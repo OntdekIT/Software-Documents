@@ -1,7 +1,7 @@
-INSERT INTO `USER` (`USERID`, `ADMIN`, `CREATION_TIME`, `LINK_HASH`, `MAIL_ADDRESS`, `USER_NAME`)
-VALUES (1, 1, null, 1, 'test@test.test', 'test');
-INSERT INTO `USER` (`USERID`, `ADMIN`, `CREATION_TIME`, `LINK_HASH`, `MAIL_ADDRESS`, `USER_NAME`)
-VALUES (2, 1, null, 1, 'test2@test2.test2', 'test2');
+INSERT INTO `USER` (`USERID`, `ADMIN`, `CREATION_TIME`, `LINK_HASH`, `MAIL_ADDRESS`, `USER_NAME`, "FIRST_NAME", "LAST_NAME")
+VALUES (1, 1, null, 1, 'test@test.test', 'test', 'Tester', 'van den Tester');
+INSERT INTO `USER` (`USERID`, `ADMIN`, `CREATION_TIME`, `LINK_HASH`, `MAIL_ADDRESS`, `USER_NAME`, "FIRST_NAME", "LAST_NAME")
+VALUES (2, 1, null, 1, 'test2@test2.test2', 'test2', 'Tester2', 'Tester2');
 
 INSERT INTO `SENSOR_TYPE` (`TYPEID`, `TYPE_NAME`)
 VALUES (1, 'Temperatuur'),
