@@ -1,6 +1,7 @@
-INSERT INTO `USER` (`USERID`, `ADMIN`, `MAIL_ADDRESS`, `PASSWORD_HASH`, `PASSWORD_SALT`, `USER_NAME`)
-VALUES (1, 1, 'VanHeeschs@Test.nl', 12, 13, 'TestVanHees'),
-       (2, 1, 'Cone@Test.com', 11, 55, 'TestPylon');
+INSERT INTO `USER` (`USERID`, `ADMIN`, `CREATION_TIME`, `LINK_HASH`, `MAIL_ADDRESS`, `USER_NAME`)
+VALUES (1, 1, null, 1, 'test@test.test', 'test');
+INSERT INTO `USER` (`USERID`, `ADMIN`, `CREATION_TIME`, `LINK_HASH`, `MAIL_ADDRESS`, `USER_NAME`)
+VALUES (2, 1, null, 1, 'test2@test2.test2', 'test2');
 
 INSERT INTO `SENSOR_TYPE` (`TYPEID`, `TYPE_NAME`)
 VALUES (1, 'Temperatuur'),
@@ -39,4 +40,3 @@ VALUES (1, 2, 1, 1),
        (16, 6, 6, 1),
        (17, 5, 6, 2),
        (18, 3, 6, 3);
-
