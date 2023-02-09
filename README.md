@@ -17,10 +17,4 @@ Ontdekstation 013 is een organisatie in Tilburg waar jongeren hun talenten kunne
 
 
 ## Docs
-In Software-Documents staat informatie over het project en de werkwijze van de groep. Software-Documents bevatten de volgende type documenten:
-
-- Overdrachtsdocument - bevat gemaakte keuzes, het instellen en gebruiken van de nodige tools en codeconventies.
-- Architectuur documenten
-- Software documenten
-- Onderzoeks documenten
-- Analyse documenten
+Start in het LEES MIJ document om te beginnen met het opzetten van het project.
