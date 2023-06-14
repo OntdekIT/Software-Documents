@@ -17,4 +17,4 @@ Ontdekstation 013 is een organisatie in Tilburg waar jongeren hun talenten kunne
 
 
 ## Docs
-Start in het LEES MIJ document om te beginnen met het opzetten van het project.
+Start in de map Overdracht om te beginnen met het opzetten van het project.
