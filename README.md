@@ -3,11 +3,20 @@
 Ontdekstation 013 is een organisatie in Tilburg waar jongeren hun talenten kunnen ontdekken op gebied van wetenschap en techniek. In samenwerking met Bibliotheek Midden-Brabant hebben zij een project opgezet rondom het meten van luchtkwaliteit in de regio Tilburg. In de regio staan meerdere sensoren om verschillende waardes op te meten. Om deze meetgegevens weer te geven voor burgers en bedrijven zijn wij begonnen met een nieuwe applicatie. Deze applicatie zal met zijn functionaliteiten kunnen laten zien hoe bepaalde acties van personen invloed hebben op bijvoorbeeld de ventilatie en de luchtkwaliteit zelf.  
 
 
-### Language & Frameworks
-- SpringBoot
-- ReactJS - HTML, CSS, Javascript
-- Cypress
-- Leaflet
+### Architectuur {Language}
+- Database
+  - MariaDB {SQL}
+  - DBeaver
+- APIs
+  - Ontdekstation → Spring Boot {Java}
+    - Hibernate ORM
+    - Jackson
+    - Lombok
+  - MeetJeStad → Extern https://meetjestad.net/data/
+- Front-end
+  - ReactJS {HTML, CSS, Javascript}
+  - Cypress
+  - Leaflet
 
 
 ### Repositories
