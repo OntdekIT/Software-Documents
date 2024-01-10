@@ -9,6 +9,7 @@ Ontdekstation013 is een organisatie in Tilburg waar jongeren hun talenten kunnen
 **Backend**
 
 - Zorg dat je een mariadb database draaiende hebt en dat je hierbij de database dump geïmporteerd hebt. Deze is te vinden in de documentatie repository
+- Kopieer `ClimateChecker/src/main/resources/secrets.properties.example` en plak deze in dezelfde map, maar dan zonder de .example extensie. Vul hierin de database gegevens in. Deze worden automatisch geïmporteerd naar `application.properties` om te voorkomen dat je gegevens in Git staan.
 - Build en run de backend in IntelliJ
   - Indien je dit handmatig doet: `mvn package --file pom.xml -DskipTests`
 
