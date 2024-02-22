@@ -1,20 +1,30 @@
-# Meet je stad Tilburg
+# MB Ontdekt
 
-Ontdekstation 013 is een organisatie in Tilburg waar jongeren hun talenten kunnen ontdekken op gebied van wetenschap en techniek. In samenwerking met Bibliotheek Midden-Brabant hebben zij een project opgezet rondom het meten van luchtkwaliteit in de regio Tilburg. In de regio staan meerdere sensoren om verschillende waardes op te meten. Om deze meetgegevens weer te geven voor burgers en bedrijven zijn wij begonnen met een nieuwe applicatie. Deze applicatie zal met zijn functionaliteiten kunnen laten zien hoe bepaalde acties van personen invloed hebben op bijvoorbeeld de ventilatie en de luchtkwaliteit zelf.  
+### Introductie
 
+Ontdekstation013 is een organisatie in Tilburg waar jongeren hun talenten kunnen ontdekken op gebied van wetenschap en techniek. In samenwerking met Bibliotheek Midden-Brabant en de gemeente Tilburg hebben zij een project opgezet rondom het meten van luchtkwaliteit in de regio Tilburg. In de regio staan meerdere meetstations om verschillende waardes op te meten. Op het moment gaat dit over temperatuur en luchtvochtigheid. Waar dit project tot stand is gekomen is bij de wens om deze gegevens eenvoudig inzichtelijk te maken voor het publiek. Ontdekstation013 geeft workshops om meetstations te maken en de data hiervan wordt automatisch naar MeetJeStad gestuurd. Wij halen deze data vervolgens weer op om deze vervolgens op een nette manier online weer te geven.
 
-### Language & Frameworks
-- SpringBoot
-- ReactJS - HTML, CSS, Javascript
-- Cypress
-- Leaflet
+### Opstart instructies
 
+**Backend**
 
-### Repositories
-- [Backend](https://github.com/OntdekIT/Software-BackEnd)
-- [Frontend](https://github.com/OntdekIT/Software-FrontEnd)
-- [Docs](https://https://github.com/OntdekIT/Software-Documents)
+- Zorg dat je een mariadb database draaiende hebt en dat je hierbij de database dump geïmporteerd hebt. Deze is te vinden in de documentatie repository
+- Kopieer `ClimateChecker/src/main/resources/secrets.properties.example` en plak deze in dezelfde map, maar dan zonder de .example extensie. Vul hierin de database gegevens in. Deze worden automatisch geïmporteerd naar `application.properties` om te voorkomen dat je gegevens in Git staan.
+- Build en run de backend in IntelliJ
+  - Indien je dit handmatig doet: `mvn package --file pom.xml -DskipTests`
 
+**Frontend**
+- Download de dependencies van de frontend: `npm install`
+- Build de frontend: `npm start`
 
-## Docs
-Start in de map Overdracht om te beginnen met het opzetten van het project.
+### Gebruikte technologieën
+- Backend
+  - Java
+  - Springboot
+  - Lombok
+  - Gson
+- Frontend
+  - React.JS
+  - Cypress
+
+Daarnaast gebruiken wij een externe API van [MeetJeStad](https://meetjestad.net/data/) om de data op te halen en gebruiken wij als database een MariaDB database.
