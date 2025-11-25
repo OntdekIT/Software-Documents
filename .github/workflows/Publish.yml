@@ -75,7 +75,7 @@ jobs:
       - name: Build Docker image
         working-directory: software-frontend
         run: |
-          docker build -t software-frontend .
+          docker build -t climatechecker-frontend 
 
       - name: Push Docker image
         run: |
