@@ -1,0 +1,89 @@
+name: Build & Publish Software Frontend (Repo A)
+
+on:
+  workflow_dispatch:   # Trigger manually or via GitHub CLI
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -------------------------------
+      # CHECK OUT THE FRONTEND REPO
+      # -------------------------------
+      - name: Checkout Software FrontEnd
+        uses: actions/checkout@v4
+        with:
+          repository: OntdekIT/Software-FrontEnd
+          fetch-depth: 0
+          path: software-frontend
+
+      # -------------------------------
+      # NODE SETUP
+      # -------------------------------
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: software-frontend/package-lock.json
+
+      # -------------------------------
+      # INSTALL + BUILD (NO TESTING)
+      # -------------------------------
+      - name: Install dependencies
+        working-directory: software-frontend
+        run: npm install
+
+      - name: Build application
+        working-directory: software-frontend
+        run: npm run build
+
+      # -------------------------------
+      # SEMVER TAG GENERATION
+      # -------------------------------
+      - name: Get previous Git tag
+        id: previous_tag
+        uses: WyriHaximus/github-action-get-previous-tag@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get next semantic version
+        id: next_version
+        uses: WyriHaximus/github-action-next-semvers@v1
+        with:
+          version: ${{ steps.previous_tag.outputs.tag }}
+
+      - name: Set lowercase owner
+        id: owner
+        run: echo "owner=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+
+      # -------------------------------
+      # DOCKER BUILD & PUSH
+      # -------------------------------
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Docker image
+        working-directory: software-frontend
+        run: |
+          docker build -t software-frontend .
+
+      - name: Push Docker image
+        run: |
+          TAG=${{ steps.next_version.outputs.patch }}
+          OWNER=${{ steps.owner.outputs.owner }}
+
+          docker tag climatechecker-frontend ghcr.io/$OWNER/climatechecker-frontend:$TAG
+          docker tag climatechecker-frontend ghcr.io/$OWNER/climatechecker-frontend:latest
+
+          docker push ghcr.io/$OWNER/climatechecker-frontend:$TAG
+          docker push ghcr.io/$OWNER/climatechecker-frontend:latest
