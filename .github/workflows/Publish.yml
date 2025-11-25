@@ -48,9 +48,9 @@ jobs:
       # -------------------------------
       - name: Get previous Git tag
         id: previous_tag
-        uses: WyriHaximus/github-action-get-previous-tag@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: software-frontend
+        run: |
+          echo "tag=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
 
       - name: Get next semantic version
         id: next_version
