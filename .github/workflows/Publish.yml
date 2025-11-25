@@ -50,7 +50,9 @@ jobs:
         id: previous_tag
         working-directory: software-frontend
         run: |
-          echo "tag=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
+          TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+
 
       - name: Get next semantic version
         id: next_version
