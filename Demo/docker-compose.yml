@@ -1,0 +1,60 @@
+services:
+  db:
+    image: mariadb:11
+    container_name: climatechecker-db
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      MYSQL_DATABASE: ${SPRING_DATASOURCE_SCHEME}
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  backend:
+    image: ghcr.io/ontdekit/climatechecker-backend:latest
+    container_name: climatechecker-backend
+    env_file: .env
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:mariadb://db:3306/${SPRING_DATASOURCE_SCHEME}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      MAILSERVER_RELAY_HOST: ${MAILSERVER_RELAY_HOST}
+      MAILSERVER_RELAY_PORT: ${MAILSERVER_RELAY_PORT}
+      MAILSERVER_RELAY_USER: ${MAILSERVER_RELAY_USER}
+      MAILSERVER_RELAY_PASSWORD: ${MAILSERVER_RELAY_PASSWORD}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      ROOT_USER_FIRSTNAME: ${ROOT_USER_FIRSTNAME}
+      ROOT_USER_LASTNAME: ${ROOT_USER_LASTNAME}
+      ROOT_USER_EMAIL: ${ROOT_USER_EMAIL}
+      ROOT_USER_PASSWORD: ${ROOT_USER_PASSWORD}
+    ports:
+      - "8082:8082"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    image: ghcr.io/ontdekit/climatechecker-frontend:latest
+    container_name: climatechecker-frontend
+    environment:
+      VITE_BACKEND_API_URL: ${VITE_BACKEND_API_URL}
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:5173" ]
+      interval: 2s
+      timeout: 1s
+      retries: 10
+
+volumes:
+  db_data:
