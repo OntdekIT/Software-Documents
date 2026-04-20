@@ -172,7 +172,14 @@ Het gebruik van Docker Desktop kan onhandig zijn, vooral op Linux. Daarom wordt 
 Binnen de backend repository kun je het project starten met het volgende commando:
 
 ```bash
-docker compose --env-file .env.production up --build -d
+# volledig clean build
+mvn clean package
+
+# force docker rebuild zonder cache
+docker compose build --no-cache
+
+# start opnieuw
+docker compose --env-file .env.production up -d
 ```
 
 ### 4.3 Configuratie frondend alleen met Node.js
