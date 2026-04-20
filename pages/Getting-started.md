@@ -187,6 +187,10 @@ npm install
 npm run dev
 ```
 
+##### 4.3.1 Frontend en Backend samendraaiend
+
+Deze optie zal weinig gebruikt worden. In de meeste gevallen wordt er één instantie van de backend gestart, waarna Docker de frontend toegankelijk maakt via de [serviceconfiguratie](#33-environment-variables).
+
 ### 4.4 Setup Java JDK
 
 Voor dit project is [Java JDK 21](https://www.oracle.com/nl/java/technologies/downloads/#java21) vereist. Zorg ervoor dat deze versie correct is geïnstalleerd voordat je het project opstart.
@@ -324,7 +328,3 @@ mvn clean install
     </td>
   </tr>
 </table>
-
-### 4.2 koppeling
-
-> TODO!
