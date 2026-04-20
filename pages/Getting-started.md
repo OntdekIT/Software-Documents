@@ -185,6 +185,7 @@ docker compose build --no-cache
 
 # start de applicatie
 docker compose --env-file .env.production up -d
+```
 
 ### 4.3 Configuratie frondend alleen met Node.js
 
