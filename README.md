@@ -10,5 +10,3 @@ Welkom bij de wiki van Ontdek IT. Ontdekstation organiseert samen met Bibliothee
 - [Home](home.md)
 - [Adres & Contact](pages/Adres-Contact.md)
 - [Getting Started](pages/Getting-started.md)  
-
-  
