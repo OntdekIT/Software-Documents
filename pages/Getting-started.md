@@ -165,9 +165,15 @@ Daarnaast kan de applicatie ook worden uitgevoerd via *GitKraken* of *Docker Des
   </tr>
 </table>
 
-### 4.2 Configuratie Docker desktop
+### 4.2 Configuratie voor Docker desktop
 
-> TODO!
+Het gebruik van Docker Desktop kan onhandig zijn, vooral op Linux. Daarom wordt aangeraden om Docker via de command-line te gebruiken. Dit is niet alleen sneller, maar je kunt Docker Desktop nog steeds gebruiken om containers en instances te monitoren.
+
+Binnen de backend repository kun je het project starten met het volgende commando:
+
+```bash
+docker compose --env-file .env.production up --build -d
+```
 
 ### 4.3 Configuratie frondend alleen met Node.js
 
@@ -269,7 +275,10 @@ mvn clean install
   <tr>
     <td style="border: 0; padding-right: 20px;">
     <ol>
-      <li>Maak een nieuwe Run/Debug Configuration aan.</li>
+      <li>Zorg ervoor dat de <code>Name</code> is hernoemd naar <code>run</code>.</li>
+      <li>De geselecteerde server is altijd <code>Docker</code>.</li>
+      <li>Selecteer het juiste compose-bestand.</li>
+      <li>En vervolgens ook het <code>.env.production</code>-bestand (zie <code>Modify options</code>).</li>
     </ol>
     </td>
     <td style="border: 0;">
@@ -286,7 +295,9 @@ mvn clean install
   <tr>
     <td style="border: 0; padding-right: 20px;">
     <ol>
-      <li>Maak een nieuwe Run/Debug Configuration aan.</li>
+      <li>Zorg ervoor dat de <code>Name</code> is hernoemd naar <code>build</code>.</li>
+      <li>De geselecteerde server is altijd <code>Docker</code>.</li>
+      <li>Selecteer het juiste docker-bestand.</li>
     </ol>
     </td>
     <td style="border: 0;">
@@ -303,13 +314,13 @@ mvn clean install
   </tr>
 
   <tr>
-    <td style="border: 0; padding-right: 20px;">
-    <ol>
-      <li>Maak een nieuwe Run/Debug Configuration aan.</li>
-    </ol>
+    <td style="border: 0;  vertical-align: top;padding: 3%;">
+      Je kunt nu vanuit je IDE Docker containers bouwen en uitvoeren. Het is belangrijk dat je altijd eerst een build uitvoert (ook via de IDE) en daarna pas runt.<br><br>
+      Zoals je kunt zien, werken alle Docker services correct. Wanneer je op een service klikt, kun je de logs bekijken. Hierdoor kun je eenvoudig zien waar eventuele problemen ontstaan.<br><br>
+      Daarnaast zouden breakpoints nu moeten werken, waardoor je een DEBUG/RUN-configuratie kunt gebruiken in je IDE.
     </td>
-    <td style="border: 0;">
-      <img src="../pictures/idea/services_dashboard.png" width="400" align="right"/>
+    <td style="border: 0; vertical-align: top;">
+      <img src="../pictures/idea/services_dashboard.png" width="600" />
     </td>
   </tr>
 </table>
