@@ -1,0 +1,68 @@
+services:
+  backend-api:
+    hostname: backend-api
+    build:
+      context: ./Software-BackEnd/ClimateChecker
+    image: climatechecker-backend:latest
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mariadb://mariaDB:3306/ontdekstation013
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ontdekstation013
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_FLYWAY_ENABLED: "true"
+      SPRING_FLYWAY_USER: root
+      SPRING_FLYWAY_PASSWORD: ontdekstation013
+      ROOT_USER_FIRSTNAME: Admin
+      ROOT_USER_LASTNAME: Beheerder
+      ROOT_USER_EMAIL: admin@example.com
+      ROOT_USER_PASSWORD: Admin123!
+      MAILSERVER_RELAY_HOST: smtp.test.local
+      MAILSERVER_RELAY_PORT: 587
+      MAILSERVER_RELAY_USER: test@test.local
+      MAILSERVER_RELAY_PASSWORD: test
+      MAIL_USERNAME: test@test.local
+      MAIL_PASSWORD: test
+    depends_on:
+      mariaDB:
+        condition: service_healthy
+    networks:
+      - public
+
+  frontend:
+    build:
+      context: ./Software-FrontEnd
+      target: release
+      args:
+        VITE_BACKEND_API_URL: http://localhost:8082/api
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-api
+    networks:
+      - public
+
+  mariaDB:
+    hostname: mariaDB
+    image: mariadb:11
+    ports:
+      - "3307:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: ontdekstation013
+      MARIADB_DATABASE: ontdekstation013
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - public
+
+networks:
+  public:
+
+volumes:
+  db_data:
