@@ -40,11 +40,26 @@ docker compose up -d --build
 | `frontend`    | `3000`       | React app, productie-build via nginx      |
 | `backend-api` | `8082`       | Spring Boot API                           |
 | `mariaDB`     | `3307`       | MariaDB, database `ontdekstation013`      |
+| `mailhog`     | `8025` (UI), `1025` (SMTP) | Lokale mailserver — vangt alle uitgaande mail op |
 
 - Frontend: <http://localhost:3000>
 - Backend:  <http://localhost:8082>
+- **MailHog (mail lezen): <http://localhost:8025>**
 - De frontend praat met de backend via `VITE_BACKEND_API_URL=http://localhost:8082/api`
   (ingebakken tijdens de build).
+
+## Mail lokaal ontvangen (MailHog)
+
+De backend verstuurt mail (o.a. de login-verificatiecode) naar de `mailhog`
+service in plaats van een echte SMTP-server. Alles wat verstuurd wordt is te
+lezen in de MailHog web-UI op <http://localhost:8025> — er gaat dus nooit echte
+mail de deur uit. MailHog spreekt plain SMTP (poort 1025, geen TLS/auth); de
+backend is daarop ingesteld via `MAILSERVER_RELAY_HOST=mailhog`,
+`MAILSERVER_RELAY_PORT=1025` en `SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE=false`.
+
+Bij inloggen (email + wachtwoord) stuurt de app een verificatiecode; open
+<http://localhost:8025>, pak de code uit de mail en vul die in om de login af te
+ronden.
 
 ## Beheer
 

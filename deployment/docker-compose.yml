@@ -18,15 +18,22 @@ services:
       ROOT_USER_LASTNAME: Beheerder
       ROOT_USER_EMAIL: admin@example.com
       ROOT_USER_PASSWORD: Admin123!
-      MAILSERVER_RELAY_HOST: smtp.test.local
-      MAILSERVER_RELAY_PORT: 587
+      # Send all outgoing mail to the local MailHog SMTP sink (see mailhog service).
+      MAILSERVER_RELAY_HOST: mailhog
+      MAILSERVER_RELAY_PORT: 1025
       MAILSERVER_RELAY_USER: test@test.local
       MAILSERVER_RELAY_PASSWORD: test
-      MAIL_USERNAME: test@test.local
+      MAIL_USERNAME: noreply@ontdekstation.local
       MAIL_PASSWORD: test
+      # MailHog speaks plain SMTP (no STARTTLS / no auth); relax the app's TLS
+      # setting and disable auth so delivery succeeds locally.
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: "false"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: "false"
     depends_on:
       mariaDB:
         condition: service_healthy
+      mailhog:
+        condition: service_started
     networks:
       - public
 
@@ -40,6 +47,16 @@ services:
       - "3000:80"
     depends_on:
       - backend-api
+    networks:
+      - public
+
+  mailhog:
+    hostname: mailhog
+    image: mailhog/mailhog:latest
+    container_name: ontdekit-mailhog
+    ports:
+      - "1025:1025"   # SMTP (the backend sends here)
+      - "8025:8025"   # Web UI - open http://localhost:8025 to read mail
     networks:
       - public
 
