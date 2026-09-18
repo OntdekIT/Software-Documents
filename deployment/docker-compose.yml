@@ -10,6 +10,9 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mariadb://mariaDB:3306/ontdekstation013
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: ontdekstation013
+      # Local-dev JWT signing key (Base64, >=256-bit). Override per environment.
+      # NB: must be non-empty — an empty value makes the HMAC key builder throw.
+      JWT_SECRET: ${JWT_SECRET:-ZGV2LW9ubHktc2VjcmV0LWRvLW5vdC11c2UtaW4tcHJvZHVjdGlvbi1jaGFuZ2VtZQ==}
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_FLYWAY_ENABLED: "true"
       SPRING_FLYWAY_USER: root
@@ -52,7 +55,7 @@ services:
 
   mailhog:
     hostname: mailhog
-    image: mailhog/mailhog:latest
+    image: mailhog/mailhog:v1.0.1
     container_name: ontdekit-mailhog
     ports:
       - "1025:1025"   # SMTP (the backend sends here)
@@ -62,12 +65,18 @@ services:
 
   mariaDB:
     hostname: mariaDB
-    image: mariadb:11
+    # Pinned to 11.2: newer 11.x (e.g. 11.8) is not yet supported by Flyway
+    # 10.10 and breaks the migration connection on startup.
+    image: mariadb:11.2
     ports:
       - "3307:3306"
     environment:
       MARIADB_ROOT_PASSWORD: ontdekstation013
       MARIADB_DATABASE: ontdekstation013
+      # Create a passwordless localhost/socket user so healthcheck.sh --connect
+      # can reach the server without credentials (otherwise it is denied and the
+      # container never becomes healthy, blocking the backend from starting).
+      MARIADB_MYSQL_LOCALHOST_USER: "1"
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:

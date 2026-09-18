@@ -79,3 +79,10 @@ docker compose down -v           # stoppen + database wissen
 - De standaard admin-gebruiker (seed): `admin@example.com` / `Admin123!`.
 - De DB-poort is bewust `3307` (host) om niet te botsen met een lokale MySQL/MariaDB
   op 3306.
+- **MariaDB is gepind op `11.2`.** Nieuwer 11.x (bijv. 11.8) wordt niet ondersteund
+  door Flyway 10.10 en breekt de migratie bij het opstarten. Wijzig dit niet zonder
+  Flyway mee te upgraden.
+- **`JWT_SECRET`** is vereist (Base64, ≥ 256-bit). De compose zet een throwaway
+  dev-key als default; voor alles buiten lokaal draaien exporteer je een eigen key
+  (`export JWT_SECRET=$(openssl rand -base64 48)`) vóór `docker compose up`. Een
+  lege waarde laat de backend bij startup falen met een duidelijke melding.
