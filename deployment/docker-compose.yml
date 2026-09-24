@@ -1,0 +1,94 @@
+services:
+  backend-api:
+    hostname: backend-api
+    build:
+      context: ./Software-BackEnd/ClimateChecker
+    image: climatechecker-backend:latest
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mariadb://mariaDB:3306/ontdekstation013
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ontdekstation013
+      # Local-dev JWT signing key (Base64, >=256-bit). Override per environment.
+      # NB: must be non-empty — an empty value makes the HMAC key builder throw.
+      JWT_SECRET: ${JWT_SECRET:-ZGV2LW9ubHktc2VjcmV0LWRvLW5vdC11c2UtaW4tcHJvZHVjdGlvbi1jaGFuZ2VtZQ==}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_FLYWAY_ENABLED: "true"
+      SPRING_FLYWAY_USER: root
+      SPRING_FLYWAY_PASSWORD: ontdekstation013
+      ROOT_USER_FIRSTNAME: Admin
+      ROOT_USER_LASTNAME: Beheerder
+      ROOT_USER_EMAIL: admin@example.com
+      ROOT_USER_PASSWORD: Admin123!
+      # Send all outgoing mail to the local MailHog SMTP sink (see mailhog service).
+      MAILSERVER_RELAY_HOST: mailhog
+      MAILSERVER_RELAY_PORT: 1025
+      MAILSERVER_RELAY_USER: test@test.local
+      MAILSERVER_RELAY_PASSWORD: test
+      MAIL_USERNAME: noreply@ontdekstation.local
+      MAIL_PASSWORD: test
+      # MailHog speaks plain SMTP (no STARTTLS / no auth); relax the app's TLS
+      # setting and disable auth so delivery succeeds locally.
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: "false"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: "false"
+    depends_on:
+      mariaDB:
+        condition: service_healthy
+      mailhog:
+        condition: service_started
+    networks:
+      - public
+
+  frontend:
+    build:
+      context: ./Software-FrontEnd
+      target: release
+      args:
+        VITE_BACKEND_API_URL: http://localhost:8082/api
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-api
+    networks:
+      - public
+
+  mailhog:
+    hostname: mailhog
+    image: mailhog/mailhog:v1.0.1
+    container_name: ontdekit-mailhog
+    ports:
+      - "1025:1025"   # SMTP (the backend sends here)
+      - "8025:8025"   # Web UI - open http://localhost:8025 to read mail
+    networks:
+      - public
+
+  mariaDB:
+    hostname: mariaDB
+    # Pinned to 11.2: newer 11.x (e.g. 11.8) is not yet supported by Flyway
+    # 10.10 and breaks the migration connection on startup.
+    image: mariadb:11.2
+    ports:
+      - "3307:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: ontdekstation013
+      MARIADB_DATABASE: ontdekstation013
+      # Create a passwordless localhost/socket user so healthcheck.sh --connect
+      # can reach the server without credentials (otherwise it is denied and the
+      # container never becomes healthy, blocking the backend from starting).
+      MARIADB_MYSQL_LOCALHOST_USER: "1"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - public
+
+networks:
+  public:
+
+volumes:
+  db_data:
