@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-17T22:42:00Z",
+  "dataAsOf": "2026-11-17T22:42:55.025622175Z",
+  "recencyMinutes": 120,
+  "ingest": {
+    "lastSuccessAt": "2026-11-17T22:42:55.025622175Z",
+    "lastAttemptAt": "2026-11-17T22:42:55.025622175Z",
+    "lastError": null,
+    "consecutiveFailures": 0,
+    "stale": false
+  },
+  "city": {
+    "avgTemp": 8.86,
+    "avgPm25": 4.7,
+    "wijkenWithData": 22,
+    "warmest": {
+      "id": 17,
+      "name": "Bouwmeester",
+      "avgTemp": 9.31
+    },
+    "coldest": {
+      "id": 39,
+      "name": "Loven-Besterd",
+      "avgTemp": 8.0
+    },
+    "biggestChange": {
+      "id": 54,
+      "name": "Witbrant",
+      "from": 0.03,
+      "to": 8.75,
+      "delta": 8.72
+    }
+  },
+  "wijken": [
+    {
+      "id": 1,
+      "name": "Buitengebied Tilburg Zuid-West",
+      "avgTemp": null,
+      "avgPm25": null,
+      "stationCount": 0,
+      "lastMeasurementAt": null,
+      "series": [
+        {
+          "t": "2026-11-16T23:42:00Z",
+          "avgTemp": null,
+          "avgPm25": null
+        },
+        {
+          "t": "2026-11-17T00:42:00Z",
+          "avgTemp": null,
+          "avgPm25": null
+        },
+        "..."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dalem Noord",
+      "avgTemp": null,
+      "avgPm25": null,
+      "stationCount": 0,
+      "lastMeasurementAt": null,
+      "series": [
+        {
+          "t": "2026-11-16T23:42:00Z",
+          "avgTemp": null,
+          "avgPm25": null
+        },
+        {
+          "t": "2026-11-17T00:42:00Z",
+          "avgTemp": null,
+          "avgPm25": null
+        },
+        "..."
+      ]
+    },
+    "... nog 57 items"
+  ],
+  "stations": [
+    {
+      "id": 480,
+      "name": null,
+      "latitude": null,
+      "longitude": null,
+      "isActive": false,
+      "latest": null,
+      "flags": {
+        "tempError": false,
+        "humError": false,
+        "stofError": true,
+        "locError": false
+      },
+      "status": "no_current_value",
+      "reason": "uitval",
+      "lastMeasurementAt": "2026-09-24T10:47:54Z"
+    },
+    {
+      "id": 562,
+      "name": null,
+      "latitude": null,
+      "longitude": null,
+      "isActive": false,
+      "latest": null,
+      "flags": {
+        "tempError": false,
+        "humError": false,
+        "stofError": true,
+        "locError": false
+      },
+      "status": "no_current_value",
+      "reason": "uitval",
+      "lastMeasurementAt": "2026-09-23T13:55:25Z"
+    },
+    "... nog 41 items"
+  ],
+  "network": {
+    "stationsTotal": 43,
+    "active": 32,
+    "offline": 11,
+    "withSensorErrors": 33,
+    "coveragePercent24h": 74.61
+  },
+  "heatmapPoints": [
+    {
+      "stationId": 575,
+      "latitude": 51.6121,
+      "longitude": 5.14795,
+      "temperature": 8.75,
+      "pm25": null,
+      "ageMinutes": 12
+    },
+    {
+      "stationId": 657,
+      "latitude": 51.54,
+      "longitude": 5.08194,
+      "temperature": 9.31,
+      "pm25": null,
+      "ageMinutes": 0
+    },
+    "... nog 30 items"
+  ]
+}

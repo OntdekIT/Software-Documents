@@ -1,0 +1,85 @@
+@startuml
+!include ../stijl.puml
+hide empty methods
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+left to right direction
+class Measurement <<measurement>> {
+  id : Long
+  timestamp : Instant
+  latitude : float
+  longitude : float
+  temperature : Float
+  humidity : Float
+  pm25 : Float
+  pm10 : Float
+  is_public : Boolean
+  locationInherited : boolean
+}
+class Neighbourhood <<region>> {
+  id : long
+  name : String
+}
+class NeighbourhoodCoords <<region_coords>> {
+  id : long
+  latitude : float
+  longitude : float
+}
+class Station <<station>> {
+  stationid : Long
+  name : String
+  database_tag : String
+  is_public : Boolean
+  registrationCode : Long
+  location_locationid : Long
+  userid : Long
+  isActive : Boolean
+  tempError : Boolean
+  humError : Boolean
+  stofError : Boolean
+  locError : Boolean
+  lastKnownLatitude : Float
+  lastKnownLongitude : Float
+}
+class Token <<token>> {
+  id : Long
+  userId : long
+  tokenType : TokenType
+  numericCode : String
+  creationTime : LocalDateTime
+}
+class TrustedIp <<trusted_ip>> {
+  id : Long
+  userId : Long
+  ipHash : String
+  createdAt : LocalDateTime
+}
+class User <<user>> {
+  userId : Long
+  firstName : String
+  lastName : String
+  email : String
+  role : UserRole
+  password : String
+}
+class Workshop <<workshop>> {
+  code : Long
+  expirationDate : LocalDateTime
+  creationTime : LocalDateTime
+}
+enum UserRole {
+  USER
+  SUPER_ADMIN
+  ADMIN
+}
+enum TokenType {
+  VERIFY_AUTH
+  PASSWORD_RESET
+}
+User ..> UserRole : role (ORDINAL)
+Token ..> TokenType : tokenType (STRING)
+Station "1" <-- "*" Measurement : station
+Neighbourhood "1" <-- "*" NeighbourhoodCoords : neighbourhood
+User "1" <-- "*" Station : user
+Workshop "1" <-- "*" User : workshop
+@enduml

@@ -1,0 +1,611 @@
+{
+ "backend_sha": "e104152e572449be91d75b1d86a3bcecd6d4f5d0",
+ "ref": "origin/s3nj26_dev",
+ "live_gelijk": true,
+ "titel": "ClimateChecker API",
+ "versie": "1.0",
+ "endpoints": [
+  {
+   "methode": "POST",
+   "pad": "/api/authentication/forgot-password",
+   "groep": "Authenticatie",
+   "samenvatting": "Vraag een wachtwoordresetcode aan per e-mail",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "body: ForgotPasswordRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "429"
+   ]
+  },
+  {
+   "methode": "POST",
+   "pad": "/api/authentication/login",
+   "groep": "Authenticatie",
+   "samenvatting": "Log in met e-mail en wachtwoord (geeft een token of vraagt om een e-mailcode)",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "body: LoginRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "429"
+   ]
+  },
+  {
+   "methode": "POST",
+   "pad": "/api/authentication/register",
+   "groep": "Authenticatie",
+   "samenvatting": "Registreer een gebruiker met workshop- en stationcode",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "body: RegisterUserRequest"
+   ],
+   "statuscodes": [
+    "201",
+    "400"
+   ]
+  },
+  {
+   "methode": "POST",
+   "pad": "/api/authentication/reset-password",
+   "groep": "Authenticatie",
+   "samenvatting": "Stel een nieuw wachtwoord in met een resetcode",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "body: ResetPasswordRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "429"
+   ]
+  },
+  {
+   "methode": "POST",
+   "pad": "/api/authentication/verify",
+   "groep": "Authenticatie",
+   "samenvatting": "Verifieer de e-mailcode en ontvang een JWT",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "body: VerifyLoginRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "429"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/measurement/coverage",
+   "groep": "Metingen",
+   "samenvatting": "Geef de volledigheid van fijnstofdata per station (alleen beheerders)",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "from (query)",
+    "to (query)",
+    "granularity (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "401",
+    "403"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/measurement/history",
+   "groep": "Metingen",
+   "samenvatting": "Geef per meetstation de meting dichtst bij een tijdstip",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "timestamp (query, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/measurement/history/average/region/{regionId}",
+   "groep": "Metingen",
+   "samenvatting": "Geef gemiddelde temperatuur per tijdsblok voor een wijk",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "regionId (path, verplicht)",
+    "from (query)",
+    "to (query)",
+    "granularity (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/measurement/history/average/{id}",
+   "groep": "Metingen",
+   "samenvatting": "Geef dagelijkse gemiddelde, minimum en maximum temperatuur van een station",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "id (path, verplicht)",
+    "startDate (query, verplicht)",
+    "endDate (query, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/measurement/history/half-hourly/{id}",
+   "groep": "Metingen",
+   "samenvatting": "Geef halfuurgemiddelden van een station voor vandaag",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "id (path, verplicht)"
+   ],
+   "statuscodes": [
+    "200"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/measurement/history/hourly/{id}",
+   "groep": "Metingen",
+   "samenvatting": "Geef uurgemiddelden van een station voor vandaag",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "id (path, verplicht)"
+   ],
+   "statuscodes": [
+    "200"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/measurement/history/network",
+   "groep": "Metingen",
+   "samenvatting": "Geef dagelijkse netwerkbrede temperatuurstatistiek over alle stations",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "startDate (query, verplicht)",
+    "endDate (query, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "POST",
+   "pad": "/api/meetstation/add",
+   "groep": "Meetstations",
+   "samenvatting": "Voeg een nieuw station toe",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "body: AddStationRequest"
+   ],
+   "statuscodes": [
+    "201",
+    "400",
+    "401",
+    "500"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/meetstation/availability/{stationId}/{workshopCode}",
+   "groep": "Meetstations",
+   "samenvatting": "Controleer of een station beschikbaar is en de workshopcode geldig is",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "stationId (path, verplicht)",
+    "workshopCode (path, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "PUT",
+   "pad": "/api/meetstation/claim",
+   "groep": "Meetstations",
+   "samenvatting": "Claim een station voor de ingelogde gebruiker",
+   "spec_auth": true,
+   "toegang": "ingelogd",
+   "parameters": [
+    "body: StationDto"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "401"
+   ]
+  },
+  {
+   "methode": "PUT",
+   "pad": "/api/meetstation/edit/{id}",
+   "groep": "Meetstations",
+   "samenvatting": "Pas naam en zichtbaarheid van een station aan (eigenaar of beheerder)",
+   "spec_auth": true,
+   "toegang": "ingelogd",
+   "parameters": [
+    "id (path, verplicht)",
+    "body: UpdateStationRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "401",
+    "403"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/meetstation/measurements/{id}",
+   "groep": "Meetstations",
+   "samenvatting": "Download de metingen van een station als PDF",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "id (path, verplicht)",
+    "startDate (query, verplicht)",
+    "endDate (query, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/meetstation/stations",
+   "groep": "Meetstations",
+   "samenvatting": "Geef alle meetstations, optioneel gefilterd",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "database_tag (query)",
+    "isActive (query)",
+    "isPublic (query)",
+    "name (query)",
+    "page (query)",
+    "pageSize (query)",
+    "paged (query)",
+    "registrationCode (query)",
+    "userid (query)",
+    "username (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/meetstation/stations-met-measurements",
+   "groep": "Meetstations",
+   "samenvatting": "Geef meetstations met hun meting op een tijdstip",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "timestamp (query, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "PUT",
+   "pad": "/api/meetstation/transfer/{id}",
+   "groep": "Meetstations",
+   "samenvatting": "Draag een station over aan een andere gebruiker",
+   "spec_auth": true,
+   "toegang": "ingelogd",
+   "parameters": [
+    "id (path, verplicht)",
+    "body: TransferStationRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "401",
+    "403"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/meetstation/{id}",
+   "groep": "Meetstations",
+   "samenvatting": "Geef een meetstation op id",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "id (path, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "404"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/my-account",
+   "groep": "Mijn account",
+   "samenvatting": "Geef het account van de ingelogde gebruiker",
+   "spec_auth": true,
+   "toegang": "ingelogd",
+   "parameters": [
+    "includeStations (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "401"
+   ]
+  },
+  {
+   "methode": "PUT",
+   "pad": "/api/my-account",
+   "groep": "Mijn account",
+   "samenvatting": "Wijzig naam, e-mail of wachtwoord van de ingelogde gebruiker",
+   "spec_auth": true,
+   "toegang": "ingelogd",
+   "parameters": [
+    "body: UpdateMyAccountRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "401"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/neighbourhood/history",
+   "groep": "Wijken",
+   "samenvatting": "Geef alle wijken met hun metingen op een tijdstip",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "timestamp (query, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/neighbourhood/history/average/{id}",
+   "groep": "Wijken",
+   "samenvatting": "Geef dagelijkse temperatuurstatistiek van een wijk",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "id (path, verplicht)",
+    "startDate (query, verplicht)",
+    "endDate (query, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/neighbourhood/history/timelapse",
+   "groep": "Wijken",
+   "samenvatting": "Geef een time-lapse van de heatmap per wijk",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "from (query)",
+    "to (query)",
+    "steps (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "400"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/neighbourhood/{id}",
+   "groep": "Wijken",
+   "samenvatting": "Geef een wijk op id",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "id (path, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "404"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/snapshot",
+   "groep": "Snapshot",
+   "samenvatting": "Geef de volledige actuele staat van het netwerk in een keer",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [
+    "If-None-Match (header)"
+   ],
+   "statuscodes": [
+    "200",
+    "304"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/status",
+   "groep": "Snapshot",
+   "samenvatting": "Status van de data-ingest en de snapshots",
+   "spec_auth": false,
+   "toegang": "openbaar",
+   "parameters": [],
+   "statuscodes": [
+    "200"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/users",
+   "groep": "Gebruikers",
+   "samenvatting": "Geef een pagina met gebruikers, optioneel gefilterd",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "email (query)",
+    "firstName (query)",
+    "lastName (query)",
+    "page (query)",
+    "pageSize (query)",
+    "role (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "403"
+   ]
+  },
+  {
+   "methode": "DELETE",
+   "pad": "/api/users/{id}",
+   "groep": "Gebruikers",
+   "samenvatting": "Verwijder een gebruiker",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "id (path, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "403"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/users/{id}",
+   "groep": "Gebruikers",
+   "samenvatting": "Geef een gebruiker op id",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "id (path, verplicht)",
+    "includeStations (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "403"
+   ]
+  },
+  {
+   "methode": "PUT",
+   "pad": "/api/users/{id}",
+   "groep": "Gebruikers",
+   "samenvatting": "Wijzig de rol van een gebruiker",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "id (path, verplicht)",
+    "body: UpdateUserRequest"
+   ],
+   "statuscodes": [
+    "200",
+    "400",
+    "403"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/workshops",
+   "groep": "Workshops",
+   "samenvatting": "Geef actieve of verlopen workshops",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "isExpired (query)"
+   ],
+   "statuscodes": [
+    "200",
+    "403"
+   ]
+  },
+  {
+   "methode": "POST",
+   "pad": "/api/workshops",
+   "groep": "Workshops",
+   "samenvatting": "Maak een workshop met een vervaldatum",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "body: WorkshopRequest"
+   ],
+   "statuscodes": [
+    "201",
+    "403"
+   ]
+  },
+  {
+   "methode": "DELETE",
+   "pad": "/api/workshops/{code}",
+   "groep": "Workshops",
+   "samenvatting": "Verwijder een workshopcode",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "code (path, verplicht)"
+   ],
+   "statuscodes": [
+    "204",
+    "403"
+   ]
+  },
+  {
+   "methode": "GET",
+   "pad": "/api/workshops/{code}/users",
+   "groep": "Workshops",
+   "samenvatting": "Geef de gebruikers die via een workshopcode zijn geregistreerd",
+   "spec_auth": true,
+   "toegang": "beheerder",
+   "parameters": [
+    "code (path, verplicht)"
+   ],
+   "statuscodes": [
+    "200",
+    "403"
+   ]
+  }
+ ],
+ "afwijkingen": [
+  "POST /api/meetstation/add: beheerder vereist maar 403 staat niet in de spec"
+ ]
+}
