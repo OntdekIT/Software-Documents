@@ -1,0 +1,35 @@
+@startuml
+!include ../../stijl.puml
+title Een ingest-run (IngestWorker.runOnce)
+participant "ExecutorDelayedRunner" as R
+participant "IngestWorker" as W
+participant "RequestLimiter" as Q
+participant "MeetJeStadMeasurementSource" as S
+participant "meetjestad.net" as M
+participant "MeasurementIngestService" as I
+database "MariaDB" as D
+participant "IngestState" as T
+participant "SnapshotService" as N
+R -> W : loop() (regel 82) na ApplicationReadyEvent (regel 72)
+W -> W : runOnce(), singleFlight.tryLock() (regel 96)
+W -> Q : tryAcquire(now) (regel 101)
+alt wachttijd nodig
+  W --> R : RATE_LIMITED, nextDelay = wachttijd
+else
+  W -> I : windowStart(now, lastFetchedUntil) (regel 109)
+  W -> S : fetch(start, now) (regel 110)
+  S -> M : GET sensoren sinds start
+  alt gelukt
+    W -> I : store(fetched) (regel 111)
+    I -> D : alleen nieuwe (station, tijdstip)
+    W -> T : recordSuccess (regel 113)
+    W --> R : SUCCESS, volgende run na 300 s
+  else RuntimeException
+    W -> T : recordFailure(korte melding) (regel 117)
+    W -> W : backoff.delayAfterFailure (regel 119)
+    W --> R : FAILURE, wacht 30 s verdubbelend tot 1800 s
+  end
+end
+W -> N : rebuild() in finally (regel 132)
+N -> N : build() en current.set (regel 146)
+@enduml

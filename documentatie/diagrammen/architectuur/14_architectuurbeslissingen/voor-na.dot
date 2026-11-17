@@ -1,0 +1,18 @@
+digraph vn {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.3; ranksep=0.5;
+  subgraph cluster_v { label="Voor (de kaartendpoints lazen live)"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    a1 [label="React-app"]; b1 [label="backend\nper verzoek"]; c1 [label="meetjestad.net", fillcolor="white"];
+    a1 -> b1 [label="GET"]; b1 -> c1 [label="elke keer"];
+    t1 [shape=note, fillcolor="white", label="0,8 tot 2,0 s per aanroep\n(neighbourhood/history 0,96 / 0,77 / 0,86 s,\ntimelapse 1,62 / 2,00 / 1,68 s)"];
+  }
+  subgraph cluster_n { label="Na (worker en snapshots)"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    a2 [label="React-app"]; b2 [label="backend\nsnapshot in geheugen", fillcolor="#FECB3D"]; w [label="IngestWorker\nelke 5 min", fillcolor="#FECB3D"]; d2 [label="MariaDB", shape=cylinder, fillcolor="#FECB3D"]; c2 [label="meetjestad.net", fillcolor="white"];
+    a2 -> b2 [label="GET"]; w -> c2 [label="enige aanroeper"]; w -> d2; d2 -> b2 [label="rebuild"]; w -> b2 [label="rebuild"];
+    t2 [shape=note, fillcolor="white", label="0,003 tot 0,023 s per aanroep\n(history 0,023 / 0,007 / 0,007 s,\ntimelapse 0,013 / 0,007 / 0,007 s)"];
+  }
+}

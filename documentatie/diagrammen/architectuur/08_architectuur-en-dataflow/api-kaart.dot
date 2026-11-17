@@ -1,0 +1,25 @@
+digraph api {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.3;
+  root [label="ClimateChecker API\n37 operaties, prefix /api", fillcolor="#FECB3D"];
+  "Authenticatie" [label="Authenticatie\n5 operaties\n5 zonder slotje, 0 met bearer-JWT", fillcolor="#FFF9E6"];
+  "Metingen" [label="Metingen\n7 operaties\n6 zonder slotje, 1 met bearer-JWT", fillcolor="#FECB3D"];
+  "Meetstations" [label="Meetstations\n9 operaties\n5 zonder slotje, 4 met bearer-JWT", fillcolor="#FECB3D"];
+  "Mijn account" [label="Mijn account\n2 operaties\n0 zonder slotje, 2 met bearer-JWT", fillcolor="#FECB3D"];
+  "Wijken" [label="Wijken\n4 operaties\n4 zonder slotje, 0 met bearer-JWT", fillcolor="#FFF9E6"];
+  "Snapshot" [label="Snapshot\n2 operaties\n2 zonder slotje, 0 met bearer-JWT", fillcolor="#FFF9E6"];
+  "Gebruikers" [label="Gebruikers\n4 operaties\n0 zonder slotje, 4 met bearer-JWT", fillcolor="#FECB3D"];
+  "Workshops" [label="Workshops\n4 operaties\n0 zonder slotje, 4 met bearer-JWT", fillcolor="#FECB3D"];
+  root -> "Authenticatie";
+  root -> "Metingen";
+  root -> "Meetstations";
+  root -> "Mijn account";
+  root -> "Wijken";
+  root -> "Snapshot";
+  root -> "Gebruikers";
+  root -> "Workshops";
+}

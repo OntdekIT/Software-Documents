@@ -1,0 +1,18 @@
+digraph p {
+  rankdir=TB; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.3; ranksep=0.6;
+  dev [label="Push naar\ns3nj26_dev", fillcolor="#FECB3D"];
+  ci [label="ci.yml\nmvn verify op JDK 21\n(Testcontainers-tests)"];
+  im [label="deploy.yml: job image\nbouwt en pusht\nghcr.io/ontdekit/\nclimatechecker-backend:sha-xxxxxxx", fillcolor="#FECB3D"];
+  tag [label="deploy.yml: job deploy\n(environment test)\nretag naar :test"];
+  wh [label="Dokploy-webhook\n(stap wordt overgeslagen\nals het secret leeg is)", fillcolor="#FFF9E6"];
+  dk [label="Dokploy haalt :test\nbinnen en herstart", fillcolor="white"];
+  dev -> ci; dev -> im; im -> tag; tag -> wh; wh -> dk [style=dashed, label="alleen met secret"];
+  fdev [label="Frontend: push\n(ghcr.yml: bouwt, lint,\ndocker-test)"];
+  fmain [label="Frontend: alleen main\nof s3nj26: tag + image\nclimatechecker-frontend", fillcolor="#FFF9E6"];
+  fdev -> fmain [style=dashed, label="niet vanaf s3nj26_dev"];
+}

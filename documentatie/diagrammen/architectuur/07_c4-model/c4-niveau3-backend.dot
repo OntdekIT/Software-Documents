@@ -1,0 +1,48 @@
+digraph c4n3be {
+  rankdir=TB; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.35; ranksep=0.9;
+  subgraph cluster_be {
+    label="backend-api: functionele pakketten (aantal imports tussen pakketten, vanaf 2)"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+  "features.measurement" [label="measurement\nmetingen lezen en berekenen\n8 klassen", fillcolor="#FFF9E6"];
+  "features.meetjestad" [label="meetjestad\nclient voor de externe bron\n2 klassen", fillcolor="#FFF9E6"];
+  "features.neighbourhood" [label="neighbourhood\nwijken en time-lapse\n8 klassen", fillcolor="#FFF9E6"];
+  "features.station" [label="station\nmeetstations en uitvalcontrole\n12 klassen", fillcolor="#FFF9E6"];
+  "features.user" [label="user\ngebruikers en accounts\n16 klassen", fillcolor="#FFF9E6"];
+  "features.user.authentication" [label="user.authentication\ninloggen, tokens, e-mail\n15 klassen", fillcolor="#FFF9E6"];
+  "features.user.trustedip" [label="user.trustedip\nvertrouwde IP-adressen\n3 klassen", fillcolor="#FFF9E6"];
+  "features.workshop" [label="workshop\nworkshopcodes\n7 klassen", fillcolor="#FFF9E6"];
+  "features.e2e" [label="e2e\n(alleen profiel e2e)\n1 klassen", fillcolor="#FFF9E6"];
+  "ingest" [label="ingest\nworker, backoff, status\n12 klassen", fillcolor="#FECB3D"];
+  "snapshot" [label="snapshot\nvoorberekende staat, /api/snapshot\n7 klassen", fillcolor="#FECB3D"];
+  }
+  dwars [label="Dwarsverbanden, door bijna alle pakketten gebruikt:\nconfig (13 klassen: beveiliging, JWT, CORS, rate limiting)\nexception (7), utility (16), cache (3)", shape=note, fillcolor="white", style="filled"];
+  "features.e2e" -> "features.user" [label="2"];
+  "features.e2e" -> "features.user.authentication" [label="3"];
+  "features.measurement" -> "features.meetjestad" [label="6"];
+  "features.measurement" -> "features.station" [label="7"];
+  "features.meetjestad" -> "features.measurement" [label="2"];
+  "features.meetjestad" -> "features.station" [label="2"];
+  "features.neighbourhood" -> "features.measurement" [label="2"];
+  "features.neighbourhood" -> "features.meetjestad" [label="3"];
+  "features.neighbourhood" -> "snapshot" [label="2"];
+  "features.station" -> "features.measurement" [label="10"];
+  "features.station" -> "features.user" [label="6"];
+  "features.user" -> "features.station" [label="5"];
+  "features.user" -> "features.workshop" [label="4"];
+  "features.user.authentication" -> "features.station" [label="3"];
+  "features.user.authentication" -> "features.user" [label="9"];
+  "features.user.authentication" -> "features.user.trustedip" [label="1"];
+  "features.user.authentication" -> "features.workshop" [label="2"];
+  "features.workshop" -> "features.user" [label="5"];
+  "ingest" -> "features.measurement" [label="5"];
+  "ingest" -> "features.meetjestad" [label="2"];
+  "ingest" -> "features.station" [label="2"];
+  "snapshot" -> "features.measurement" [label="4"];
+  "snapshot" -> "features.neighbourhood" [label="7"];
+  "snapshot" -> "features.station" [label="4"];
+  "snapshot" -> "ingest" [label="5"];
+}

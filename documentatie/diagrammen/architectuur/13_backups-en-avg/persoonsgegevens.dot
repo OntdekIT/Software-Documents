@@ -1,0 +1,21 @@
+digraph s {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.3; ranksep=0.8;
+  g [label="Eigenaar of beheerder\n(browser)", fillcolor="#FECB3D"];
+  subgraph cluster_a { label="backend-api"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    reg [label="register / login / my-account\nnaam, e-mail, wachtwoord\n(Argon2-hash), workshopcode, stationcode"];
+    ip [label="trusted-IP\nclient-IP wordt HMAC-SHA256\nmet pepper, IP zelf niet bewaard"];
+    mail [label="EmailSenderService\ne-mail naar het adres van de gebruiker"];
+    adm [label="/api/users, /api/workshops\n(alleen ADMIN of SUPER_ADMIN)"];
+    pub [label="Publieke endpoints\nstations met locatie, naam,\nuserid, registrationCode"];
+  }
+  db [label="MariaDB\nuser, trusted_ip, token, station,\nmeasurement", shape=cylinder, fillcolor="#FECB3D"];
+  smtp [label="Mailserver (SMTP)\nlokaal MailHog", fillcolor="white"];
+  git [label="Git-historie van de backend\nres/dump-...202506121529.sql\n(user-tabel met 3 rijen)", fillcolor="white"];
+  g -> reg; reg -> db; reg -> ip -> db; reg -> mail -> smtp; db -> adm; adm -> g; db -> pub; pub -> g [label="zonder login"];
+  db -> git [style=dashed, label="ooit gedumpt"];
+}

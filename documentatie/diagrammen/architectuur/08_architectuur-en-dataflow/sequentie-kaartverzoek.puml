@@ -1,0 +1,28 @@
+@startuml
+!include ../../stijl.puml
+title Een kaartverzoek voor "nu" (GET /api/neighbourhood/history)
+actor "React-app" as F
+participant "DataFreshnessFilter" as X
+participant "NeighbourhoodController" as C
+participant "SnapshotService" as N
+participant "NeighbourhoodService" as V
+database "MariaDB" as D
+F -> X : GET ?timestamp=...
+X -> X : zet X-Data-As-Of (regel 33)
+X -> C : door
+C -> N : servableAt(timestamp) (regel 50)
+alt binnen 300 s van nu (regel 121)
+  N --> C : huidige snapshot (geheugen)
+  C --> F : 200 JSON, geen databasetoegang
+else ander tijdstip
+  C -> V : computeNeighbourhoodsAtTime (@Cacheable, regel 74)
+  alt cache-treffer (TTL 60 s)
+    V --> C : uit Caffeine
+  else
+    V -> D : metingen uit lokale database
+    V --> C : berekend en gecachet
+  end
+  C --> F : 200 JSON
+end
+note over N : meetjestad.net wordt in dit pad nooit aangeroepen
+@enduml

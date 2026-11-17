@@ -1,0 +1,28 @@
+digraph s {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.25; ranksep=1.1;
+  subgraph cluster_b { label="Bronnen in de backend"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    w [label="IngestWorker + IngestState\nlaatste succes, laatste fout,\nopeenvolgende fouten", fillcolor="#FECB3D"];
+    sn [label="SnapshotService\nversie, bouwtijd, grootte"];
+    sm [label="StationMonitorService\nuitvalcontrole elke 300 s"];
+    lg [label="Logregels (SLF4J)\ninfo, warn, error"];
+    db [label="Database\n(db-check)"];
+  }
+  subgraph cluster_e { label="Zichtbaar via"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    st [label="GET /api/status\n(publiek, JSON)", fillcolor="#FECB3D"];
+    h [label="X-Data-As-Of\nop kaartantwoorden", fillcolor="#FECB3D"];
+    rd [label="/actuator/health/readiness\nUP, DEGRADED na 30 min, DOWN", fillcolor="#FECB3D"];
+    lv [label="/actuator/health/liveness"];
+    out [label="stdout van de container"];
+    ml [label="E-mail aan de stationseigenaar\n(station valt uit of sensorfout)"];
+    hc [label="Docker HEALTHCHECK\n(readiness)"];
+  }
+  w -> st; sn -> st; w -> h; w -> rd; db -> rd; lg -> out; sm -> ml; sm -> lg; w -> lg; sn -> lg;
+  rd -> hc;
+  fe [label="Frontend\n(leest deze signalen nog niet)", fillcolor="white"]; ext [label="Externe monitor of Dokploy\n(configuratie niet vast te stellen)", fillcolor="white"];
+  hc -> ext [style=dashed]; rd -> ext [style=dashed]; st -> ext [style=dashed];
+}

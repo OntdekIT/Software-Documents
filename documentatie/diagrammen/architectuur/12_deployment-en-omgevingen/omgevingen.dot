@@ -1,0 +1,14 @@
+digraph o {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.3;
+  img [label="Een image\n:sha-xxxxxxx", fillcolor="#FECB3D"];
+  t [label="test\nautomatisch bij push\ngeen goedkeuring"];
+  a [label="acceptance\nhandmatig (workflow_dispatch)\nsource_tag invullen\ngoedkeuring aanbevolen"];
+  p [label="production\nhandmatig (workflow_dispatch)\nreviewer verplicht (instelling\nin GitHub, niet vast te stellen)"];
+  img -> t [label="retag :test"]; img -> a [label="retag :acceptance"]; img -> p [label="retag :production"];
+  note [shape=note, fillcolor="white", label="Alleen de omgevingsvariabelen verschillen\n(JWT_SECRET, TRUSTED_IP_PEPPER, DB-wachtwoord,\nFRONTEND_HOST, CORS_ALLOWED_ORIGINS, mail)"];
+}

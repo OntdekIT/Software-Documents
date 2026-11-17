@@ -1,0 +1,17 @@
+digraph k {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.3; ranksep=0.5;
+  r [label="Verzoek\n(Bearer-JWT of niet)", fillcolor="white"];
+  a [label="RateLimitingFilter\nHIGHEST_PRECEDENCE\n600 of 20 per minuut per IP (Bucket4J)", fillcolor="#FECB3D"];
+  b [label="CORS\n(CorsConfig, allowed-origins)"];
+  c [label="JwtAuthenticationFilter\nvoor UsernamePassword-\nAuthenticationFilter"];
+  d [label="Autorisatie\nSecurityConfiguration\n(eerste passende regel)", fillcolor="#FECB3D"];
+  e [label="Controller\n+ GlobalExceptionHandler"];
+  x429 [label="429", fillcolor="white"]; x401 [label="401 / 403", fillcolor="white"];
+  r -> a -> b -> c -> d -> e;
+  a -> x429 [style=dashed, label="te veel"]; d -> x401 [style=dashed];
+}

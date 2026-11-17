@@ -1,0 +1,31 @@
+digraph df {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.4; ranksep=0.7;
+  sensor [label="Meetstation\n(sensor)", fillcolor="white"];
+  mjs [label="meetjestad.net", fillcolor="white"];
+  subgraph cluster_be {
+    label="backend-api"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    w [label="IngestWorker\nelke 300 s, venster = vorige run\nplus 10 min overlap\nmax 30 verzoeken per uur", fillcolor="#FECB3D"];
+    db [label="MariaDB\nmeasurement\n(sleutel: station + tijdstip)", shape=cylinder, fillcolor="#FECB3D"];
+    s [label="SnapshotService\nrebuild() na elke run\natomair wisselen (AtomicReference)", fillcolor="#FECB3D"];
+    ep [label="Endpoints\n/api/snapshot (max-age 30 s)\nlegacy: wijken, stations, time-lapse"];
+    c [label="Caffeine-cache\nandere tijdstippen\nTTL 60 s", fillcolor="#FFF9E6"];
+    h [label="Health en status\n/api/status, X-Data-As-Of\nreadiness DEGRADED na 30 min"];
+  }
+  fe [label="React-app", fillcolor="#FECB3D"];
+  sensor -> mjs [label="publiceert"];
+  mjs -> w [label="GET (enige aanroeper)"];
+  w -> db [label="idempotent opslaan"];
+  w -> s [label="rebuild (ook na fout)"];
+  db -> s [label="leest 24 uur"];
+  s -> ep [label="snapshot in geheugen"];
+  db -> c [label="andere tijdstip\nuit database", style=dashed];
+  c -> ep [style=dashed];
+  w -> h [label="IngestState"];
+  ep -> fe [label="JSON"];
+  h -> fe [label="header en status"];
+}

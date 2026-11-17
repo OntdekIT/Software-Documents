@@ -1,0 +1,33 @@
+@startuml
+!include ../../stijl.puml
+title Inloggen met e-mailcode en vertrouwd IP
+actor Gebruiker as G
+participant "React-app" as F
+participant "UserAuthenticationController" as C
+participant "RateLimiter\n(5 per minuut)" as Q
+participant "TrustedIpService" as T
+participant "TokenService" as K
+participant "EmailSenderService" as E
+participant "JwtService" as J
+G -> F : e-mail en wachtwoord
+F -> C : POST /api/authentication/login
+C -> Q : sleutel "login:IP:e-mail" (UserAuthenticationController.java regel 116)
+C -> C : wachtwoord controleren (Argon2PasswordEncoder, ApplicationConfig)
+C -> T : isTrusted(userId, IP) (regel 124)
+alt IP al vertrouwd
+  C -> J : token (geldig 10 uur, 1 keer in code, regel 58)
+  C --> F : 200 met JWT
+else onbekend IP
+  C -> K : createVerifyToken: 6 cijfers
+  C -> E : sendLoginMail (regel 131)
+  C --> F : 200 requiresVerification
+  G -> F : code uit e-mail
+  F -> C : POST /api/authentication/verify
+  C -> K : verifyToken (max 5 minuten oud, 64) (regel 142)
+  C -> J : token
+  C -> T : remember(userId, IP als HMAC-SHA256) (regel 148)
+  C --> F : 200 met JWT
+end
+F -> F : JWT in localStorage ("token")
+note right of F : daarna Authorization: Bearer
+@enduml
