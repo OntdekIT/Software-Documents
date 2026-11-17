@@ -1,26 +1,8 @@
-# Meet je stad Tilburg
+# MB Ontdekt
 
-Ontdekstation 013 is een organisatie in Tilburg waar jongeren hun talenten kunnen ontdekken op gebied van wetenschap en techniek. In samenwerking met Bibliotheek Midden-Brabant hebben zij een project opgezet rondom het meten van luchtkwaliteit in de regio Tilburg. In de regio staan meerdere sensoren om verschillende waardes op te meten. Om deze meetgegevens weer te geven voor burgers en bedrijven zijn wij begonnen met een nieuwe applicatie. Deze applicatie zal met zijn functionaliteiten kunnen laten zien hoe bepaalde acties van personen invloed hebben op bijvoorbeeld de ventilatie en de luchtkwaliteit zelf.  
+### Introductie
 
+Ontdekstation organiseert samen met Bibliotheek Midden-Brabant workshops voor jong en oud die hun talenten kunnen ontdekken op het gebied van wetenschap en techniek. Er is een project opgezet om de temperatuur en luchtkwaliteit te meten. Er worden workshops gegeven voor het maken van een meetstation. Een meetstation verzamelt data en verstuurt die naar 'Meet je Stad'. Deze web applicatie haalt de data weer op van de API van Meet je Stad. De gegevens worden overzichtelijk weergegeven op de home pagina van de MB-Ontdekt applicatie.
 
-### Language & Frameworks
-- SpringBoot
-- ReactJS - HTML, CSS, Javascript
-- Cypress
-- Leaflet
-
-
-### Repositories
-- [Backend](https://github.com/OntdekIT/Software-BackEnd)
-- [Frontend](https://github.com/OntdekIT/Software-FrontEnd)
-- [Docs](https://https://github.com/OntdekIT/Software-Documents)
-
-
-## Docs
-In Software-Documents staat informatie over het project en de werkwijze van de groep. Software-Documents bevatten de volgende type documenten:
-
-- Overdrachtsdocument - bevat gemaakte keuzes, het instellen en gebruiken van de nodige tools en codeconventies.
-- Architectuur documenten
-- Software documenten
-- Onderzoeks documenten
-- Analyse documenten
+### Opstart instructies
+Voor meer informatie over het opzetten van het project wordt doorverwezen naar de wiki. Bekijk de [Getting Started](https://github.com/OntdekIT/Software-Documents/wiki/Getting-Started) page om zowel de backend als frontend te configureren.
