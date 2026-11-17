@@ -1,0 +1,62 @@
+digraph set { rankdir=TB; graph [fontname="Helvetica", bgcolor="white", pad="0.2"];
+node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+nodesep=0.2; ranksep=0.25; newrank=true;
+subgraph cluster_0 { label="Begin hier"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+d1 [label="01 Overzicht", fillcolor="#FECB3D"];
+d2 [label="02 Leeswijzer", fillcolor="#FECB3D"];
+{ rank=same; d1; d2; }
+d1 -> d2 [style=invis];
+}
+subgraph cluster_1 { label="Wat en waarom"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+d3 [label="03 Analysedocument", fillcolor="#FFF9E6"];
+d4 [label="04 Prioritering", fillcolor="#FFF9E6"];
+d5 [label="05 Domeinmodel", fillcolor="#FFF9E6"];
+d6 [label="06 Woordenlijst", fillcolor="#FFF9E6"];
+{ rank=same; d3; d4; d5; d6; }
+d3 -> d4 [style=invis];
+d4 -> d5 [style=invis];
+d5 -> d6 [style=invis];
+}
+subgraph cluster_2 { label="Hoe het gebouwd is"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+d7 [label="07 C4-model", fillcolor="#FFF9E6"];
+d8 [label="08 Architectuur en dataflow", fillcolor="#FFF9E6"];
+d9 [label="09 Beveiliging", fillcolor="#FFF9E6"];
+d10 [label="10 Foutafhandeling en betrouwbaarheid", fillcolor="#FFF9E6"];
+d11 [label="11 Observability", fillcolor="#FFF9E6"];
+d12 [label="12 Deployment en omgevingen", fillcolor="#FFF9E6"];
+d13 [label="13 Backups en AVG", fillcolor="#FFF9E6"];
+d14 [label="14 Architectuurbeslissingen", fillcolor="#FFF9E6"];
+d21 [label="21 API-document", fillcolor="#FFF9E6"];
+{ rank=same; d7; d8; d9; d10; d11; }
+d7 -> d8 [style=invis];
+d8 -> d9 [style=invis];
+d9 -> d10 [style=invis];
+d10 -> d11 [style=invis];
+{ rank=same; d12; d13; d14; d21; }
+d12 -> d13 [style=invis];
+d13 -> d14 [style=invis];
+d14 -> d21 [style=invis];
+d7 -> d12 [style=invis];
+}
+subgraph cluster_3 { label="Kwaliteit en werkwijze"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+d15 [label="15 Testdocument", fillcolor="#FFF9E6"];
+d16 [label="16 Versiebeheer en werkwijze", fillcolor="#FFF9E6"];
+d17 [label="17 Backlog en sprints", fillcolor="#FFF9E6"];
+d18 [label="18 Agile samenwerking", fillcolor="#FFF9E6"];
+{ rank=same; d15; d16; d17; d18; }
+d15 -> d16 [style=invis];
+d16 -> d17 [style=invis];
+d17 -> d18 [style=invis];
+}
+subgraph cluster_4 { label="Gebruik"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+d19 [label="19 Wireframes en schermen", fillcolor="#FFF9E6"];
+d20 [label="20 Gebruikershandleiding", fillcolor="#FFF9E6"];
+{ rank=same; d19; d20; }
+d19 -> d20 [style=invis];
+}
+d1 -> d3 [style=invis];
+d3 -> d7 [style=invis];
+d12 -> d15 [style=invis];
+d15 -> d19 [style=invis];
+}

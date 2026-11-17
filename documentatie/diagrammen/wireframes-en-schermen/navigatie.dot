@@ -1,0 +1,26 @@
+digraph nav { rankdir=TB; graph [fontname="Helvetica", bgcolor="white", pad="0.2"];
+node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+nodesep=0.25; ranksep=0.45; compound=true;
+subgraph cluster_mobiel { label="Mobiel: onderbalk (smaller dan 1024 px)"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; fontcolor="#111827"; style="rounded";
+mobiel_gast [shape=record, label="{gast|Kaart\lMijn stations\lMeldingen\lInloggen\l}"];
+mobiel_gebruiker [shape=record, label="{gebruiker|Kaart\lMijn stations\lMeldingen\lProfiel\l}"];
+mobiel_beheerder [shape=record, label="{beheerder|Kaart\lMijn stations\lMeldingen\lProfiel\l}"];
+}
+subgraph cluster_desktop { label="Desktop: bovenbalk (maximaal 4 items)"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; fontcolor="#111827"; style="rounded";
+desktop_gast [shape=record, label="{gast|Kaart\lHeatmap\lWijken\lDashboard\l}"];
+desktop_gebruiker [shape=record, label="{gebruiker|Kaart\lHeatmap\lWijken\lDashboard\l}"];
+desktop_beheerder [shape=record, label="{beheerder|Kaart\lHeatmap\lWijken\lDashboard\l}"];
+}
+subgraph cluster_profiel { label="Desktop: profielmenu (uitgelogd: Meer)"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; fontcolor="#111827"; style="rounded";
+profiel_gast [shape=record, label="{gast|Over ons\l}"];
+profiel_gebruiker [shape=record, label="{gebruiker|Mijn stations\lMeldingen\lOver ons\l}"];
+profiel_beheerder [shape=record, label="{beheerder|Mijn stations\lMeldingen\lOver ons\lBeheer\l}"];
+}
+subgraph cluster_ontdek { label="Mobiel: profielpagina, Meer ontdekken"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; fontcolor="#111827"; style="rounded";
+ontdek_gebruiker [shape=record, label="{gebruiker|Heatmap\lWijken\lDashboard\lOver ons\l}"];
+ontdek_beheerder [shape=record, label="{beheerder|Heatmap\lWijken\lDashboard\lOver ons\lBeheer\l}"];
+}
+mobiel_gast -> profiel_gast [style=invis];
+desktop_gast -> ontdek_gebruiker [style=invis];
+}

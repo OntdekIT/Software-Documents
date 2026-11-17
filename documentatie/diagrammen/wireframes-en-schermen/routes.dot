@@ -1,0 +1,54 @@
+digraph routes { rankdir=TB; graph [fontname="Helvetica", bgcolor="white", pad="0.2"];
+node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+ranksep=0.25; nodesep=0.3; newrank=true;
+subgraph cluster_kaart { label="Kaart"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+n0 [label="/\nKaart", fillcolor="#FECB3D"];
+n1 [label="/wijk/:id\nKaart", fillcolor="#FECB3D"];
+n0 -> n1 [style=invis];
+}
+subgraph cluster_openbaar { label="Openbaar"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+n2 [label="/about\nAbout", fillcolor="#FFF9E6"];
+n3 [label="/dashboard\nNetworkDashboard", fillcolor="#FFF9E6"];
+n4 [label="/heatmap\nHeatmap", fillcolor="#FFF9E6"];
+n5 [label="/stations/:stationId\nStationDetails", fillcolor="#FFF9E6"];
+n6 [label="/stations/:stationId/edit\nEditStation", fillcolor="#FFF9E6"];
+n7 [label="/wijken\nWijken", fillcolor="#FFF9E6"];
+n2 -> n3 [style=invis];
+n3 -> n4 [style=invis];
+n4 -> n5 [style=invis];
+n5 -> n6 [style=invis];
+n6 -> n7 [style=invis];
+}
+subgraph cluster_auth { label="Inloggen"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+n8 [label="/auth/forgot-password\nForgotPassword", fillcolor="#FFF9E6"];
+n9 [label="/auth/login\nLogin", fillcolor="#FFF9E6"];
+n10 [label="/auth/logout\nLogout", fillcolor="#FFF9E6"];
+n11 [label="/auth/register\nRegister", fillcolor="#FFF9E6"];
+n12 [label="/auth/reset-password\nResetPassword", fillcolor="#FFF9E6"];
+n8 -> n9 [style=invis];
+n9 -> n10 [style=invis];
+n10 -> n11 [style=invis];
+n11 -> n12 [style=invis];
+}
+subgraph cluster_ingelogd { label="Ingelogd (ProtectedRoute)"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+n13 [label="/meldingen\nNotifications", fillcolor="#FFF9E6"];
+n14 [label="/my/account\nProfile", fillcolor="#FFF9E6"];
+n15 [label="/my/stations\nMyStationsOverview", fillcolor="#FFF9E6"];
+n16 [label="/my/stations/claim\nClaimStation", fillcolor="#FFF9E6"];
+n13 -> n14 [style=invis];
+n14 -> n15 [style=invis];
+n15 -> n16 [style=invis];
+}
+subgraph cluster_leg { label="Doorverwijzingen (legacy-routes.js)"; fontname="Helvetica-Bold"; fontsize=12; color="#4B5563"; style="rounded,dashed"; fontcolor="#111827";
+l_newheatmap [label="/newheatmap\n-> /heatmap", style="filled,rounded,dashed", fillcolor="white"];
+l_kaart [label="/kaart\n-> /", style="filled,rounded,dashed", fillcolor="white"];
+l_newhome [label="/newhome\n-> /", style="filled,rounded,dashed", fillcolor="white"];
+l_stations [label="/stations\n-> /", style="filled,rounded,dashed", fillcolor="white"];
+l_wijken__id [label="/wijken/:id\n-> /wijk/:id", style="filled,rounded,dashed", fillcolor="white"];
+l_newheatmap -> l_kaart [style=invis];
+l_kaart -> l_newhome [style=invis];
+l_newhome -> l_stations [style=invis];
+l_stations -> l_wijken__id [style=invis];
+}
+}

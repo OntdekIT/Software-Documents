@@ -1,0 +1,24 @@
+digraph ctx { rankdir=TB; graph [fontname="Helvetica", bgcolor="white", pad="0.2"];
+node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+nodesep=0.4; ranksep=0.55;
+bez [label="Bezoeker\n(niet ingelogd)", shape=box, fillcolor="white"];
+eig [label="Stationeigenaar\n(rol USER)", shape=box, fillcolor="white"];
+adm [label="Beheerder\n(rol ADMIN of SUPER_ADMIN)", shape=box, fillcolor="white"];
+subgraph cluster_app { label="MB Ontdekt (ClimateChecker)"; fontname="Helvetica-Bold"; color="#8A6408"; style="rounded"; fontsize=12;
+fe [label="Webapp\nReact 18.3.1, MapLibre", fillcolor="#FECB3D"];
+be [label="Backend-API\nSpring Boot 3.3.5, Java 21", fillcolor="#FECB3D"];
+db [label="Database\nMariaDB", shape=cylinder, fillcolor="#FECB3D"];
+}
+mjs [label="Meet je Stad\nmeetjestad.net\n(meetdata van de stations)", fillcolor="white"];
+tegel [label="Kaartachtergrond\ntiles.openfreemap.org", fillcolor="white"];
+mail [label="Mailserver\n(SMTP)", fillcolor="white"];
+bez -> fe;
+eig -> fe;
+adm -> fe;
+fe -> be [label="REST (JSON)"];
+be -> db [label="lezen en schrijven"];
+be -> mjs [label="haalt metingen op\n(elke 5 min)", dir=forward];
+fe -> tegel [label="kaarttegels", style=dashed];
+be -> mail [label="inlogcodes", style=dashed];
+}

@@ -1,0 +1,22 @@
+digraph stroom { rankdir=TB; graph [fontname="Helvetica", bgcolor="white", pad="0.2"];
+node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+nodesep=0.3; ranksep=0.3;
+a [label="1. Beheerder maakt een workshopcode\n(POST /api/workshops)", fillcolor="#FECB3D"];
+b [label="2. Bezoeker vult het registratieformulier in\n(naam, e-mail, wachtwoord, stationcode, workshopcode)", fillcolor="#FFF9E6"];
+c [label="3. Backend controleert wachtwoord, workshopcode\nen stationcode en koppelt het station", fillcolor="#FFF9E6"];
+d [label="4. Backend mailt een code\n(sendSignupMail)", fillcolor="#FFF9E6"];
+e [label="5. Bezoeker voert de code in\n(POST /api/authentication/verify)", fillcolor="#FFF9E6"];
+f [label="6. Claim-wizard opent op stap 2\n(stationnummer onthouden in localStorage)", fillcolor="#FFF9E6"];
+g [label="7. Privacy, naam, controle, Claimen\n(PUT /api/meetstation/claim)", fillcolor="#FECB3D"];
+h [label="Backend weigert: station is al geclaimd (409)\nde wizard toont 'Meetstation claimen is mislukt'", fillcolor="#FFF9E6", style="filled,rounded,dashed"];
+i [label="Mijn stations", fillcolor="#FECB3D"];
+a -> b;
+b -> c;
+c -> d;
+d -> e;
+e -> f;
+f -> g;
+g -> h [style=dashed, label="altijd, als registratie\nhet station al koppelde"];
+h -> i;
+}
