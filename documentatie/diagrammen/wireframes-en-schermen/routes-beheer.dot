@@ -1,0 +1,23 @@
+digraph beheer { rankdir=TB; graph [fontname="Helvetica", bgcolor="white", pad="0.2"];
+node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+ranksep=0.25; nodesep=0.3;
+subgraph cluster_admin { label="Beheer (ProtectedRoute: ADMIN of SUPER_ADMIN), tabs via AdminLayout"; fontname="Helvetica-Bold"; fontsize=12; color="#8A6408"; style="rounded"; fontcolor="#111827";
+n17 [label="/admin\nAdminDashboard", fillcolor="#FFF9E6"];
+n18 [label="/admin/data-coverage\nDataCoverage", fillcolor="#FFF9E6"];
+n19 [label="/admin/stations\nStationOverview", fillcolor="#FFF9E6"];
+n20 [label="/admin/stations/:stationId\nStationDetails", fillcolor="#FFF9E6"];
+n21 [label="/admin/stations/toevoegen\nMeetstationToevoegen", fillcolor="#FFF9E6"];
+n22 [label="/admin/users\nUserOverview", fillcolor="#FFF9E6"];
+n23 [label="/admin/users/:userId\nUserDetails", fillcolor="#FFF9E6"];
+n24 [label="/admin/workshop-codes\nWorkshopCodeOverview", fillcolor="#FFF9E6"];
+n25 [label="/admin/workshop-codes/create\nCreateWorkshopCode", fillcolor="#FFF9E6"];
+n17 -> n19 [style=invis];
+n18 -> n20 [style=invis];
+n19 -> n21 [style=invis];
+n20 -> n22 [style=invis];
+n21 -> n23 [style=invis];
+n22 -> n24 [style=invis];
+n23 -> n25 [style=invis];
+}
+}
