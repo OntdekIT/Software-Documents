@@ -4,6 +4,8 @@ Naslagwerk voor ontwikkelaars over alle HTTP-endpoints van de ClimateChecker-bac
 
 Bron van waarheid: de code in `OntdekIT/Software-BackEnd`, branch `s3nj26_dev` (commit `e8c567b`). Alles in dit document is afgeleid uit de controllers, DTO's, services en de securityconfiguratie. Waar het gedrag uit de code niet eenduidig te halen is, staat **onduidelijk** vermeld in plaats van een aanname.
 
+> **OpenAPI:** de backend publiceert ook een door de code gegenereerde specificatie (`/v3/api-docs`) met Swagger UI (`/swagger-ui.html`), beschikbaar met het dev- of test-profiel (Software-BackEnd #196, PR #197). Dit document is het handgeschreven naslagwerk en kan achterlopen op de code; bij verschil geldt de OpenAPI-spec.
+
 ## Inhoudsopgave
 
 - [1. Overzicht](#1-overzicht)
