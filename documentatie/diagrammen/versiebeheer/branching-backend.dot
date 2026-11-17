@@ -1,0 +1,30 @@
+digraph G { graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+node [fontname="Helvetica", fontcolor="#111827", color="#111827", style="filled,rounded", shape=box, fillcolor="#FFF9E6"];
+edge [fontname="Helvetica", color="#111827", fontcolor="#4B5563"];
+ rankdir=LR; nodesep=0.2; ranksep=0.5; node [fontsize=19]; edge [fontsize=17];
+subgraph cluster_backend { label="Software-BackEnd, PR's sinds 2026-09-15"; fontsize=14; fontname="Helvetica-Bold"; fontcolor="#8A6408"; color="#8A6408"; style="rounded";
+backend_main [fillcolor="#FECB3D", label="main\n9d5dc32 (+0)"];
+backend_s3nj26 [fillcolor="#FECB3D", label="s3nj26\n520f2d4 (+19)"];
+backend_s3nj26_dev [fillcolor="#FECB3D", label="s3nj26_dev\ne104152 (+51)"];
+backend_main -> backend_s3nj26 -> backend_s3nj26_dev [style=dashed, arrowhead=none, color="#4B5563", constraint=true];
+backend_h_2255914725 [label="ci/*"];
+backend_h_2403758892 [label="docs/*"];
+backend_h_662181000 [label="feat/*"];
+backend_h_2612442369 [label="feature/*"];
+backend_h_87754026 [label="fix/*"];
+backend_h_2952362593 [label="perf/*"];
+backend_h_3615507440 [label="s3vj26-teamA_dev"];
+backend_h_2473994252 [label="test/*"];
+backend_h_2255914725 -> backend_s3nj26 [label="3 (3+0)", penwidth=1.6];
+backend_h_2403758892 -> backend_s3nj26_dev [label="1 (0+1)", penwidth=1.2];
+backend_h_662181000 -> backend_s3nj26_dev [label="10 (4+6)", penwidth=3.0];
+backend_h_2612442369 -> backend_s3nj26 [label="6 (6+0)", penwidth=2.2];
+backend_h_2612442369 -> backend_s3nj26_dev [label="1 (1+0)", penwidth=1.2];
+backend_h_87754026 -> backend_s3nj26 [label="2 (2+0)", penwidth=1.4];
+backend_h_87754026 -> backend_s3nj26_dev [label="4 (4+0)", penwidth=1.8];
+backend_h_2952362593 -> backend_s3nj26_dev [label="1 (1+0)", penwidth=1.2];
+backend_h_3615507440 -> backend_main [label="1 (1+0)", penwidth=1.2];
+backend_h_2473994252 -> backend_s3nj26 [label="4 (4+0)", penwidth=1.8];
+backend_h_2473994252 -> backend_s3nj26_dev [label="1 (1+0)", penwidth=1.2];
+}
+}

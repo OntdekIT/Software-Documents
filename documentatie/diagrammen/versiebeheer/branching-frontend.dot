@@ -1,0 +1,32 @@
+digraph G { graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+node [fontname="Helvetica", fontcolor="#111827", color="#111827", style="filled,rounded", shape=box, fillcolor="#FFF9E6"];
+edge [fontname="Helvetica", color="#111827", fontcolor="#4B5563"];
+ rankdir=LR; nodesep=0.2; ranksep=0.5; node [fontsize=19]; edge [fontsize=17];
+subgraph cluster_frontend { label="Software-FrontEnd, PR's sinds 2026-09-15"; fontsize=14; fontname="Helvetica-Bold"; fontcolor="#8A6408"; color="#8A6408"; style="rounded";
+frontend_main [fillcolor="#FECB3D", label="main\nea38790 (+0)"];
+frontend_s3nj26 [fillcolor="#FECB3D", label="s3nj26\n49ffe68 (+22)"];
+frontend_s3nj26_dev [fillcolor="#FECB3D", label="s3nj26_dev\n13fc1e2 (+88)"];
+frontend_main -> frontend_s3nj26 -> frontend_s3nj26_dev [style=dashed, arrowhead=none, color="#4B5563", constraint=true];
+frontend_h_990595527 [label="DEV-s3vj26-teamA"];
+frontend_h_2255914725 [label="ci/*"];
+frontend_h_662181000 [label="feat/*"];
+frontend_h_2612442369 [label="feature/*"];
+frontend_h_87754026 [label="fix/*"];
+frontend_h_700993689 [label="integration/*"];
+frontend_h_43423321 [label="overig"];
+frontend_h_2952362593 [label="perf/*"];
+frontend_h_425777083 [label="s3nj26_dev"];
+frontend_x_673236002 [fillcolor="#FECB3D", label="integration/kaart-en-navigatie"];
+frontend_h_990595527 -> frontend_main [label="1 (1+0)", penwidth=1.2];
+frontend_h_2255914725 -> frontend_s3nj26_dev [label="2 (2+0)", penwidth=1.4];
+frontend_h_662181000 -> frontend_x_673236002 [label="4 (4+0)", penwidth=1.8];
+frontend_h_662181000 -> frontend_s3nj26_dev [label="16 (10+6)", penwidth=4.2];
+frontend_h_2612442369 -> frontend_s3nj26_dev [label="3 (3+0)", penwidth=1.6];
+frontend_h_87754026 -> frontend_s3nj26 [label="1 (0+1)", penwidth=1.2];
+frontend_h_87754026 -> frontend_s3nj26_dev [label="3 (2+1)", penwidth=1.6];
+frontend_h_700993689 -> frontend_s3nj26_dev [label="1 (0+1)", penwidth=1.2];
+frontend_h_43423321 -> frontend_s3nj26_dev [label="1 (0+1)", penwidth=1.2];
+frontend_h_2952362593 -> frontend_s3nj26_dev [label="1 (1+0)", penwidth=1.2];
+frontend_h_425777083 -> frontend_s3nj26 [label="4 (0+4)", penwidth=1.8];
+}
+}

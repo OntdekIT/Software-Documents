@@ -1,0 +1,14 @@
+digraph G { graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+node [fontname="Helvetica", fontcolor="#111827", color="#111827", style="filled,rounded", shape=box, fillcolor="#FFF9E6"];
+edge [fontname="Helvetica", color="#111827", fontcolor="#4B5563"];
+ rankdir=TB; nodesep=0.05; ranksep=0.08; edge [style=invis];
+n0 [shape=box, style="filled", fixedsize=true, width=5.00, height=0.7, fillcolor="#FECB3D", label=<<B>End-to-end (Cypress, frontend)</B><BR/><FONT COLOR="#4B5563" POINT-SIZE="11">1 actief, 1 overgeslagen (describe.skip)</FONT>>];
+n1 [shape=box, style="filled", fixedsize=true, width=7.20, height=0.7, fillcolor="#FECB3D", label=<<B>Integratie met echte database (Testcontainers, backend)</B><BR/><FONT COLOR="#4B5563" POINT-SIZE="11">11 tests, waarvan 11 overgeslagen in CI</FONT>>];
+n0 -> n1;
+n2 [shape=box, style="filled", fixedsize=true, width=8.00, height=0.7, fillcolor="#FFF9E6", label=<<B>Spring-context en API-tests (MockMvc, H2, backend)</B><BR/><FONT COLOR="#4B5563" POINT-SIZE="11">94 tests in 16 klassen</FONT>>];
+n1 -> n2;
+n3 [shape=box, style="filled", fixedsize=true, width=8.80, height=0.7, fillcolor="#FFF9E6", label=<<B>Unit-tests (JUnit en Mockito, backend)</B><BR/><FONT COLOR="#4B5563" POINT-SIZE="11">279 tests in 41 klassen</FONT>>];
+n2 -> n3;
+n4 [shape=box, style="filled", fixedsize=true, width=8.80, height=0.7, fillcolor="#FFF9E6", label=<<B>Unit-tests (node:test, frontend)</B><BR/><FONT COLOR="#4B5563" POINT-SIZE="11">168 tests in 23 bestanden</FONT>>];
+n3 -> n4;
+}
