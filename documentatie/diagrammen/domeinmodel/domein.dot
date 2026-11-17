@@ -1,0 +1,20 @@
+digraph D {
+graph [fontname="Helvetica", rankdir=TB, nodesep=0.6, ranksep=0.9, pad=0.3]
+node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", margin="0.2,0.12"]
+edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=10, arrowhead=none]
+gebruiker [label=<<B>Gebruiker</B><BR/><FONT POINT-SIZE="10">naam, e-mail, wachtwoord (Argon2)<BR/>rol: gebruiker, beheerder, superbeheerder</FONT>>, fillcolor="#FECB3D"];
+workshop [label=<<B>Workshop</B><BR/><FONT POINT-SIZE="10">workshopcode, aangemaakt, verloopt op</FONT>>];
+station [label=<<B>Meetstation</B><BR/><FONT POINT-SIZE="10">id, naam, zichtbaar voor iedereen,<BR/>registratiecode, actief,<BR/>storingsvlaggen: temp, vocht, fijnstof, locatie,<BR/>laatst bekende positie</FONT>>, fillcolor="#FECB3D"];
+meting [label=<<B>Meting</B><BR/><FONT POINT-SIZE="10">tijdstip, positie, temperatuur, vochtigheid,<BR/>PM2.5, PM10, positie overgenomen?</FONT>>, fillcolor="#FECB3D"];
+wijk [label=<<B>Wijk</B><BR/><FONT POINT-SIZE="10">naam</FONT>>, fillcolor="#FECB3D"];
+grens [label=<<B>Wijkgrens</B><BR/><FONT POINT-SIZE="10">geordende hoekpunten (breedte, lengte)</FONT>>];
+inlogcode [label=<<B>Inlog- of resetcode</B><BR/><FONT POINT-SIZE="10">cijfercode, type, aanmaaktijd</FONT>>];
+ip [label=<<B>Vertrouwd IP</B><BR/><FONT POINT-SIZE="10">alleen een HMAC-hash van het adres</FONT>>];
+gebruiker -> workshop [taillabel="*", headlabel="0..1", label="heeft meegedaan aan", style=solid];
+gebruiker -> station [taillabel="1", headlabel="*", label="is eigenaar van"];
+station -> meting [taillabel="1", headlabel="*", label="levert"];
+wijk -> grens [taillabel="1", headlabel="*", label="wordt begrensd door"];
+meting -> wijk [style=dashed, label="valt in (berekend, niet opgeslagen)", color="#8A6408", fontcolor="#8A6408"];
+gebruiker -> inlogcode [style=dashed, taillabel="1", headlabel="*", label="ontvangt (geen FK in DB)"];
+gebruiker -> ip [taillabel="1", headlabel="*", label="vertrouwt"];
+}

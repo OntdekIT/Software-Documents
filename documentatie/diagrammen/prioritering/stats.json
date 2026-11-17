@@ -1,0 +1,768 @@
+{
+ "totaal_items": 130,
+ "met_moscow": 57,
+ "zonder_moscow": 73,
+ "zonder_status": {
+  "Done": 60,
+  "Not Planned": 1,
+  "Todo": 12
+ },
+ "zonder_repo": {
+  "Documents": 4,
+  "concept": 2,
+  "BackEnd": 40,
+  "FrontEnd": 27
+ },
+ "moscow_status": {
+  "Must have": {
+   "Todo": 11,
+   "Not Planned": 2,
+   "Done": 5
+  },
+  "Should have": {
+   "Todo": 8,
+   "Done": 5,
+   "Not Planned": 13,
+   "In Progress": 1
+  },
+  "Could have": {
+   "Not Planned": 5,
+   "Done": 3,
+   "Todo": 2,
+   "In Progress": 1
+  },
+  "Won't have": {
+   "Not Planned": 1
+  }
+ },
+ "sp_moscow": {
+  "Must have": 85,
+  "Should have": 100,
+  "Could have": 47,
+  "Won't have": 8
+ },
+ "sp_open_moscow": {
+  "Must have": 51,
+  "Should have": 39,
+  "Could have": 14,
+  "Won't have": 0
+ },
+ "epic_status": {
+  "Documentatie & overdracht": {
+   "Todo": 3,
+   "Done": 1,
+   "Not Planned": 3
+  },
+  "Grafieken & visualisatie": {
+   "Done": 3,
+   "Todo": 1,
+   "In Progress": 1
+  },
+  "Onderzoek & advies": {
+   "Not Planned": 6,
+   "Todo": 3
+  },
+  "DevOps, hosting & OTAP": {
+   "Not Planned": 3,
+   "Done": 4,
+   "Todo": 4
+  },
+  "Data-import & performance": {
+   "Not Planned": 1,
+   "Todo": 3
+  },
+  "Notificaties": {
+   "Not Planned": 1
+  },
+  "Meetstation-beheer": {
+   "Not Planned": 1,
+   "Todo": 1
+  },
+  "Project & samenwerking": {
+   "Todo": 2,
+   "Not Planned": 5,
+   "Done": 2
+  },
+  "Datakwaliteit & betrouwbaarheid": {
+   "Todo": 3,
+   "Done": 2,
+   "In Progress": 1
+  },
+  "Dashboard & overzicht": {
+   "Todo": 1,
+   "Not Planned": 1,
+   "Done": 1
+  }
+ },
+ "sp_epic": {
+  "Documentatie & overdracht": 24,
+  "Grafieken & visualisatie": 31,
+  "Onderzoek & advies": 30,
+  "DevOps, hosting & OTAP": 56,
+  "Data-import & performance": 21,
+  "Notificaties": 5,
+  "Meetstation-beheer": 13,
+  "Project & samenwerking": 14,
+  "Datakwaliteit & betrouwbaarheid": 30,
+  "Dashboard & overzicht": 16
+ },
+ "must_per_epic": {
+  "Documentatie & overdracht": 2,
+  "Grafieken & visualisatie": 0,
+  "Onderzoek & advies": 2,
+  "DevOps, hosting & OTAP": 6,
+  "Data-import & performance": 1,
+  "Notificaties": 0,
+  "Meetstation-beheer": 0,
+  "Project & samenwerking": 5,
+  "Datakwaliteit & betrouwbaarheid": 1,
+  "Dashboard & overzicht": 1
+ },
+ "sprints": {
+  "Sprint 4": {
+   "start": "2026-12-12",
+   "dagen": 35
+  },
+  "Sprint 3": {
+   "start": "2026-11-02",
+   "dagen": 40
+  }
+ },
+ "items_mc": [
+  {
+   "repo": "Documents",
+   "nummer": 88,
+   "titel": "Testplan opstellen",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "Documentatie & overdracht",
+   "sp": 3,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 108,
+   "titel": "Als een gebruiker wil ik tempratuur grafieken hebben die van een interval van 30 minuten de tempratuur weergeven zodat ik een periodieke weergave heb van de tempratuur over de dag",
+   "status": "Done",
+   "moscow": "Should have",
+   "epic": "Grafieken & visualisatie",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 79,
+   "titel": "Meelopen bij een workshop Meetstation bouwen",
+   "status": "Not Planned",
+   "moscow": "Could have",
+   "epic": "Onderzoek & advies",
+   "sp": 2,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 179,
+   "titel": "E-mailserver in eigen beheer nemen",
+   "status": "Not Planned",
+   "moscow": "Could have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 178,
+   "titel": "Docker deployment implementatie",
+   "status": "Done",
+   "moscow": "Should have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 150,
+   "titel": "'Over ons' pagina invullen",
+   "status": "Done",
+   "moscow": "Could have",
+   "epic": "Documentatie & overdracht",
+   "sp": 2,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 118,
+   "titel": "Als een Demo gebruiker wil ik grote datasets in kleinere blokken verwerken zodat ik fouten en performanceproblemen tijdens de opstartfase kan voorkomen.",
+   "status": "Not Planned",
+   "moscow": "Could have",
+   "epic": "Data-import & performance",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 148,
+   "titel": "Notificatievoorkeuren in het gebruikersprofiel",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Notificaties",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 97,
+   "titel": "Onderzoek toegang tot de centrale database van Meet je stad",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Onderzoek & advies",
+   "sp": 5,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 96,
+   "titel": "Datastroom in kaart brengen van sensor tot applicatie",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Documentatie & overdracht",
+   "sp": 3,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 95,
+   "titel": "Onderzoek hostingopties en OTAP-inrichting",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Onderzoek & advies",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 94,
+   "titel": "Adviesdocument datasynchronisatie",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Documentatie & overdracht",
+   "sp": 5,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 90,
+   "titel": "Voorkeurskanaal voor notificaties achterhalen",
+   "status": "Not Planned",
+   "moscow": "Could have",
+   "epic": "Onderzoek & advies",
+   "sp": 2,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 173,
+   "titel": "Acceptatie- en productieomgeving opzetten",
+   "status": "Not Planned",
+   "moscow": "Must have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 8,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 171,
+   "titel": "Automatisch uitrollen naar de testomgeving",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 172,
+   "titel": "Testomgeving opzetten",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 5,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 170,
+   "titel": "Buildpijplijn: automatisch bouwen en testen",
+   "status": "Done",
+   "moscow": "Must have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 8,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 81,
+   "titel": "Definitieve keuze hosting en OTAP",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 3,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 111,
+   "titel": "Als een klant wil ik een enquete voor meetstation-eigenaren zodat we een beter inzicht kunnen krijgen in de locatie en omgeving van het meetstation",
+   "status": "Not Planned",
+   "moscow": "Won't have",
+   "epic": "Meetstation-beheer",
+   "sp": 8,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 86,
+   "titel": "Overdrachtsdocument voor de volgende groep",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Documentatie & overdracht",
+   "sp": 5,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 85,
+   "titel": "Demo en eindoplevering aan Wil",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Project & samenwerking",
+   "sp": 3,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 169,
+   "titel": "Healthcheck en monitoring",
+   "status": "Done",
+   "moscow": "Should have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 98,
+   "titel": "Product backlog prioriteren samen met Wil",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Project & samenwerking",
+   "sp": 2,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 174,
+   "titel": "Applicatie containeriseren met Docker",
+   "status": "Done",
+   "moscow": "Must have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 87,
+   "titel": "Gebruikerstest met een eigenaar van een meetstation",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Onderzoek & advies",
+   "sp": 3,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 84,
+   "titel": "Status van de bestaande gebruikersdatabase navragen",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Onderzoek & advies",
+   "sp": 2,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 82,
+   "titel": "Exact e-mailadres van Wil verifieren",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Project & samenwerking",
+   "sp": 1,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 103,
+   "titel": "Als ontwikkelaar wil ik documentatie inzien over alle backend API endpoints",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Documentatie & overdracht",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 80,
+   "titel": "Contactpersoon bij Meet je stad Amersfoort",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Project & samenwerking",
+   "sp": 1,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 99,
+   "titel": "Vervolgafspraak fysiek plannen op het Ontdekstation",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Project & samenwerking",
+   "sp": 1,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 176,
+   "titel": "Eenmalige import van historische meetdata",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "Data-import & performance",
+   "sp": 5,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 100,
+   "titel": "GitHub-toegang regelen voor alle groepsleden",
+   "status": "Not Planned",
+   "moscow": "Must have",
+   "epic": "Project & samenwerking",
+   "sp": 1,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 93,
+   "titel": "Schaalbaarheid en clustering bewust buiten scope houden",
+   "status": "Not Planned",
+   "moscow": "Could have",
+   "epic": "Documentatie & overdracht",
+   "sp": 1,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 91,
+   "titel": "Inventarisatie van de bestaande registratiefunctionaliteit",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Onderzoek & advies",
+   "sp": 3,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 83,
+   "titel": "Naam van de eigen hostingomgeving van Wil navragen",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Project & samenwerking",
+   "sp": 1,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 177,
+   "titel": "Nagestuurde (late) metingen correct verwerken",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "Datakwaliteit & betrouwbaarheid",
+   "sp": 5,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 92,
+   "titel": "Bepalen welke regio's in de lokale kopie komen",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "Onderzoek & advies",
+   "sp": 3,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 102,
+   "titel": "Rolverdeling vastleggen",
+   "status": "Done",
+   "moscow": "Must have",
+   "epic": "Project & samenwerking",
+   "sp": 2,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 96,
+   "titel": "Als een bezoeker wil ik een dashboard hebben, zodat ik in één oogopslag de meetgegevens kan zien",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Dashboard & overzicht",
+   "sp": 8,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 98,
+   "titel": "Als een bezoeker wil ik geen onrealistische meetwaarden kunnen zien, zodat de gegevens op het dashboard kloppen",
+   "status": "Done",
+   "moscow": "Should have",
+   "epic": "Datakwaliteit & betrouwbaarheid",
+   "sp": 3,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 102,
+   "titel": "Als gebruiker wil ik meetstations kunnen vergelijken met elkaar én met de gemiddelde waarden, zodat ik verschillen en patronen beter kan analyseren.",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "Grafieken & visualisatie",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 103,
+   "titel": "Als gebruiker wil ik in vier vensters de minimum-, maximum-, mediane waarde en het geselecteerde station kunnen zien, zodat ik snel inzicht krijg in de meetresultaten.",
+   "status": "Done",
+   "moscow": "Could have",
+   "epic": "Grafieken & visualisatie",
+   "sp": 8,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 104,
+   "titel": "Als gebruiker wil ik tijdsopnames kunnen genereren voor de heatmap, zodat ik veranderingen in waarden over de tijd visueel kan volgen.",
+   "status": "Done",
+   "moscow": "Could have",
+   "epic": "Grafieken & visualisatie",
+   "sp": 8,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 109,
+   "titel": "Als een meetstation eigenaar moet de locatie van het meestation gebaseerd worden op de laatst bekende GPS-locatie, zodat de locatie altijd recent en up to date is.",
+   "status": "Todo",
+   "moscow": "Could have",
+   "epic": "Meetstation-beheer",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 121,
+   "titel": "Als Gebruiker wil ik inzicht krijgen in uitvalmomenten, actieve meetstations en hun fijnstofmetingen binnen één dashboard zodat ik patronen kan herkennen, de meetkwaliteit kan beoordelen en betrouwbare conclusies kan trekken.",
+   "status": "Not Planned",
+   "moscow": "Should have",
+   "epic": "Dashboard & overzicht",
+   "sp": 5,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 89,
+   "titel": "AVG-check op persoons- en locatiegegevens",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Onderzoek & advies",
+   "sp": 5,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 149,
+   "titel": "Wireframes voor de nieuwe publiekskaart",
+   "status": "Done",
+   "moscow": "Should have",
+   "epic": "Dashboard & overzicht",
+   "sp": 3,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 175,
+   "titel": "Omgaan met dubbele, ontbrekende en nagestuurde metingen",
+   "status": "Done",
+   "moscow": "Must have",
+   "epic": "Datakwaliteit & betrouwbaarheid",
+   "sp": 8,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "Documents",
+   "nummer": 101,
+   "titel": "Samenwerkingscontract opstellen",
+   "status": "Done",
+   "moscow": "Must have",
+   "epic": "Project & samenwerking",
+   "sp": 2,
+   "sprint": null,
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 120,
+   "titel": "Als een gebruiker wil ik weten waarom we wisselend data ontvangen van de fijnstofmeetstations meetstations zodat ik de betrouwbaarheid van de meetnetwerken kan beoordelen en verbanden tussen missende data in zicht kan brengen",
+   "status": "In Progress",
+   "moscow": "Could have",
+   "epic": "Datakwaliteit & betrouwbaarheid",
+   "sp": 8,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 105,
+   "titel": "Als gebruiker wil ik kunnen inzoomen op overlappende grafieken of specifieke tijdsperiodes, zodat ik gedetailleerder data kan bekijken.",
+   "status": "In Progress",
+   "moscow": "Should have",
+   "epic": "Grafieken & visualisatie",
+   "sp": 5,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 182,
+   "titel": "Als beheerder wil ik dat de gelekte MailSlurp-key geroteerd is en elke omgeving een eigen JWT_SECRET heeft, zodat niemand met oude of standaard sleutels toegang krijgt",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 2,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 183,
+   "titel": "Als ontwikkelaar wil ik de testdekking van de backend kunnen meten en verhogen, zodat we wijzigingen aan de synchronisatie veilig kunnen doorvoeren",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "DevOps, hosting & OTAP",
+   "sp": 5,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 184,
+   "titel": "Als beheerder wil ik dat ook de mail- en PDF-code via de logger logt in plaats van System.out, zodat alle meldingen op één plek met een niveau terug te vinden zijn",
+   "status": "Todo",
+   "moscow": "Could have",
+   "epic": "Datakwaliteit & betrouwbaarheid",
+   "sp": 1,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "BackEnd",
+   "nummer": 185,
+   "titel": "Als gebruiker wil ik dat metingen zonder geldige GPS-positie de laatst bekende locatie van het meetstation krijgen, zodat deze metingen niet worden weggegooid",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "Datakwaliteit & betrouwbaarheid",
+   "sp": 5,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 122,
+   "titel": "Als Ontwikkelaar wil ik gebruikersdata en metadata gescheiden opslaan en een kopie van de Amersfoort-database gebruiken zodat het systeem schaalbaar, veilig blijft en onze meetdata-verwerking consistent is.",
+   "status": "Todo",
+   "moscow": "Must have",
+   "epic": "Data-import & performance",
+   "sp": 8,
+   "sprint": "Sprint 3",
+   "type": "Issue"
+  },
+  {
+   "repo": "FrontEnd",
+   "nummer": 119,
+   "titel": "Als een gebruiker wil ik weten op welk moment de systeeminitialisatie moet plaatsvinden zodat ik dit proces gecontroleerd kan uitvoeren.",
+   "status": "Todo",
+   "moscow": "Should have",
+   "epic": "Data-import & performance",
+   "sp": 3,
+   "sprint": "Sprint 4",
+   "type": "Issue"
+  }
+ ],
+ "totaal_sp_mc": 240,
+ "sp_per_waarde": {
+  "3": 10,
+  "5": 23,
+  "2": 8,
+  "8": 9,
+  "1": 7
+ }
+}

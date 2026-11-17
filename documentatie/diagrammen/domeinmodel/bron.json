@@ -1,0 +1,100 @@
+{
+ "backend_sha": "e104152e572449be91d75b1d86a3bcecd6d4f5d0",
+ "ref": "origin/s3nj26_dev",
+ "entities": {
+  "Measurement": {
+   "tabel": "measurement",
+   "bestand": "features/measurement/Measurement.java",
+   "relaties": [
+    [
+     "ManyToOne",
+     "Station",
+     "station",
+     34
+    ]
+   ]
+  },
+  "Neighbourhood": {
+   "tabel": "region",
+   "bestand": "features/neighbourhood/Neighbourhood.java",
+   "relaties": [
+    [
+     "OneToMany",
+     "NeighbourhoodCoords",
+     "coordinates",
+     20
+    ]
+   ]
+  },
+  "NeighbourhoodCoords": {
+   "tabel": "region_coords",
+   "bestand": "features/neighbourhood/NeighbourhoodCoords.java",
+   "relaties": [
+    [
+     "ManyToOne",
+     "Neighbourhood",
+     "neighbourhood",
+     21
+    ]
+   ]
+  },
+  "Station": {
+   "tabel": "station",
+   "bestand": "features/station/Station.java",
+   "relaties": [
+    [
+     "ManyToOne",
+     "User",
+     "user",
+     65
+    ],
+    [
+     "OneToMany",
+     "Measurement",
+     "measurementList",
+     68
+    ]
+   ]
+  },
+  "User": {
+   "tabel": "user",
+   "bestand": "features/user/User.java",
+   "relaties": [
+    [
+     "OneToMany",
+     "Station",
+     "stations",
+     48
+    ],
+    [
+     "ManyToOne",
+     "Workshop",
+     "workshop",
+     52
+    ]
+   ]
+  },
+  "Token": {
+   "tabel": "token",
+   "bestand": "features/user/authentication/Token.java",
+   "relaties": []
+  },
+  "TrustedIp": {
+   "tabel": "trusted_ip",
+   "bestand": "features/user/authentication/trustedip/TrustedIp.java",
+   "relaties": []
+  },
+  "Workshop": {
+   "tabel": "workshop",
+   "bestand": "features/workshop/Workshop.java",
+   "relaties": [
+    [
+     "OneToMany",
+     "User",
+     "users",
+     34
+    ]
+   ]
+  }
+ }
+}

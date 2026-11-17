@@ -1,0 +1,46 @@
+@startuml
+!include ../stijl.puml
+left to right direction
+skinparam packageStyle rectangle
+skinparam usecaseBackgroundColor #FFF9E6
+skinparam usecaseBorderColor #111827
+skinparam nodesep 12
+skinparam ranksep 40
+actor "Bezoeker" as A0
+actor "Beheerder" as A1
+actor "Stationeigenaar" as A2
+actor "Meet je stad" as A3
+actor "Systeem" as A4
+rectangle "ClimateChecker" {
+  usecase "UC-01\nKlimaat op de kaart bekijken" as UC01
+  usecase "UC-02\nWijken vergelijken" as UC02
+  usecase "UC-03\nHeatmap bekijken" as UC03
+  usecase "UC-04\nGezondheid van het meetnet bekijken" as UC04
+  usecase "UC-05\nRegistreren" as UC05
+  usecase "UC-06\nInloggen" as UC06
+  usecase "UC-07\nWachtwoord herstellen" as UC07
+  usecase "UC-08\nEigen stations beheren" as UC08
+  usecase "UC-09\nGebruikers en workshopcodes beheren" as UC09
+  usecase "UC-10\nStation toevoegen" as UC10
+  usecase "UC-11\nDatadekking bekijken" as UC11
+  usecase "UC-12\nMetingen ophalen en opslaan" as UC12
+  usecase "UC-13\nUitval signaleren" as UC13
+}
+A0 --> UC01
+A0 --> UC02
+A0 --> UC03
+A0 --> UC04
+A1 --> UC04
+A2 --> UC05
+A2 --> UC06
+A1 --> UC06
+A2 --> UC07
+A2 --> UC08
+A1 --> UC09
+A1 --> UC10
+A1 --> UC11
+A3 --> UC12
+A4 --> UC12
+A4 --> UC13
+A2 --> UC13
+@enduml
