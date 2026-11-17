@@ -1,0 +1,19 @@
+digraph G { graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+node [fontname="Helvetica", fontsize=15, fontcolor="#111827", color="#111827", style="filled,rounded", shape=box, fillcolor="#FFF9E6"];
+edge [fontname="Helvetica", fontsize=13, color="#111827", fontcolor="#4B5563"];
+ rankdir=TB; nodesep=0.4; ranksep=0.5;
+wil [fillcolor="#FECB3D", label="Opdrachtgever: Wil\n(Meet je stad Amersfoort)\nDocuments #80 open"];
+afspraak [style="dashed,rounded", fillcolor="#FFF9E6", label="Afspraak: backlog prioriteren\nDocuments #98 open\n(vragen #82, #83, #84, #99 daarin samengevoegd)"];
+bord [fillcolor="#FECB3D", label="Bord Sem3 2026\nepics, MoSCoW, story points\n21 items in Sprint 3 en 4"];
+issue [fillcolor="#FECB3D", label="Issue als user story\n(113 issues sinds 2026-09-01)"];
+pr [fillcolor="#FECB3D", label="Branch en pull request\n(71 gemerged)"];
+ci [fillcolor="#FECB3D", label="CI: build, tests, lint, security\n(GitHub Actions)"];
+dev [fillcolor="#FECB3D", label="Merge naar s3nj26_dev\nen deploy-workflow (backend)"];
+demo [style="dashed,rounded", fillcolor="#FFF9E6", label="Demo en eindoplevering aan Wil\nDocuments #85 open"];
+wil -> afspraak [label="vragen en wensen"];
+afspraak -> bord [label="volgorde en prioriteit", style=dashed];
+bord -> issue; issue -> pr; pr -> ci; ci -> dev;
+dev -> demo [style=dashed, label="laten zien", constraint=true];
+demo -> wil [style=dashed, constraint=false, label="feedback"];
+leg [shape=plaintext, style="", label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD BGCOLOR="#FECB3D">aantoonbaar in GitHub</TD><TD>gepland, uitvoering niet aantoonbaar (gestippeld)</TD></TR></TABLE>>];
+}

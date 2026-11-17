@@ -1,0 +1,3179 @@
+{
+ "sprint_items": [
+  {
+   "repo": "Software-Documents",
+   "nummer": 88,
+   "titel": "Testplan opstellen",
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 75,
+   "titel": "Werkende docker-compose + README bij de documenten",
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": "Sprint 3",
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 97,
+   "titel": "Onderzoek toegang tot de centrale database van Meet je stad",
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 94,
+   "titel": "Adviesdocument datasynchronisatie",
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 172,
+   "titel": "Testomgeving opzetten",
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 81,
+   "titel": "Definitieve keuze hosting en OTAP",
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 86,
+   "titel": "Overdrachtsdocument voor de volgende groep",
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 85,
+   "titel": "Demo en eindoplevering aan Wil",
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 98,
+   "titel": "Product backlog prioriteren samen met Wil",
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 2,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 176,
+   "titel": "Eenmalige import van historische meetdata",
+   "bord": {
+    "epic": "Data-import & performance",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 177,
+   "titel": "Nagestuurde (late) metingen correct verwerken",
+   "bord": {
+    "epic": "Datakwaliteit & betrouwbaarheid",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 92,
+   "titel": "Bepalen welke regio's in de lokale kopie komen",
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Should have",
+    "sprint": "Sprint 3",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 89,
+   "titel": "AVG-check op persoons- en locatiegegevens",
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 120,
+   "titel": "Als een gebruiker wil ik weten waarom we wisselend data ontvangen van de fijnstofmeetstations meetstations zodat ik de betrouwbaarheid van de meetnetwerken kan beoordelen en verbanden tussen missende data in zicht kan brengen",
+   "bord": {
+    "epic": "Datakwaliteit & betrouwbaarheid",
+    "moscow": "Could have",
+    "sprint": "Sprint 3",
+    "punten": 8,
+    "status": "In Progress"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 105,
+   "titel": "Als gebruiker wil ik kunnen inzoomen op overlappende grafieken of specifieke tijdsperiodes, zodat ik gedetailleerder data kan bekijken.",
+   "bord": {
+    "epic": "Grafieken & visualisatie",
+    "moscow": "Should have",
+    "sprint": "Sprint 3",
+    "punten": 5,
+    "status": "In Progress"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 182,
+   "titel": "Als beheerder wil ik dat de gelekte MailSlurp-key geroteerd is en elke omgeving een eigen JWT_SECRET heeft, zodat niemand met oude of standaard sleutels toegang krijgt",
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 2,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 183,
+   "titel": "Als ontwikkelaar wil ik de testdekking van de backend kunnen meten en verhogen, zodat we wijzigingen aan de synchronisatie veilig kunnen doorvoeren",
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 184,
+   "titel": "Als beheerder wil ik dat ook de mail- en PDF-code via de logger logt in plaats van System.out, zodat alle meldingen op één plek met een niveau terug te vinden zijn",
+   "bord": {
+    "epic": "Datakwaliteit & betrouwbaarheid",
+    "moscow": "Could have",
+    "sprint": "Sprint 4",
+    "punten": 1,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 185,
+   "titel": "Als gebruiker wil ik dat metingen zonder geldige GPS-positie de laatst bekende locatie van het meetstation krijgen, zodat deze metingen niet worden weggegooid",
+   "bord": {
+    "epic": "Datakwaliteit & betrouwbaarheid",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 122,
+   "titel": "Als Ontwikkelaar wil ik gebruikersdata en metadata gescheiden opslaan en een kopie van de Amersfoort-database gebruiken zodat het systeem schaalbaar, veilig blijft en onze meetdata-verwerking consistent is.",
+   "bord": {
+    "epic": "Data-import & performance",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 8,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 119,
+   "titel": "Als een gebruiker wil ik weten op welk moment de systeeminitialisatie moet plaatsvinden zodat ik dit proces gecontroleerd kan uitvoeren.",
+   "bord": {
+    "epic": "Data-import & performance",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 3,
+    "status": "Todo"
+   }
+  }
+ ],
+ "sinds": "2026-09-01",
+ "issues": [
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 206,
+   "titel": "Als gebruiker wil ik dat de kaartgegevens snel laden, zodat de app niet seconden hoeft te wachten",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:47:15Z",
+   "gesloten": "2026-11-17T22:26:25Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 201,
+   "titel": "Als ontwikkelaar wil ik een nette en consistente API-opzet, zodat de API makkelijk te gebruiken en te onderhouden is",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:15:37Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 200,
+   "titel": "Als gebruiker wil ik dat de API correcte gegevens geeft, zodat wat ik zie klopt",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:15:31Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 199,
+   "titel": "Als ontwikkelaar wil ik consistente foutafhandeling in de API, zodat fouten de juiste statuscode en een duidelijke melding krijgen",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:15:25Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 198,
+   "titel": "Als beheerder wil ik dat de API-beveiliging op orde is, zodat niemand stations kan overnemen of accounts kan raden",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:15:19Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 196,
+   "titel": "Als ontwikkelaar wil ik OpenAPI-documentatie (Swagger UI) van de backend, zodat de API altijd actueel gedocumenteerd is",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:11:35Z",
+   "gesloten": null,
+   "labels": [
+    "documentation",
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 184,
+   "titel": "Als beheerder wil ik dat ook de mail- en PDF-code via de logger logt in plaats van System.out, zodat alle meldingen op één plek met een niveau terug te vinden zijn",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-05T12:58:07Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": "Datakwaliteit & betrouwbaarheid",
+    "moscow": "Could have",
+    "sprint": "Sprint 4",
+    "punten": 1,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 183,
+   "titel": "Als ontwikkelaar wil ik de testdekking van de backend kunnen meten en verhogen, zodat we wijzigingen aan de synchronisatie veilig kunnen doorvoeren",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-05T12:58:04Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 182,
+   "titel": "Als beheerder wil ik dat de gelekte MailSlurp-key geroteerd is en elke omgeving een eigen JWT_SECRET heeft, zodat niemand met oude of standaard sleutels toegang krijgt",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-05T12:58:00Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 2,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 179,
+   "titel": "E-mailserver in eigen beheer nemen",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:55:05Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Could have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 178,
+   "titel": "Docker deployment implementatie",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:55:03Z",
+   "gesloten": "2026-11-17T11:25:28Z",
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 177,
+   "titel": "Nagestuurde (late) metingen correct verwerken",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:59Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Datakwaliteit & betrouwbaarheid",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 176,
+   "titel": "Eenmalige import van historische meetdata",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:35Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Data-import & performance",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 175,
+   "titel": "Omgaan met dubbele, ontbrekende en nagestuurde metingen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:33Z",
+   "gesloten": "2026-10-08T13:12:25Z",
+   "labels": [],
+   "bord": {
+    "epic": "Datakwaliteit & betrouwbaarheid",
+    "moscow": "Must have",
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 174,
+   "titel": "Applicatie containeriseren met Docker",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:16Z",
+   "gesloten": "2026-11-17T11:25:23Z",
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 173,
+   "titel": "Acceptatie- en productieomgeving opzetten",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:12Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": null,
+    "punten": 8,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 172,
+   "titel": "Testomgeving opzetten",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:10Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 171,
+   "titel": "Automatisch uitrollen naar de testomgeving",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:06Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 170,
+   "titel": "Buildpijplijn: automatisch bouwen en testen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:04Z",
+   "gesloten": "2026-11-17T11:25:26Z",
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 169,
+   "titel": "Healthcheck en monitoring",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:02Z",
+   "gesloten": "2026-11-17T11:25:21Z",
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 168,
+   "titel": "CI: Sonar Scan draait op Java 21 (Maven-plugin i.p.v. Docker-action)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T17:23:49Z",
+   "gesloten": "2026-09-18T17:24:05Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 166,
+   "titel": "CI: Super-Linter groen — projecteigen checkstyle-config i.p.v. sun_checks",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T17:13:39Z",
+   "gesloten": "2026-09-18T17:13:57Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 163,
+   "titel": "CI: tests automatisch draaien (backend Maven + frontend lint + e2e)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T14:48:07Z",
+   "gesloten": "2026-09-18T14:48:13Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 158,
+   "titel": "Trusted-IP whitelist (mailverificatie overslaan bij bekend IP)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:15Z",
+   "gesloten": "2026-09-18T12:43:17Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 157,
+   "titel": "Uitval-check-interval instelbaar maken (nu 15s debug)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:14Z",
+   "gesloten": "2026-09-18T12:43:16Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 156,
+   "titel": "Testdekking uitbreiden + integratietests",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:12Z",
+   "gesloten": "2026-09-18T12:43:16Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 155,
+   "titel": "Meet je stad-databron omschakelbaar maken (demo/test/live)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:09Z",
+   "gesloten": "2026-09-18T12:43:12Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 154,
+   "titel": "Sync-logging fatsoenlijk maken (logger + status per ronde)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:08Z",
+   "gesloten": "2026-09-18T12:43:11Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 153,
+   "titel": "Projectdocumenten verzamelen en doornemen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:07Z",
+   "gesloten": "2026-09-18T12:43:10Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 152,
+   "titel": "Onderzoek: welke codebase is het beste uitgangspunt",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:06Z",
+   "gesloten": "2026-09-18T12:43:08Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 151,
+   "titel": "Trello-board inrichten en werkwijze afspreken",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:05Z",
+   "gesloten": "2026-09-18T12:43:07Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 150,
+   "titel": "Bestaande applicatie lokaal draaiend krijgen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:04Z",
+   "gesloten": "2026-09-18T12:43:05Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 149,
+   "titel": "Periodieke synchronisatie van nieuwe meetdata",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:00Z",
+   "gesloten": "2026-09-18T12:43:03Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 148,
+   "titel": "Databaseschema ontwerpen voor de lokale meetdata",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:59Z",
+   "gesloten": "2026-09-18T12:43:02Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 147,
+   "titel": "Logging en foutafhandeling van de synchronisatie",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:58Z",
+   "gesloten": "2026-09-18T12:43:01Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 146,
+   "titel": "Databron configureerbaar maken (demo, test, live)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:57Z",
+   "gesloten": "2026-09-18T12:42:59Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 145,
+   "titel": "Datamodel voor de koppeling eigenaar aan meetstation",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:51Z",
+   "gesloten": "2026-09-18T12:42:53Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 144,
+   "titel": "Meetstation koppelen aan een eigenaar",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:50Z",
+   "gesloten": "2026-09-18T12:42:52Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 143,
+   "titel": "Meetstation overdragen aan een nieuwe eigenaar",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:49Z",
+   "gesloten": "2026-09-18T12:42:51Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 142,
+   "titel": "Bepalen wanneer een meetstation als uitgevallen geldt",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:47Z",
+   "gesloten": "2026-09-18T12:42:51Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 141,
+   "titel": "Bericht naar de eigenaar bij uitval",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:46Z",
+   "gesloten": "2026-09-18T12:42:49Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 140,
+   "titel": "Detectie van uitgevallen meetstations",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:45Z",
+   "gesloten": "2026-09-18T12:42:48Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 139,
+   "titel": "Voorkomen van herhaalde meldingen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:44Z",
+   "gesloten": "2026-09-18T12:42:46Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 138,
+   "titel": "Geautomatiseerde tests voor de kernfunctionaliteit",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:43Z",
+   "gesloten": "2026-09-18T12:42:45Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 131,
+   "titel": "App weer opstartbaar via docker-compose (migratie, verify-500, mariadb)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:56Z",
+   "gesloten": "2026-09-18T09:55:12Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 130,
+   "titel": "Gebruikerslijst pagineren i.p.v. hele tabel laden",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:55Z",
+   "gesloten": "2026-09-18T09:55:11Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 129,
+   "titel": "Actuator dichtgezet tot alleen /health",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:54Z",
+   "gesloten": "2026-09-18T09:55:11Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 1,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 128,
+   "titel": "Timeouts op meetjestad-calls, transacties, debug-logging weg",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:53Z",
+   "gesloten": "2026-09-18T09:55:10Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 127,
+   "titel": "Kwetsbare dependencies geüpdatet (Dependabot)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:51Z",
+   "gesloten": "2026-09-18T09:55:10Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 126,
+   "titel": "Rate limiting op inlog- en reset-endpoints",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:41Z",
+   "gesloten": "2026-09-18T09:55:08Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 125,
+   "titel": "Inlog-/reset-codes met SecureRandom i.p.v. Random",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:40Z",
+   "gesloten": "2026-09-18T09:55:08Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 1,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 124,
+   "titel": "Meetstation-endpoints achter login + eigenaar-check",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:39Z",
+   "gesloten": "2026-09-18T09:55:08Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 123,
+   "titel": "JWT-sleutel uit de code gehaald",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:38Z",
+   "gesloten": "2026-09-18T09:55:07Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 122,
+   "titel": "Security-audit: backend + frontend doorgelicht",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:53:37Z",
+   "gesloten": "2026-09-18T09:55:06Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 193,
+   "titel": "Als gebruiker wil ik dat alle pagina's dezelfde cijfers tonen, zodat de app zichzelf niet tegenspreekt",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:47:24Z",
+   "gesloten": "2026-11-17T22:05:29Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 192,
+   "titel": "Als gebruiker wil ik dat de pagina's snel laden, zodat ik niet op de kaart hoef te wachten",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:47:19Z",
+   "gesloten": "2026-11-17T22:05:27Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 187,
+   "titel": "Als gebruiker wil ik dat elk menu-item iets anders doet, zodat de navigatie klopt en er geen dubbele knoppen zijn",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:36:55Z",
+   "gesloten": "2026-11-17T21:51:17Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 186,
+   "titel": "Als beheerder en gebruiker wil ik een Dashboard met de gezondheid van het meetnet, zodat ik zie of de data betrouwbaar is",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:36:51Z",
+   "gesloten": "2026-11-17T21:51:15Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 185,
+   "titel": "Als gebruiker wil ik een Wijken-pagina om wijken te vergelijken en te rangschikken, zodat ik verschillen en patronen snel zie",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:36:47Z",
+   "gesloten": "2026-11-17T21:51:12Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 184,
+   "titel": "Als gebruiker wil ik een echte heatmap van de stad, zodat ik het patroon van warme en koude plekken zie los van wijkgrenzen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:36:42Z",
+   "gesloten": "2026-11-17T21:51:10Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 182,
+   "titel": "Als gebruiker wil ik een consistent kleurenthema op de kaartpagina, zodat blauw alleen voor knoppen is",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:24:52Z",
+   "gesloten": "2026-11-17T21:51:06Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 176,
+   "titel": "Als beheerder wil ik Beheer als één scherm met tabs, zodat ik snel tussen onderdelen wissel",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:05:40Z",
+   "gesloten": "2026-11-17T21:51:04Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 175,
+   "titel": "Als gebruiker wil ik een onderbalk op mobiel en een korte bovenbalk op desktop, zodat ik overal makkelijk kan navigeren",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:05:36Z",
+   "gesloten": "2026-11-17T21:51:01Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 174,
+   "titel": "Als gebruiker wil ik de afgelopen 24 uur op de kaart kunnen afspelen, zodat ik zie hoe temperatuur en fijnstof zich ontwikkelen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:05:32Z",
+   "gesloten": "2026-11-17T21:50:58Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 173,
+   "titel": "Als gebruiker wil ik een detailpagina per wijk of station met kerngetallen, zodat ik de situatie en trend kan beoordelen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:05:28Z",
+   "gesloten": "2026-11-17T21:50:56Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 172,
+   "titel": "Als gebruiker wil ik de kaart als hoofdscherm, zodat ik direct het klimaat in mijn stad zie",
+   "state": "CLOSED",
+   "aangemaakt": "2026-11-17T21:05:23Z",
+   "gesloten": "2026-11-17T21:50:54Z",
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 164,
+   "titel": "Als gebruiker wil ik een duidelijke en mobielvriendelijke navigatie, zodat ik overal makkelijk bij kan",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:13:23Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 163,
+   "titel": "Als beheerder wil ik op het beheerdashboard kerncijfers zien, zodat ik zie waar aandacht nodig is",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:13:19Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 162,
+   "titel": "Als stationeigenaar wil ik op Mijn stations een heldere lege staat, zodat ik weet hoe ik een station toevoeg",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:13:15Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 161,
+   "titel": "Als bezoeker wil ik op de homepagina een samenvatting van de meetgegevens, zodat ik in één oogopslag zie hoe het ervoor staat",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:13:11Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 160,
+   "titel": "Als gebruiker wil ik één duidelijke laagkeuze en een toegankelijke legenda op de kaart, zodat ik weet wat ik zie",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:13:06Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 159,
+   "titel": "Als gebruiker wil ik dat kaart en wijkenlijst met elkaar meebewegen, zodat ik snel een wijk kan vinden en bekijken",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:13:01Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 158,
+   "titel": "Als gebruiker wil ik duidelijk zien wanneer een wijk geen recente data heeft, zodat ik het niet voor een fout aanzie",
+   "state": "OPEN",
+   "aangemaakt": "2026-11-17T15:12:57Z",
+   "gesloten": null,
+   "labels": [
+    "userstories"
+   ],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": null,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 150,
+   "titel": "'Over ons' pagina invullen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:55:07Z",
+   "gesloten": "2026-11-17T11:10:58Z",
+   "labels": [],
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Could have",
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 149,
+   "titel": "Wireframes voor de nieuwe publiekskaart",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:30Z",
+   "gesloten": "2026-10-15T08:43:36Z",
+   "labels": [],
+   "bord": {
+    "epic": "Dashboard & overzicht",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 148,
+   "titel": "Notificatievoorkeuren in het gebruikersprofiel",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:14Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Notificaties",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 145,
+   "titel": "Publiekskaart responsive/mobiel maken",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:10Z",
+   "gesloten": "2026-09-18T12:43:14Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 144,
+   "titel": "Historische grafieken per meetstation",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:56Z",
+   "gesloten": "2026-09-18T12:42:59Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 143,
+   "titel": "Gemiddelde temperatuur per wijk tonen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:55Z",
+   "gesloten": "2026-09-18T12:42:58Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 142,
+   "titel": "Nieuwe kaartweergave bouwen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:54Z",
+   "gesloten": "2026-09-18T12:42:57Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 141,
+   "titel": "Toegankelijkheid en responsiveness van de publiekskaart",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:52Z",
+   "gesloten": "2026-09-18T12:42:54Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 140,
+   "titel": "Beheerscherm voor meetstations",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:42:48Z",
+   "gesloten": "2026-09-18T12:42:51Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 8,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 137,
+   "titel": "axios geüpdatet naar 1.18+ (Dependabot)",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:54:06Z",
+   "gesloten": "2026-09-18T09:55:14Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 1,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 136,
+   "titel": "MailSlurp-key uit de repo, axios-timeout, veilige localStorage",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:54:05Z",
+   "gesloten": "2026-09-18T09:55:14Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 103,
+   "titel": "Als ontwikkelaar wil ik documentatie inzien over alle backend API endpoints",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:55:01Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 102,
+   "titel": "Rolverdeling vastleggen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:56Z",
+   "gesloten": "2026-10-01T13:17:27Z",
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Must have",
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 101,
+   "titel": "Samenwerkingscontract opstellen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:54Z",
+   "gesloten": "2026-10-15T07:17:54Z",
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Must have",
+    "sprint": null,
+    "punten": 2,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 100,
+   "titel": "GitHub-toegang regelen voor alle groepsleden",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:52Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Must have",
+    "sprint": null,
+    "punten": 1,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 99,
+   "titel": "Vervolgafspraak fysiek plannen op het Ontdekstation",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:54:49Z",
+   "gesloten": "2026-11-05T13:39:41Z",
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 1,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 98,
+   "titel": "Product backlog prioriteren samen met Wil",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:47Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 2,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 97,
+   "titel": "Onderzoek toegang tot de centrale database van Meet je stad",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:45Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 96,
+   "titel": "Datastroom in kaart brengen van sensor tot applicatie",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:43Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 3,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 95,
+   "titel": "Onderzoek hostingopties en OTAP-inrichting",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:41Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 5,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 94,
+   "titel": "Adviesdocument datasynchronisatie",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:39Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 93,
+   "titel": "Schaalbaarheid en clustering bewust buiten scope houden",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:36Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Could have",
+    "sprint": null,
+    "punten": 1,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 92,
+   "titel": "Bepalen welke regio's in de lokale kopie komen",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:28Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Should have",
+    "sprint": "Sprint 3",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 91,
+   "titel": "Inventarisatie van de bestaande registratiefunctionaliteit",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:25Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 3,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 90,
+   "titel": "Voorkeurskanaal voor notificaties achterhalen",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:23Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Could have",
+    "sprint": null,
+    "punten": 2,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 89,
+   "titel": "AVG-check op persoons- en locatiegegevens",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:54:19Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 88,
+   "titel": "Testplan opstellen",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:53:59Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Should have",
+    "sprint": "Sprint 4",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 87,
+   "titel": "Gebruikerstest met een eigenaar van een meetstation",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:53:57Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 3,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 86,
+   "titel": "Overdrachtsdocument voor de volgende groep",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:53:55Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Documentatie & overdracht",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 5,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 85,
+   "titel": "Demo en eindoplevering aan Wil",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:53:53Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Must have",
+    "sprint": "Sprint 4",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 84,
+   "titel": "Status van de bestaande gebruikersdatabase navragen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:53:51Z",
+   "gesloten": "2026-11-05T13:39:39Z",
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 2,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 83,
+   "titel": "Naam van de eigen hostingomgeving van Wil navragen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:53:49Z",
+   "gesloten": "2026-11-05T13:39:35Z",
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 1,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 82,
+   "titel": "Exact e-mailadres van Wil verifieren",
+   "state": "CLOSED",
+   "aangemaakt": "2026-10-01T10:53:47Z",
+   "gesloten": "2026-11-05T13:39:33Z",
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 1,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 81,
+   "titel": "Definitieve keuze hosting en OTAP",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:53:44Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "DevOps, hosting & OTAP",
+    "moscow": "Must have",
+    "sprint": "Sprint 3",
+    "punten": 3,
+    "status": "Todo"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 80,
+   "titel": "Contactpersoon bij Meet je stad Amersfoort",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:53:42Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Project & samenwerking",
+    "moscow": "Should have",
+    "sprint": null,
+    "punten": 1,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 79,
+   "titel": "Meelopen bij een workshop Meetstation bouwen",
+   "state": "OPEN",
+   "aangemaakt": "2026-10-01T10:53:40Z",
+   "gesloten": null,
+   "labels": [],
+   "bord": {
+    "epic": "Onderzoek & advies",
+    "moscow": "Could have",
+    "sprint": null,
+    "punten": 2,
+    "status": "Not Planned"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 78,
+   "titel": "Architectuurschets van de nieuwe opzet",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:03Z",
+   "gesloten": "2026-09-18T12:43:06Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 5,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 77,
+   "titel": "Niet-functionele eisen vastleggen",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T12:43:02Z",
+   "gesloten": "2026-09-18T12:43:05Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 76,
+   "titel": "Addendum iteratie 4: documentatie weer kloppend met de code",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:54:09Z",
+   "gesloten": "2026-09-18T09:55:15Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": null,
+    "punten": 3,
+    "status": "Done"
+   }
+  },
+  {
+   "repo": "Software-Documents",
+   "nummer": 75,
+   "titel": "Werkende docker-compose + README bij de documenten",
+   "state": "CLOSED",
+   "aangemaakt": "2026-09-18T09:54:08Z",
+   "gesloten": "2026-11-17T15:07:15Z",
+   "labels": [],
+   "bord": {
+    "epic": null,
+    "moscow": null,
+    "sprint": "Sprint 3",
+    "punten": 3,
+    "status": "Done"
+   }
+  }
+ ],
+ "prs": [
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 207,
+   "titel": "perf: snelle kaartendpoints met ingest-worker, snapshots en /api/snapshot",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "perf/206-snelle-kaartendpoints",
+   "aangemaakt": "2026-11-17T22:17:06Z",
+   "gemerged": "2026-11-17T22:26:21Z",
+   "commit": "e104152",
+   "issues": [
+    206
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 205,
+   "titel": "feat: consistente API-opzet met kleine-letterpaden, Postman-collectie en getypeerde responses (#201)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/201-consistent-api",
+   "aangemaakt": "2026-11-17T15:42:27Z",
+   "gemerged": "2026-11-17T20:57:51Z",
+   "commit": "e0709ba",
+   "issues": [
+    201
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 204,
+   "titel": "fix: correcte gegevens in de API (#200)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "fix/200-correct-data",
+   "aangemaakt": "2026-11-17T15:35:23Z",
+   "gemerged": "2026-11-17T20:53:01Z",
+   "commit": "f11503a",
+   "issues": [
+    200
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 203,
+   "titel": "fix: consistente foutafhandeling in de API (#199)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "fix/199-error-handling",
+   "aangemaakt": "2026-11-17T15:27:58Z",
+   "gemerged": "2026-11-17T20:51:31Z",
+   "commit": "1cac523",
+   "issues": [
+    199
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 202,
+   "titel": "fix: API-beveiliging op orde (#198)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "fix/198-api-security",
+   "aangemaakt": "2026-11-17T15:22:15Z",
+   "gemerged": "2026-11-17T20:50:21Z",
+   "commit": "b909388",
+   "issues": [
+    198
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 197,
+   "titel": "feat: openapi-documentatie en swagger ui (#196)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/196-openapi-docs",
+   "aangemaakt": "2026-11-17T15:14:06Z",
+   "gemerged": "2026-11-17T20:49:17Z",
+   "commit": "9e3ee62",
+   "issues": [
+    196
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 195,
+   "titel": "test: meet testdekking met jacoco en test mail, pdf en synchronisatie",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "test/183-jacoco-coverage",
+   "aangemaakt": "2026-11-17T13:33:18Z",
+   "gemerged": "2026-11-17T20:54:53Z",
+   "commit": "9cbff86",
+   "issues": [
+    183
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 194,
+   "titel": "feat: metingen zonder geldige gps-positie krijgen de laatst bekende locatie",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/185-last-known-location",
+   "aangemaakt": "2026-11-17T13:33:15Z",
+   "gemerged": "2026-11-17T20:54:01Z",
+   "commit": "5aec1d6",
+   "issues": [
+    185
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 193,
+   "titel": "refactor: log mail en pdf via de logger i.p.v. System.out",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "fix/184-logger-mail-pdf",
+   "aangemaakt": "2026-11-17T13:33:12Z",
+   "gemerged": "2026-11-17T20:55:36Z",
+   "commit": "a90e27d",
+   "issues": [
+    184
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 192,
+   "titel": "docs: e-mailserver in eigen beheer, onderzoek en ontwerp",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "docs/179-email-self-hosting",
+   "aangemaakt": "2026-11-17T11:21:04Z",
+   "gemerged": "2026-11-17T11:22:58Z",
+   "commit": "95f222a",
+   "issues": [
+    179
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 191,
+   "titel": "feat: docker deployment, compose opschonen en deploy-workflow (OTAP)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/178-docker-deployment",
+   "aangemaakt": "2026-11-17T11:20:00Z",
+   "gemerged": "2026-11-17T11:25:03Z",
+   "commit": "e8c567b",
+   "issues": [
+    178
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 190,
+   "titel": "chore: een build-en-test workflow, verwijder verouderde duplicaten",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/170-build-pipeline",
+   "aangemaakt": "2026-11-17T11:13:02Z",
+   "gemerged": "2026-11-17T11:22:31Z",
+   "commit": "af83408",
+   "issues": [
+    170
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 189,
+   "titel": "feat: multi-stage dockerfile met non-root user en healthcheck",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/174-dockerfile",
+   "aangemaakt": "2026-11-17T11:10:40Z",
+   "gemerged": "2026-11-17T11:22:20Z",
+   "commit": "15644d2",
+   "issues": [
+    174
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 188,
+   "titel": "feat: healthcheck en monitoring (liveness/readiness)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/169-healthcheck",
+   "aangemaakt": "2026-11-17T11:00:56Z",
+   "gemerged": "2026-11-17T11:22:10Z",
+   "commit": "be85d65",
+   "issues": [
+    169
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 187,
+   "titel": "feat: faal bij opstarten zonder eigen JWT_SECRET buiten dev/test",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/182-jwt-failfast",
+   "aangemaakt": "2026-11-17T10:59:27Z",
+   "gemerged": "2026-11-17T11:22:41Z",
+   "commit": "b73f633",
+   "issues": [
+    182
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 186,
+   "titel": "feat: configureerbare meetwaardegrenzen en pm25/pm10 filter",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/98-meetwaarden-filter",
+   "aangemaakt": "2026-11-17T10:58:05Z",
+   "gemerged": "2026-11-17T11:22:00Z",
+   "commit": "461e56b",
+   "issues": [
+    98
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 181,
+   "titel": "feat: particulate matter data coverage per station and network",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/datadekking-fijnstof",
+   "aangemaakt": "2026-10-15T08:55:00Z",
+   "gemerged": "2026-10-15T09:08:52Z",
+   "commit": "4896fbc",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 180,
+   "titel": "feat: omgaan met dubbele, ontbrekende en nagestuurde metingen (#175)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feature/measurement-dedup-missing-late",
+   "aangemaakt": "2026-10-08T13:07:16Z",
+   "gemerged": "2026-10-08T13:11:52Z",
+   "commit": "743f8dc",
+   "issues": [
+    175
+   ]
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 167,
+   "titel": "ci: SonarCloud via Maven-plugin (Java 21) i.p.v. verouderde Docker-action",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "ci/sonar-java21-maven-plugin",
+   "aangemaakt": "2026-09-18T17:17:32Z",
+   "gemerged": "2026-09-18T17:23:24Z",
+   "commit": "d4fe8e7",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 165,
+   "titel": "ci: Super-Linter Java-checkstyle uitzetten (onhaalbare regels)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "ci/disable-java-checkstyle",
+   "aangemaakt": "2026-09-18T15:20:19Z",
+   "gemerged": "2026-09-18T17:02:54Z",
+   "commit": "e8e14c2",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 164,
+   "titel": "test: integration- en feature-tests (Testcontainers + MockMvc)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "test/integration-and-feature",
+   "aangemaakt": "2026-09-18T15:00:19Z",
+   "gemerged": "2026-09-18T17:10:59Z",
+   "commit": "00b433e",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 162,
+   "titel": "ci: Maven-tests écht in CI draaien (nu werden ze overgeslagen)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "ci/maven-build-test",
+   "aangemaakt": "2026-09-18T14:27:29Z",
+   "gemerged": "2026-09-18T14:46:27Z",
+   "commit": "013f3a4",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 161,
+   "titel": "test: unit tests voor de mappers (Station/User/Workshop)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "test/mapper-tests",
+   "aangemaakt": "2026-09-18T14:22:31Z",
+   "gemerged": "2026-09-18T14:46:06Z",
+   "commit": "f1cc91e",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 160,
+   "titel": "test: unit tests voor PasswordEncodingService + WorkshopService",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "test/auth-services-tests",
+   "aangemaakt": "2026-09-18T14:20:32Z",
+   "gemerged": "2026-09-18T14:46:00Z",
+   "commit": "5a76f99",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 159,
+   "titel": "test: unit tests voor de security-kern (Token + JWT)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "test/security-core-tests",
+   "aangemaakt": "2026-09-18T14:19:17Z",
+   "gemerged": "2026-09-18T14:45:53Z",
+   "commit": "0517230",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 137,
+   "titel": "feat: trusted-IP whitelist (mailverificatie overslaan bij bekend IP)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "feature/trusted-ip-whitelist",
+   "aangemaakt": "2026-09-18T12:31:50Z",
+   "gemerged": "2026-09-18T12:37:18Z",
+   "commit": "f481371",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 136,
+   "titel": "test: unit tests voor de StationService-kern",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "feature/more-tests",
+   "aangemaakt": "2026-09-18T10:54:27Z",
+   "gemerged": "2026-09-18T12:33:29Z",
+   "commit": "ec6b6a8",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 135,
+   "titel": "feat: meetstation overdragen aan een nieuwe eigenaar",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "feature/transfer-station-owner",
+   "aangemaakt": "2026-09-18T10:52:59Z",
+   "gemerged": "2026-09-18T12:36:33Z",
+   "commit": "4ace167",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 134,
+   "titel": "feat: monitor-intervallen configureerbaar (weg met de 15s-debugwaarde)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "feature/configurable-monitor-interval",
+   "aangemaakt": "2026-09-18T10:50:13Z",
+   "gemerged": "2026-09-18T12:35:22Z",
+   "commit": "ed8450d",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 133,
+   "titel": "feat: Meet je stad-databron-URL uit configuratie",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "feature/configurable-datasource",
+   "aangemaakt": "2026-09-18T10:46:47Z",
+   "gemerged": "2026-09-18T12:34:18Z",
+   "commit": "3d669a7",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 132,
+   "titel": "feat: sync-/uitvalcontrole loggen via SLF4J i.p.v. System.out",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "feature/sync-logging",
+   "aangemaakt": "2026-09-18T10:45:22Z",
+   "gemerged": "2026-09-18T12:33:34Z",
+   "commit": "538de89",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 121,
+   "titel": "fix: maak de app opstartbaar (init-migratie, verify-500/JWT-validatie, compose)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "fix/broken-init-migration",
+   "aangemaakt": "2026-09-18T09:23:31Z",
+   "gemerged": "2026-09-18T09:25:50Z",
+   "commit": "d04f17d",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 120,
+   "titel": "fix: security-hardening backend (JWT, station-auth, rate limiting, dep-bumps, actuator)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "fix/critical-security-hardening",
+   "aangemaakt": "2026-09-17T22:15:02Z",
+   "gemerged": "2026-09-17T22:40:58Z",
+   "commit": "a40d65e",
+   "issues": []
+  },
+  {
+   "repo": "Software-BackEnd",
+   "nummer": 119,
+   "titel": "back to main for new semester",
+   "state": "MERGED",
+   "basis": "main",
+   "branch": "s3vj26-teamA_dev",
+   "aangemaakt": "2026-09-15T16:07:54Z",
+   "gemerged": "2026-09-15T16:10:36Z",
+   "commit": "7468d29",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 196,
+   "titel": "fix: alle pagina's tonen dezelfde actuele cijfers (#193)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "fix/193-consistente-cijfers",
+   "aangemaakt": "2026-11-17T22:00:07Z",
+   "gemerged": "2026-11-17T22:05:10Z",
+   "commit": "13fc1e2",
+   "issues": [
+    193
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 195,
+   "titel": "perf: snelle frontend (gzip, cache, lazy grafieken, SWR)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "perf/192-snelle-frontend",
+   "aangemaakt": "2026-11-17T21:56:25Z",
+   "gemerged": "2026-11-17T22:04:24Z",
+   "commit": "fe6d598",
+   "issues": [
+    192
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 194,
+   "titel": "feat: kaart en navigatie integratie (#172 tot #187)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "integration/kaart-en-navigatie",
+   "aangemaakt": "2026-11-17T21:50:05Z",
+   "gemerged": "2026-11-17T21:50:25Z",
+   "commit": "373273d",
+   "issues": [
+    172,
+    173,
+    174,
+    175,
+    176,
+    182,
+    184,
+    185,
+    186,
+    187
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 191,
+   "titel": "feat: heatmap met doorlopend kleurvlak (#184)",
+   "state": "MERGED",
+   "basis": "integration/kaart-en-navigatie",
+   "branch": "feat/184-heatmap",
+   "aangemaakt": "2026-11-17T21:44:19Z",
+   "gemerged": "2026-11-17T21:48:53Z",
+   "commit": "91b0b0b",
+   "issues": [
+    184
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 190,
+   "titel": "feat: dashboard met de gezondheid van het meetnet",
+   "state": "MERGED",
+   "basis": "integration/kaart-en-navigatie",
+   "branch": "feat/186-dashboard",
+   "aangemaakt": "2026-11-17T21:43:46Z",
+   "gemerged": "2026-11-17T21:49:48Z",
+   "commit": "d7a5923",
+   "issues": [
+    186
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 189,
+   "titel": "feat: wijken-pagina om wijken te rangschikken en vergelijken (#185)",
+   "state": "MERGED",
+   "basis": "integration/kaart-en-navigatie",
+   "branch": "feat/185-wijken-vergelijken",
+   "aangemaakt": "2026-11-17T21:43:31Z",
+   "gemerged": "2026-11-17T21:49:20Z",
+   "commit": "8870a8b",
+   "issues": [
+    185
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 188,
+   "titel": "feat: menu met eigen pagina per item (#187)",
+   "state": "MERGED",
+   "basis": "integration/kaart-en-navigatie",
+   "branch": "feat/187-navigatie-menu",
+   "aangemaakt": "2026-11-17T21:41:32Z",
+   "gemerged": "2026-11-17T21:48:12Z",
+   "commit": "ae84119",
+   "issues": [
+    187
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 183,
+   "titel": "feat: consistent kleurenthema en vernieuwde wijkenlijst (#182)",
+   "state": "CLOSED",
+   "basis": "feat/174-tijdlijn",
+   "branch": "feat/182-kleurenthema",
+   "aangemaakt": "2026-11-17T21:31:45Z",
+   "gemerged": null,
+   "commit": "",
+   "issues": [
+    182
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 181,
+   "titel": "feat: 24-uurs tijdlijn op de kaart (#174)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/174-tijdlijn",
+   "aangemaakt": "2026-11-17T21:19:57Z",
+   "gemerged": "2026-11-17T21:50:27Z",
+   "commit": "bbf759f",
+   "issues": [
+    174
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 180,
+   "titel": "feat: wijk-detailroute met sheet (#173)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/173-wijk-detail",
+   "aangemaakt": "2026-11-17T21:19:54Z",
+   "gemerged": "2026-11-17T21:50:27Z",
+   "commit": "e3bc1bf",
+   "issues": [
+    173
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 179,
+   "titel": "feat: kaart als hoofdscherm (#172)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/172-kaart-hoofdscherm",
+   "aangemaakt": "2026-11-17T21:19:52Z",
+   "gemerged": "2026-11-17T21:50:27Z",
+   "commit": "f3a5f92",
+   "issues": [
+    172
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 178,
+   "titel": "feat: beheer als een scherm met tabs (#176)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/176-beheer-tabs",
+   "aangemaakt": "2026-11-17T21:12:57Z",
+   "gemerged": "2026-11-17T21:50:27Z",
+   "commit": "825b897",
+   "issues": [
+    176
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 177,
+   "titel": "feat: onderbalk op mobiel en bovenbalk met profielmenu op desktop (#175)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/175-onderbalk",
+   "aangemaakt": "2026-11-17T21:12:54Z",
+   "gemerged": "2026-11-17T21:50:27Z",
+   "commit": "bbf759f",
+   "issues": [
+    175
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 171,
+   "titel": "feat: laagkeuze en toegankelijke legenda (#160)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/160-laagkeuze-legenda",
+   "aangemaakt": "2026-11-17T15:34:39Z",
+   "gemerged": "2026-11-17T20:49:53Z",
+   "commit": "b5745c9",
+   "issues": [
+    160
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 170,
+   "titel": "feat: kaart en wijkenlijst synchroon (#159)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/159-kaart-lijst-sync",
+   "aangemaakt": "2026-11-17T15:34:36Z",
+   "gemerged": "2026-11-17T20:49:27Z",
+   "commit": "3a25725",
+   "issues": [
+    159
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 169,
+   "titel": "feat: geen recente data (#158)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/158-geen-recente-data",
+   "aangemaakt": "2026-11-17T15:34:34Z",
+   "gemerged": "2026-11-17T20:48:55Z",
+   "commit": "561f122",
+   "issues": [
+    158
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 168,
+   "titel": "Navigatie: contrast, mobiel inklappen, rollen en actieve pagina",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/164-navigatie",
+   "aangemaakt": "2026-11-17T15:22:57Z",
+   "gemerged": "2026-11-17T20:51:58Z",
+   "commit": "ac3599e",
+   "issues": [
+    164
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 167,
+   "titel": "Beheerdashboard: kerncijfers en waarschuwingen",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/163-beheer-kerncijfers",
+   "aangemaakt": "2026-11-17T15:22:52Z",
+   "gemerged": "2026-11-17T20:51:24Z",
+   "commit": "d154d2e",
+   "issues": [
+    163
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 166,
+   "titel": "Mijn stations: heldere lege staat en stationstatus",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/162-mijn-stations-lege-staat",
+   "aangemaakt": "2026-11-17T15:22:48Z",
+   "gemerged": "2026-11-17T20:50:53Z",
+   "commit": "2928b0e",
+   "issues": [
+    162
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 165,
+   "titel": "Homepage: samenvattingsstrook met kerncijfers",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/161-home-samenvatting",
+   "aangemaakt": "2026-11-17T15:22:44Z",
+   "gemerged": "2026-11-17T20:50:26Z",
+   "commit": "8d7e60d",
+   "issues": [
+    161
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 157,
+   "titel": "feat: dashboard toont recente uitvalmomenten",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/96-dashboard-uitvalmomenten",
+   "aangemaakt": "2026-11-17T11:03:51Z",
+   "gemerged": "2026-11-17T11:08:37Z",
+   "commit": "9bc44e5",
+   "issues": [
+    96
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 156,
+   "titel": "ci: security-checks met gitleaks en npm audit",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/113-security-ci",
+   "aangemaakt": "2026-11-17T11:02:29Z",
+   "gemerged": "2026-11-17T11:10:45Z",
+   "commit": "27ae9bf",
+   "issues": [
+    113
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 155,
+   "titel": "feat: over-ons pagina invullen",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/150-over-ons",
+   "aangemaakt": "2026-11-17T11:01:12Z",
+   "gemerged": "2026-11-17T11:08:29Z",
+   "commit": "00ec404",
+   "issues": [
+    150
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 154,
+   "titel": "fix: heatmap komt overeen met legenda",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "fix/86-heatmap-legenda",
+   "aangemaakt": "2026-11-17T10:58:58Z",
+   "gemerged": "2026-11-17T11:08:20Z",
+   "commit": "d7391fb",
+   "issues": [
+    86
+   ]
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 153,
+   "titel": "105 als gebruiker wil ik kunnen inzoomen op overlappende grafieken of specifieke tijdsperiodes zodat ik gedetailleerder data kan bekijken",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "105-als-gebruiker-wil-ik-kunnen-inzoomen-op-overlappende-grafieken-of-specifieke-tijdsperiodes-zodat-ik-gedetailleerder-data-kan-bekijken",
+   "aangemaakt": "2026-11-03T13:38:53Z",
+   "gemerged": "2026-11-17T10:47:56Z",
+   "commit": "102e635",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 152,
+   "titel": "feat: admin page for particulate matter data coverage",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feat/datadekking-fijnstof",
+   "aangemaakt": "2026-10-15T08:53:49Z",
+   "gemerged": "2026-10-15T09:08:15Z",
+   "commit": "fe5adc3",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 151,
+   "titel": "feat: geconsolideerd bezoekersdashboard (#96)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feature/visitor-dashboard",
+   "aangemaakt": "2026-10-08T13:33:41Z",
+   "gemerged": "2026-10-15T09:08:35Z",
+   "commit": "34f65c4",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 147,
+   "titel": "test: echte Cypress e2e-login in CI (volledige stack)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "ci/cypress-e2e",
+   "aangemaakt": "2026-09-18T14:42:14Z",
+   "gemerged": "2026-09-18T14:46:50Z",
+   "commit": "b7ff269",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 146,
+   "titel": "ci: frontend CI-trigger fixen + lint toevoegen",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "ci/frontend-lint-and-branch",
+   "aangemaakt": "2026-09-18T14:30:05Z",
+   "gemerged": "2026-09-18T14:46:43Z",
+   "commit": "be30fb6",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 139,
+   "titel": "feat: verify-scherm overslaan bij vertrouwd IP (direct token)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feature/trusted-ip-frontend",
+   "aangemaakt": "2026-09-18T12:32:05Z",
+   "gemerged": "2026-09-18T12:37:42Z",
+   "commit": "3a85f6d",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 138,
+   "titel": "fix: app responsief maken op mobiel (kaart, wijken, heatmap, grafiek)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "feature/responsive-app",
+   "aangemaakt": "2026-09-18T11:12:35Z",
+   "gemerged": "2026-09-18T12:37:34Z",
+   "commit": "1a10771",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 135,
+   "titel": "fix: frontend security-hardening (MailSlurp-key, axios timeout + bump, safe localStorage parse)",
+   "state": "MERGED",
+   "basis": "s3nj26_dev",
+   "branch": "fix/frontend-security-hardening",
+   "aangemaakt": "2026-09-17T22:26:26Z",
+   "gemerged": "2026-09-17T22:41:01Z",
+   "commit": "a2d7e3c",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 134,
+   "titel": "chore: code-kwaliteit en config-verbeteringen",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "s3nj26_dev",
+   "aangemaakt": "2026-09-17T15:14:51Z",
+   "gemerged": "2026-09-17T15:17:12Z",
+   "commit": "49ffe68",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 133,
+   "titel": "fix: nginx .mjs MIME-type + SPA fallback (productie)",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "s3nj26_dev",
+   "aangemaakt": "2026-09-17T13:45:03Z",
+   "gemerged": "2026-09-17T13:45:19Z",
+   "commit": "2e553bc",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 132,
+   "titel": "fix: maplibre worker in productie-build + home fetch cleanup",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "s3nj26_dev",
+   "aangemaakt": "2026-09-17T13:40:57Z",
+   "gemerged": "2026-09-17T13:41:13Z",
+   "commit": "96b8182",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 131,
+   "titel": "fix: los npm audit kwetsbaarheden op + maplibre v6 map-fix",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "s3nj26_dev",
+   "aangemaakt": "2026-09-17T13:07:30Z",
+   "gemerged": "2026-09-17T13:13:01Z",
+   "commit": "8233e5c",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 130,
+   "titel": "fix: correct import path casing to match tracked filenames",
+   "state": "MERGED",
+   "basis": "s3nj26",
+   "branch": "fix/import-path-casing",
+   "aangemaakt": "2026-09-17T11:28:27Z",
+   "gemerged": "2026-09-17T12:00:47Z",
+   "commit": "7c86af4",
+   "issues": []
+  },
+  {
+   "repo": "Software-FrontEnd",
+   "nummer": 129,
+   "titel": "back to main for new semester",
+   "state": "MERGED",
+   "basis": "main",
+   "branch": "DEV-s3vj26-teamA",
+   "aangemaakt": "2026-09-15T16:12:58Z",
+   "gemerged": "2026-09-15T16:19:18Z",
+   "commit": "ea38790",
+   "issues": []
+  }
+ ],
+ "sprints": {
+  "Sprint 4": {
+   "start": "2026-12-12",
+   "dagen": 35
+  },
+  "Sprint 3": {
+   "start": "2026-11-02",
+   "dagen": 40
+  }
+ },
+ "bord_items": 130,
+ "bord_status": {
+  "Done": 73,
+  "In Progress": 2,
+  "Not Planned": 22,
+  "Todo": 33
+ },
+ "bord_epic_status": {
+  "Dashboard & overzicht": {
+   "Done": 1,
+   "In Progress": 0,
+   "Not Planned": 1,
+   "Todo": 1
+  },
+  "Data-import & performance": {
+   "Done": 0,
+   "In Progress": 0,
+   "Not Planned": 1,
+   "Todo": 3
+  },
+  "Datakwaliteit & betrouwbaarheid": {
+   "Done": 2,
+   "In Progress": 1,
+   "Not Planned": 0,
+   "Todo": 3
+  },
+  "DevOps, hosting & OTAP": {
+   "Done": 4,
+   "In Progress": 0,
+   "Not Planned": 3,
+   "Todo": 4
+  },
+  "Documentatie & overdracht": {
+   "Done": 1,
+   "In Progress": 0,
+   "Not Planned": 3,
+   "Todo": 3
+  },
+  "Grafieken & visualisatie": {
+   "Done": 3,
+   "In Progress": 1,
+   "Not Planned": 0,
+   "Todo": 1
+  },
+  "Meetstation-beheer": {
+   "Done": 0,
+   "In Progress": 0,
+   "Not Planned": 1,
+   "Todo": 1
+  },
+  "geen": {
+   "Done": 60,
+   "In Progress": 0,
+   "Not Planned": 1,
+   "Todo": 12
+  },
+  "Notificaties": {
+   "Done": 0,
+   "In Progress": 0,
+   "Not Planned": 1,
+   "Todo": 0
+  },
+  "Onderzoek & advies": {
+   "Done": 0,
+   "In Progress": 0,
+   "Not Planned": 6,
+   "Todo": 3
+  },
+  "Project & samenwerking": {
+   "Done": 2,
+   "In Progress": 0,
+   "Not Planned": 5,
+   "Todo": 2
+  }
+ },
+ "bord_epics": {
+  "Dashboard & overzicht": 3,
+  "Data-import & performance": 4,
+  "Datakwaliteit & betrouwbaarheid": 6,
+  "DevOps, hosting & OTAP": 11,
+  "Documentatie & overdracht": 7,
+  "Grafieken & visualisatie": 5,
+  "Meetstation-beheer": 2,
+  "geen": 73,
+  "Notificaties": 1,
+  "Onderzoek & advies": 9,
+  "Project & samenwerking": 9
+ }
+}

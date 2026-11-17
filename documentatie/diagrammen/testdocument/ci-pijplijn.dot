@@ -1,0 +1,40 @@
+digraph G { graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+node [fontname="Helvetica", fontcolor="#111827", color="#111827", style="filled,rounded", shape=box, fillcolor="#FFF9E6"];
+edge [fontname="Helvetica", color="#111827", fontcolor="#4B5563"];
+ rankdir=LR; nodesep=0.15; ranksep=1.6;
+ev_push [label="push", shape=ellipse, fillcolor="#FECB3D"];
+ev_pr [label="pull request", shape=ellipse, fillcolor="#FECB3D"];
+ev_hand [label="handmatig\n(workflow_dispatch)", shape=ellipse, fillcolor="#FFF9E6"];
+{rank=same; ev_push; ev_pr; ev_hand}
+subgraph cluster_backend { label="backend (Software-BackEnd)"; fontname="Helvetica-Bold"; fontcolor="#8A6408"; color="#8A6408"; style="rounded";
+backend_ci_yml [fillcolor="#FECB3D", label="CI build (ci.yml)\n113 geslaagd, 1 mislukt, 6 geannuleerd van 120\n\nCheckout source\lSet up Java 21\lBuild and test\lPublish test report\l(+ 3 stappen)\l"];
+ev_push -> backend_ci_yml;
+ev_pr -> backend_ci_yml;
+ev_hand -> backend_ci_yml;
+backend_deploy_yml [fillcolor="#FFF9E6", label="Deploy (deploy.yml)\n7 geslaagd, 0 mislukt, 3 geannuleerd van 10\n\nCompute image name and tag\lCheckout\lSet up Docker Buildx\lLog in to GHCR\l(+ 4 stappen)\l"];
+ev_push -> backend_deploy_yml;
+ev_hand -> backend_deploy_yml;
+backend_sonarqube_yml [fillcolor="#FFF9E6", label="Sonar Scan (sonarqube.yml)\n0 geslaagd, 82 mislukt, 0 geannuleerd van 82\n\nCheckout Source\lSet up Java\lBuild & SonarCloud analyse\l"];
+ev_push -> backend_sonarqube_yml;
+ev_hand -> backend_sonarqube_yml;
+backend_super_linter_yml [fillcolor="#FFF9E6", label="Super-Linter (super-linter.yml)\n62 geslaagd, 78 mislukt, 0 geannuleerd van 140\n\nCheckout repository\lRun Super-Linter\l"];
+ev_push -> backend_super_linter_yml;
+ev_pr -> backend_super_linter_yml;
+{rank=same; backend_ci_yml; backend_deploy_yml; backend_sonarqube_yml; backend_super_linter_yml}
+}
+subgraph cluster_frontend { label="frontend (Software-FrontEnd)"; fontname="Helvetica-Bold"; fontcolor="#8A6408"; color="#8A6408"; style="rounded";
+frontend_e2e_yml [fillcolor="#FECB3D", label="E2E tests (e2e.yml)\n2 geslaagd, 61 mislukt, 0 geannuleerd van 63\n\nCheckout frontend\lCheckout backend\lSet up Java 21\lBuild backend\l(+ 6 stappen)\l"];
+ev_push -> frontend_e2e_yml;
+ev_pr -> frontend_e2e_yml;
+frontend_ghcr_yml [fillcolor="#FFF9E6", label="Frontend CI to GitHub Container Registry (ghcr.yml)\n98 geslaagd, 8 mislukt, 0 geannuleerd van 106\n\nCheckout repository\lSet up Node.js\lInstall dependencies\lRun linter\l(+ 7 stappen)\l"];
+ev_push -> frontend_ghcr_yml;
+ev_pr -> frontend_ghcr_yml;
+frontend_npm_publish_yml [fillcolor="#FECB3D", label="Build and Test (npm-publish.yml)\n59 geslaagd, 15 mislukt, 0 geannuleerd van 74\n\nCheckout Repository\lInstall Node.js\lInstall node modules\lLint\l(+ 1 stappen)\l"];
+ev_push -> frontend_npm_publish_yml;
+ev_pr -> frontend_npm_publish_yml;
+frontend_security_yml [fillcolor="#FFF9E6", label="Security checks (security.yml)\n34 geslaagd, 1 mislukt, 0 geannuleerd van 35\n\nCheckout repository (volledige historie)\lInstall gitleaks (met checksum-controle)\lScan volledige git-historie op secrets\lCheckout repository\l(+ 3 stappen)\l"];
+ev_push -> frontend_security_yml;
+ev_pr -> frontend_security_yml;
+{rank=same; frontend_e2e_yml; frontend_ghcr_yml; frontend_npm_publish_yml; frontend_security_yml}
+}
+}

@@ -1,0 +1,1562 @@
+{
+ "shas": {
+  "backend": "e104152e572449be91d75b1d86a3bcecd6d4f5d0",
+  "frontend": "13fc1e2f086ea4c2c52c37188294b6e3921bfebd"
+ },
+ "ci_run_backend": "44190061230",
+ "backend": {
+  "klassen": [
+   {
+    "klasse": "StationMonitorServiceTest",
+    "pakket": "StationMonitorService",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/StationMonitorService/StationMonitorServiceTest.java",
+    "laag": "unit",
+    "tests": 8,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "testCheckMeetstations_withActiveToInactiveStation_shouldUpdateAndSendEmail",
+     "testCheckMeetstations_withActiveMeasurements_whenErrors_shouldUpdateAndSendMeasurementUpdateEmail",
+     "testCheckMeetstations_withActiveMeasurements_whenActive_shouldUpdateAndNotSendEmail"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "AuthSecurityApiTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/AuthSecurityApiTest.java",
+    "laag": "api",
+    "tests": 7,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "stationControllerHasNoHardcodedCrossOrigin",
+     "forgotPasswordWithoutAnEmailStillGivesTheSameReaction",
+     "registerRejectsWeakPasswords"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "CompressionApiTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/CompressionApiTest.java",
+    "laag": "api",
+    "tests": 4,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "jsonIsGzippedWhenTheClientAsksForIt",
+     "theSnapshotEndpointIsGzippedAndAnswersNotModifiedForItsEtag",
+     "jsonIsPlainWhenTheClientDoesNotAcceptGzip"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "ErrorHandlingApiTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/ErrorHandlingApiTest.java",
+    "laag": "api",
+    "tests": 16,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "garbageExpiredAndOrphanedTokensGiveUnauthorizedInsteadOfAServerError",
+     "superAdminCanStillChangeRoles",
+     "unknownUserGivesNotFound"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "OpenApiSpecTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/OpenApiSpecTest.java",
+    "laag": "api",
+    "tests": 4,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "noControllerMethodReturnsAWildcardResponseEntity",
+     "successResponsesDescribeTheirBodyInTheSpec",
+     "committedSpecMatchesTheCode"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "PathAliasApiTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/PathAliasApiTest.java",
+    "laag": "api",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "stationsWithMeasurementsAnswersOnTheNewAndTheOldPath",
+     "claimWorksOnTheNewAndTheOldPath",
+     "stationsAnswerOnTheNewAndTheOldBasePath"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "PostmanCollectionTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/PostmanCollectionTest.java",
+    "laag": "unit",
+    "tests": 3,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "collectionIsPostmanV21WithABaseUrlAndTokenVariable",
+     "collectionUsesTheCanonicalPathsOnly",
+     "collectionContainsEveryOperationOfTheSpec"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "SchemaManagementTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/SchemaManagementTest.java",
+    "laag": "unit",
+    "tests": 3,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "mainPropertiesValidateTheSchema",
+     "flywayStaysEnabledInTheMainConfiguration",
+     "everyComposeFileValidatesTheSchemaAndNoneUsesAnotherMode"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "StationFilterApiTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/StationFilterApiTest.java",
+    "laag": "api",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "invalidPagingParametersGiveBadRequest",
+     "withoutPagingParametersAllStationsAreReturnedAsBefore",
+     "useridFilterOnlyReturnsStationsOfThatUser"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "StationSecurityApiTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/StationSecurityApiTest.java",
+    "laag": "api",
+    "tests": 7,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "addingAStationRequiresAnAdminRole",
+     "addingAStationFromTheFrontendFormDefaultsTheIdToTheRegistrationCode",
+     "addingAStationWithoutRequiredFieldsOrWithADuplicateRegistrationCodeIsRejected"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "TimeZoneApiTest",
+    "pakket": "api",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/api/TimeZoneApiTest.java",
+    "laag": "api",
+    "tests": 2,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "historyAverageInterpretsDatesInTheConfiguredZone",
+     "stationMeasurementsPdfInterpretsDatesInTheConfiguredZone"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "MapCacheTest",
+    "pakket": "cache",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/cache/MapCacheTest.java",
+    "laag": "api",
+    "tests": 8,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "theCacheKeyAndTheComputationUseTheMinuteRoundedDown",
+     "theCacheIsBoundedInSize",
+     "theTimelapseIsCachedOnRoundedFromToAndSteps"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "CorsConfigTest",
+    "pakket": "config",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/config/CorsConfigTest.java",
+    "laag": "unit",
+    "tests": 3,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "singleOriginIsAllowed",
+     "blankEntriesAreIgnoredAndCredentialsStayEnabled",
+     "multipleOriginsAreSplitAndTrimmed"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "DefaultCredentialsGuardTest",
+    "pakket": "config",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/config/DefaultCredentialsGuardTest.java",
+    "laag": "unit",
+    "tests": 7,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "defaultPepperMatchesApplicationProperties",
+     "uniqueSecretsAreAccepted",
+     "examplePlaceholderRootPasswordIsRejected"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "JwtSecretGuardTest",
+    "pakket": "config",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/config/JwtSecretGuardTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "defaultSecretIsRejectedWithoutProfile",
+     "defaultSecretMatchesApplicationProperties",
+     "defaultSecretIsRejectedInProductionProfile"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "JwtServiceTest",
+    "pakket": "config",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/config/JwtServiceTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "isTokenValid_false_whenUserDoesNotMatch",
+     "constructor_throws_whenKeyIsBlank",
+     "generateAndExtract_roundTrips_theUsername"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "OpenApiDisabledTest",
+    "pakket": "config",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/config/OpenApiDisabledTest.java",
+    "laag": "api",
+    "tests": 1,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "apiDocsAreNotAvailableWhenDisabled"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "OpenApiDocsTest",
+    "pakket": "config",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/config/OpenApiDocsTest.java",
+    "laag": "api",
+    "tests": 4,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "specDescribesJwtBearerSchemeAndMarksSecuredEndpoints",
+     "apiDocsArePublicAndListEveryController",
+     "swaggerUiIsReachableInTestProfile"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "RateLimitingFilterTest",
+    "pakket": "config.ratelimit",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/config/ratelimit/RateLimitingFilterTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "shouldBypassFilterWhenDisabled",
+     "shouldUseXForwardedForHeader",
+     "shouldTrackDifferentClientsSeparately"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "HealthEndpointTest",
+    "pakket": "health",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/health/HealthEndpointTest.java",
+    "laag": "api",
+    "tests": 3,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "healthIsPublicAndHidesDetails",
+     "otherActuatorEndpointsAreNotExposed",
+     "livenessAndReadinessProbesArePublic"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "IngestHealthIndicatorTest",
+    "pakket": "ingest",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/ingest/IngestHealthIndicatorTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "freshDataIsUp",
+     "dataOlderThanTheThresholdIsDegradedNotDown",
+     "aDisabledIngestIsNeverDegraded"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "IngestPolicyTest",
+    "pakket": "ingest",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/ingest/IngestPolicyTest.java",
+    "laag": "unit",
+    "tests": 7,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "limiterEnforcesTheMinimumIntervalBetweenRequests",
+     "jitterShortensTheDelayToBetweenHalfAndFull",
+     "backoffDoublesPerConsecutiveFailure"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "IngestWorkerTest",
+    "pakket": "ingest",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/ingest/IngestWorkerTest.java",
+    "laag": "unit",
+    "tests": 13,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "errorsAreRecordedWithoutSecretsOrLongTraces",
+     "theHourlyMaximumIsHonoured",
+     "theSchedulingLoopFollowsIntervalAndBackoffAndKeepsGoing"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "JreCompatibilityTest",
+    "pakket": "ingest",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/ingest/JreCompatibilityTest.java",
+    "laag": "unit",
+    "tests": 2,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "mainCodeNeverUsesRandomGeneratorFactoriesOrJdkInternalModules",
+     "theProductionConstructorBuildsAWorkerWithoutNeedingOptionalJdkModules"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "MeasurementIngestServiceTest",
+    "pakket": "ingest",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/ingest/MeasurementIngestServiceTest.java",
+    "laag": "api",
+    "tests": 10,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "aLongOutageIsCappedAtTheMaximumCatchUpPeriod",
+     "aRestartContinuesFromTheNewestStoredMeasurement",
+     "anEmptyDatabaseStartsWithTheInitialWindow"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "AuthEndpointsFeatureTest",
+    "pakket": "integration",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/integration/AuthEndpointsFeatureTest.java",
+    "laag": "integratie",
+    "tests": 4,
+    "overgeslagen": 4,
+    "gefaald": 0,
+    "voorbeelden": [],
+    "redenen_overgeslagen": [
+     "Temporarily disabled due to Docker dependency issues"
+    ]
+   },
+   {
+    "klasse": "MeasurementIndexIntegrationTest",
+    "pakket": "integration",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/integration/MeasurementIndexIntegrationTest.java",
+    "laag": "integratie",
+    "tests": 3,
+    "overgeslagen": 3,
+    "gefaald": 0,
+    "voorbeelden": [],
+    "redenen_overgeslagen": [
+     "disabledWithoutDocker is true and Docker is not available"
+    ]
+   },
+   {
+    "klasse": "UserRepositoryIntegrationTest",
+    "pakket": "integration",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/integration/UserRepositoryIntegrationTest.java",
+    "laag": "integratie",
+    "tests": 4,
+    "overgeslagen": 4,
+    "gefaald": 0,
+    "voorbeelden": [],
+    "redenen_overgeslagen": [
+     "Temporarily disabled due to Docker dependency issues"
+    ]
+   },
+   {
+    "klasse": "DataCoverageServiceTest",
+    "pakket": "measurement",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/measurement/DataCoverageServiceTest.java",
+    "laag": "unit",
+    "tests": 7,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "requestsRawReadingsForKnownStations",
+     "rejectsDayPeriodThatExceedsMaximumAfterAligning",
+     "rejectsPeriodLongerThanMaximum"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "LocalMeasurementReaderTest",
+    "pakket": "measurement",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/measurement/LocalMeasurementReaderTest.java",
+    "laag": "api",
+    "tests": 4,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "localResultsEqualTheLiveResultsForTheSameData",
+     "theNumberOfQueriesDoesNotGrowWithStationsOrMeasurements",
+     "measurementsOutsideTheWindowAreLeftOut"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "MeasurementServiceTest",
+    "pakket": "measurement",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/measurement/MeasurementServiceTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "generatePdf_handlesMeasurementWithoutTemperature",
+     "generatePdf_emptyList_returnsValidPdfInsteadOfFailing",
+     "generatePdf_returnsPdfBytesForMeasurements"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "IncorrectValueFilterTest",
+    "pakket": "meetJestad",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/meetJestad/IncorrectValueFilterTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "particulateMatterOutsideLimitsBecomesNull",
+     "humidityOutsideConfiguredLimitsBecomesNull",
+     "missingAndNanValuesAreHandled"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "MeetJeStadLocationTest",
+    "pakket": "meetJestad",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/meetJestad/MeetJeStadLocationTest.java",
+    "laag": "unit",
+    "tests": 9,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "measurementWithoutLocationAndWithoutKnownStationLocationIsDiscarded",
+     "missingLocationUsesNewestValidLocationFromSameBatch",
+     "measurementOutsideTilburgIsStillDiscarded"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "NeighbourhoodByIdTest",
+    "pakket": "neighbourhood",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/neighbourhood/NeighbourhoodByIdTest.java",
+    "laag": "unit",
+    "tests": 4,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "averageTemperatureIsCalculatedFromTheMeasurementsInsideTheNeighbourhood",
+     "averageTemperatureIsNaNWhenThereAreNoMeasurementsInTheNeighbourhood",
+     "unknownNeighbourhoodIsNotFound"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "NeighbourhoodTimelapseTest",
+    "pakket": "neighbourhood",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/neighbourhood/NeighbourhoodTimelapseTest.java",
+    "laag": "unit",
+    "tests": 12,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "fetchedRangeIncludesTheWindowBeforeTheFirstStep",
+     "measurementOutsideEveryNeighbourhoodIsIgnored",
+     "aMeasurementDoesNotLeakIntoAnEarlierFrame"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "NeighbourhoodUnitTest",
+    "pakket": "neighbourhood",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/neighbourhood/NeighbourhoodUnitTest.java",
+    "laag": "unit",
+    "tests": 1,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "testNeighbourhoodConstructor"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "OverviewCalculatorTest",
+    "pakket": "snapshot",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/snapshot/OverviewCalculatorTest.java",
+    "laag": "unit",
+    "tests": 16,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "networkCoverageIsTheShareOfStationHoursWithData",
+     "dongewijkWithNullInTheLatestHourAndOnlyAFiveHourOldValueIsNull",
+     "timestampsAreIsoUtc"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "SnapshotApiTest",
+    "pakket": "snapshot",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/snapshot/SnapshotApiTest.java",
+    "laag": "api",
+    "tests": 11,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "readersNeverSeeAHalfBuiltSnapshotWhileItIsBeingSwapped",
+     "theEtagStaysTheSameForUnchangedDataAndChangesWhenDataChanges",
+     "theFreshnessHeaderIsTheLastSuccessfulIngest"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "SnapshotBudgetTest",
+    "pakket": "snapshot",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/snapshot/SnapshotBudgetTest.java",
+    "laag": "api",
+    "tests": 1,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "buildTimeAndPayloadStayWithinBudget"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "StationMapperTest",
+    "pakket": "station",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/station/StationMapperTest.java",
+    "laag": "unit",
+    "tests": 2,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "toStationFilter_mapsRequestFields",
+     "toStationDTO_mapsAllFields"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "StationServiceTest",
+    "pakket": "station",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/station/StationServiceTest.java",
+    "laag": "unit",
+    "tests": 11,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "getByRegistrationCode_delegatesToRepository",
+     "readById_returnsDto_whenStationExists",
+     "transferOwnership_throwsWhenNewOwnerDoesNotExist"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "StationSyncTest",
+    "pakket": "station",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/station/StationSyncTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "sync_skipsMeasurementsWithAnUnparsableTimestamp",
+     "sync_doesNotThrowWhenSavingFails",
+     "sync_keepsExistingStationAndGroupsMeasurementsPerStation"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "StationUnitTests",
+    "pakket": "station",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/station/StationUnitTests.java",
+    "laag": "unit",
+    "tests": 3,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "testStationDtoToStationConstructor",
+     "testStationConstructor",
+     "testStationToStationDtoConstructor"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "GetAllUsersRequestTest",
+    "pakket": "user",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/GetAllUsersRequestTest.java",
+    "laag": "unit",
+    "tests": 2,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "keepsExplicitPagingValues",
+     "appliesDefaultPagingWhenNotProvided"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "PasswordEncodingServiceTest",
+    "pakket": "user",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/PasswordEncodingServiceTest.java",
+    "laag": "unit",
+    "tests": 4,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "encodePassword_producesArgon2Hash_notThePlaintext",
+     "encodePassword_isSalted_soSamePasswordYieldsDifferentHashes",
+     "verifyPassword_true_forMatchingPassword"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "UserMapperTest",
+    "pakket": "user",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/UserMapperTest.java",
+    "laag": "unit",
+    "tests": 2,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "toUserFilter_mapsRequestFields",
+     "toUserResponse_mapsFields_andHasNoStationsWhenNotRequested"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "UserUnitTests",
+    "pakket": "user",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/UserUnitTests.java",
+    "laag": "unit",
+    "tests": 11,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "getUsersWithOptionalFilters",
+     "createUser_ValidatesFields_Succeeds",
+     "updateUser_WhenUserFound_Succeeds"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "UserValidatorTests",
+    "pakket": "user",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/UserValidatorTests.java",
+    "laag": "unit",
+    "tests": 19,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "validateFirstName_WithSpecialCharacters_Fails",
+     "validateLastName_WhenTooLong_Fails",
+     "validatePassword_WhenLengthAtMax_Succeeds"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "AuthenticationUnitTests",
+    "pakket": "user.authentication",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/authentication/AuthenticationUnitTests.java",
+    "laag": "unit",
+    "tests": 1,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "testAuthenticate_ReturnsToken"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "EmailSenderServiceTest",
+    "pakket": "user.authentication",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/authentication/EmailSenderServiceTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "nothingIsSent_whenRealMailserverIsDisabled",
+     "sendEmail_sendsSimpleMessageToRecipient",
+     "sendFailure_isPropagatedToTheCaller"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "TokenServiceTest",
+    "pakket": "user.authentication",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/authentication/TokenServiceTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "verifyToken_false_whenNoTokenExists",
+     "verifyToken_false_whenTokenExpired",
+     "createVerifyToken_generatesSixDigitCode_andReplacesExisting"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "TrustedIpServiceTest",
+    "pakket": "user.authentication",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/user/authentication/TrustedIpServiceTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "isTrusted_false_whenIpIsNullOrBlank",
+     "remember_savesHashedIp_notThePlainIp",
+     "isTrusted_true_whenHashExistsForUser"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "ClientIpResolverTest",
+    "pakket": "utility",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/utility/ClientIpResolverTest.java",
+    "laag": "unit",
+    "tests": 8,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "usesRemoteAddressWhenThereIsNoHeader",
+     "ignoresClientSuppliedEntriesLeftOfTheProxy",
+     "neverTreatsAnUnparseableHopAsATrustedProxy"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "DataCoverageLogicTest",
+    "pakket": "utility",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/utility/DataCoverageLogicTest.java",
+    "laag": "unit",
+    "tests": 11,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "stationWithoutPmSensorDoesNotPullNetworkCoverageDown",
+     "dayBucketsFollowDutchDays",
+     "stationWithGapsIsIrregularAndReportsLongestGap"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "MeasurementDeduplicatorTest",
+    "pakket": "utility",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/utility/MeasurementDeduplicatorTest.java",
+    "laag": "unit",
+    "tests": 7,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "collapsesDuplicateStationTimestampToOneRecord",
+     "keepsRecordsThatDifferByTimestamp",
+     "keepsMeasurementsThatCannotBeKeyed"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "MeasurementLogicTest",
+    "pakket": "utility",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/utility/MeasurementLogicTest.java",
+    "laag": "unit",
+    "tests": 25,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "medianOfOddNumberOfValuesIsTheMiddleValue",
+     "dayAverageSkipsFilteredHumidityAndParticulate",
+     "medianIgnoresNullsAndNaN"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "RateLimiterTest",
+    "pakket": "utility",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/utility/RateLimiterTest.java",
+    "laag": "unit",
+    "tests": 3,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "tracksDifferentKeysIndependently",
+     "rejectsAttemptsBeyondTheLimit",
+     "allowsAttemptsUpToTheLimit"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "WorkshopMapperTest",
+    "pakket": "workshop",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/workshop/WorkshopMapperTest.java",
+    "laag": "unit",
+    "tests": 2,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "toResponse_allowsNullCreationTime",
+     "toResponse_mapsCode_andFormatsDatesAsUtc"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "WorkshopServiceTest",
+    "pakket": "workshop",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/workshop/WorkshopServiceTest.java",
+    "laag": "unit",
+    "tests": 6,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "verifyWorkshopCode_false_whenCodeDoesNotExist",
+     "verifyWorkshopCode_false_whenCodeExpired",
+     "createWorkshop_generatesCode_andSaves"
+    ],
+    "redenen_overgeslagen": []
+   },
+   {
+    "klasse": "WorkshopUnitTests",
+    "pakket": "workshop",
+    "bestand": "ClimateChecker/src/test/java/Ontdekstation013/ClimateChecker/workshop/WorkshopUnitTests.java",
+    "laag": "unit",
+    "tests": 7,
+    "overgeslagen": 0,
+    "gefaald": 0,
+    "voorbeelden": [
+     "getAllActiveWorkshops_ReturnsActiveWorkshops",
+     "deleteWorkshopCode_Succeeds",
+     "getAllExpiredWorkshops_ReturnsExpiredWorkshops"
+    ],
+    "redenen_overgeslagen": []
+   }
+  ],
+  "dekking_pakketten": {
+   "features.neighbourhood.endpoint": {
+    "li_m": 22,
+    "li_c": 30,
+    "br_m": 2,
+    "br_c": 2
+   },
+   "features.workshop.endpoint.dto": {
+    "li_m": 0,
+    "li_c": 2,
+    "br_m": 0,
+    "br_c": 0
+   },
+   "features.station.endpoint.dto": {
+    "li_m": 2,
+    "li_c": 3,
+    "br_m": 0,
+    "br_c": 4
+   },
+   "features.user.authentication.trustedip": {
+    "li_m": 5,
+    "li_c": 25,
+    "br_m": 2,
+    "br_c": 8
+   },
+   "features.measurement.endpoint": {
+    "li_m": 43,
+    "li_c": 25,
+    "br_m": 109,
+    "br_c": 3
+   },
+   "features.e2e": {
+    "li_m": 7,
+    "li_c": 0,
+    "br_m": 2,
+    "br_c": 0
+   },
+   "snapshot": {
+    "li_m": 10,
+    "li_c": 303,
+    "br_m": 23,
+    "br_c": 159
+   },
+   "features.user.authentication": {
+    "li_m": 8,
+    "li_c": 154,
+    "br_m": 15,
+    "br_c": 31
+   },
+   "(root)": {
+    "li_m": 2,
+    "li_c": 6,
+    "br_m": 0,
+    "br_c": 0
+   },
+   "utility": {
+    "li_m": 75,
+    "li_c": 475,
+    "br_m": 50,
+    "br_c": 180
+   },
+   "features.user.endpoint": {
+    "li_m": 20,
+    "li_c": 17,
+    "br_m": 15,
+    "br_c": 7
+   },
+   "features.workshop": {
+    "li_m": 2,
+    "li_c": 42,
+    "br_m": 1,
+    "br_c": 7
+   },
+   "cache": {
+    "li_m": 0,
+    "li_c": 16,
+    "br_m": 0,
+    "br_c": 0
+   },
+   "features.user.authentication.endpoint": {
+    "li_m": 43,
+    "li_c": 22,
+    "br_m": 21,
+    "br_c": 11
+   },
+   "features.measurement": {
+    "li_m": 32,
+    "li_c": 160,
+    "br_m": 6,
+    "br_c": 36
+   },
+   "config.ratelimit": {
+    "li_m": 0,
+    "li_c": 32,
+    "br_m": 0,
+    "br_c": 4
+   },
+   "features.station": {
+    "li_m": 37,
+    "li_c": 339,
+    "br_m": 25,
+    "br_c": 108
+   },
+   "features.user.endpoint.dto": {
+    "li_m": 1,
+    "li_c": 8,
+    "br_m": 0,
+    "br_c": 4
+   },
+   "features.user": {
+    "li_m": 26,
+    "li_c": 130,
+    "br_m": 10,
+    "br_c": 36
+   },
+   "features.station.endpoint": {
+    "li_m": 25,
+    "li_c": 101,
+    "br_m": 24,
+    "br_c": 12
+   },
+   "features.meetjestad": {
+    "li_m": 10,
+    "li_c": 145,
+    "br_m": 22,
+    "br_c": 86
+   },
+   "config": {
+    "li_m": 4,
+    "li_c": 189,
+    "br_m": 15,
+    "br_c": 45
+   },
+   "exception": {
+    "li_m": 21,
+    "li_c": 42,
+    "br_m": 9,
+    "br_c": 5
+   },
+   "ingest": {
+    "li_m": 4,
+    "li_c": 201,
+    "br_m": 2,
+    "br_c": 56
+   },
+   "features.user.authentication.endpoint.dto": {
+    "li_m": 14,
+    "li_c": 2,
+    "br_m": 22,
+    "br_c": 0
+   },
+   "features.neighbourhood": {
+    "li_m": 49,
+    "li_c": 128,
+    "br_m": 19,
+    "br_c": 35
+   },
+   "features.workshop.endpoint": {
+    "li_m": 16,
+    "li_c": 7,
+    "br_m": 4,
+    "br_c": 0
+   }
+  },
+  "dekking_totaal": {
+   "instruction": {
+    "gedekt": 13590,
+    "gemist": 3020,
+    "pct": 81.8
+   },
+   "branch": {
+    "gedekt": 839,
+    "gemist": 398,
+    "pct": 67.8
+   },
+   "line": {
+    "gedekt": 2604,
+    "gemist": 478,
+    "pct": 84.5
+   },
+   "method": {
+    "gedekt": 789,
+    "gemist": 208,
+    "pct": 79.1
+   }
+  },
+  "jacoco_minimum": "0.60"
+ },
+ "frontend": {
+  "unit_bestanden": [
+   {
+    "bestand": "src/utils/accessibility.test.js",
+    "tests": 13
+   },
+   {
+    "bestand": "src/utils/admin-summary.test.js",
+    "tests": 6
+   },
+   {
+    "bestand": "src/utils/admin-tabs.test.js",
+    "tests": 7
+   },
+   {
+    "bestand": "src/utils/color-scale.test.js",
+    "tests": 4
+   },
+   {
+    "bestand": "src/utils/current-values.test.js",
+    "tests": 13
+   },
+   {
+    "bestand": "src/utils/heatmap-data.test.js",
+    "tests": 3
+   },
+   {
+    "bestand": "src/utils/heatmap-render.test.js",
+    "tests": 3
+   },
+   {
+    "bestand": "src/utils/interpolation.test.js",
+    "tests": 10
+   },
+   {
+    "bestand": "src/utils/legacy-routes.test.js",
+    "tests": 7
+   },
+   {
+    "bestand": "src/utils/map-metrics.test.js",
+    "tests": 4
+   },
+   {
+    "bestand": "src/utils/nav-items.test.js",
+    "tests": 18
+   },
+   {
+    "bestand": "src/utils/network-health.test.js",
+    "tests": 12
+   },
+   {
+    "bestand": "src/utils/network-summary.test.js",
+    "tests": 6
+   },
+   {
+    "bestand": "src/utils/region-list.test.js",
+    "tests": 4
+   },
+   {
+    "bestand": "src/utils/region-search.test.js",
+    "tests": 4
+   },
+   {
+    "bestand": "src/utils/region-sort.test.js",
+    "tests": 8
+   },
+   {
+    "bestand": "src/utils/region-status.test.js",
+    "tests": 4
+   },
+   {
+    "bestand": "src/utils/relative-time.test.js",
+    "tests": 3
+   },
+   {
+    "bestand": "src/utils/station-status.test.js",
+    "tests": 5
+   },
+   {
+    "bestand": "src/utils/swr-cache.test.js",
+    "tests": 12
+   },
+   {
+    "bestand": "src/utils/timeline.test.js",
+    "tests": 8
+   },
+   {
+    "bestand": "src/utils/wijk-link.test.js",
+    "tests": 3
+   },
+   {
+    "bestand": "src/utils/wijken-compare.test.js",
+    "tests": 11
+   }
+  ],
+  "som_bronnen": 168,
+  "run": {
+   "tests": 168,
+   "pass": 168,
+   "fail": 0,
+   "cancelled": 0,
+   "skipped": 0
+  },
+  "cypress": [
+   {
+    "bestand": "cypress/e2e/login.cy.js",
+    "describe": [
+     "Login als admin met mailverificatie"
+    ],
+    "overgeslagen": false,
+    "it": [
+     "logt in en bevestigt met de gemailde code"
+    ]
+   },
+   {
+    "bestand": "cypress/e2e/register.cy.js",
+    "describe": [
+     "User Registration with Email 2FA"
+    ],
+    "overgeslagen": true,
+    "it": [
+     "should register and verify user via email 2FA"
+    ]
+   }
+  ]
+ },
+ "workflows": {
+  "backend/ci.yml": {
+   "naam": "CI build",
+   "trigger": {
+    "push": {
+     "branches": [
+      "main",
+      "s3nj26",
+      "s3nj26_dev"
+     ]
+    },
+    "pull_request": null,
+    "workflow_dispatch": null
+   },
+   "jobs": {
+    "build-and-test": {
+     "naam": "build-and-test",
+     "stappen": [
+      "Checkout source",
+      "Set up Java 21",
+      "Build and test",
+      "Publish test report",
+      "Upload test results",
+      "Upload JaCoCo coverage report",
+      "Upload jar"
+     ]
+    }
+   }
+  },
+  "backend/deploy.yml": {
+   "naam": "Deploy",
+   "trigger": {
+    "push": {
+     "branches": [
+      "s3nj26_dev"
+     ],
+     "paths": [
+      "ClimateChecker/**",
+      ".github/workflows/deploy.yml"
+     ]
+    },
+    "workflow_dispatch": {
+     "inputs": {
+      "environment": {
+       "description": "Target environment",
+       "type": "choice",
+       "options": [
+        "test",
+        "acceptance",
+        "production"
+       ],
+       "default": "test"
+      },
+      "source_tag": {
+       "description": "Image tag to promote (for example sha-1a2b3c4). Empty means build the current commit.",
+       "type": "string",
+       "required": false
+      }
+     }
+    }
+   },
+   "jobs": {
+    "image": {
+     "naam": "Build and push image",
+     "stappen": [
+      "Compute image name and tag",
+      "Checkout",
+      "Set up Docker Buildx",
+      "Log in to GHCR",
+      "Build and push"
+     ]
+    },
+    "deploy": {
+     "naam": "Deploy to ${{ github.event.inputs.environment || 'test' }}",
+     "stappen": [
+      "Log in to GHCR",
+      "Point the environment tag at this image",
+      "Trigger Dokploy deploy"
+     ]
+    }
+   }
+  },
+  "backend/sonarqube.yml": {
+   "naam": "Sonar Scan",
+   "trigger": {
+    "workflow_dispatch": null,
+    "push": {
+     "branches": [
+      "*"
+     ]
+    }
+   },
+   "jobs": {
+    "build-and-analyze": {
+     "naam": "build-and-analyze",
+     "stappen": [
+      "Checkout Source",
+      "Set up Java",
+      "Build & SonarCloud analyse"
+     ]
+    }
+   }
+  },
+  "backend/super-linter.yml": {
+   "naam": "Super-Linter",
+   "trigger": {
+    "pull_request": {
+     "branches": [
+      "develop",
+      "main",
+      "*"
+     ]
+    },
+    "push": {
+     "branches": [
+      "develop",
+      "main",
+      "*"
+     ]
+    }
+   },
+   "jobs": {
+    "lint": {
+     "naam": "Lint Code Base",
+     "stappen": [
+      "Checkout repository",
+      "Run Super-Linter"
+     ]
+    }
+   }
+  },
+  "frontend/e2e.yml": {
+   "naam": "E2E tests",
+   "trigger": {
+    "push": {
+     "branches": [
+      "*"
+     ]
+    },
+    "pull_request": {
+     "branches": [
+      "*"
+     ]
+    }
+   },
+   "jobs": {
+    "cypress-e2e": {
+     "naam": "cypress-e2e",
+     "stappen": [
+      "Checkout frontend",
+      "Checkout backend",
+      "Set up Java 21",
+      "Build backend",
+      "Start backend",
+      "Set up Node.js",
+      "Install frontend dependencies",
+      "Build & serve frontend",
+      "Run Cypress e2e",
+      "Upload Cypress artifacts"
+     ]
+    }
+   }
+  },
+  "frontend/ghcr.yml": {
+   "naam": "Frontend CI to GitHub Container Registry",
+   "trigger": {
+    "push": {
+     "branches": [
+      "main",
+      "develop",
+      "s3nj26",
+      "s3nj26_dev"
+     ]
+    },
+    "pull_request": {
+     "branches": [
+      "main",
+      "develop",
+      "s3nj26",
+      "s3nj26_dev"
+     ]
+    }
+   },
+   "jobs": {
+    "build-and-deploy": {
+     "naam": "build-and-deploy",
+     "stappen": [
+      "Checkout repository",
+      "Set up Node.js",
+      "Install dependencies",
+      "Run linter",
+      "Build application",
+      "Test Docker image",
+      "Compute next semantic version",
+      "Set lowercase owner",
+      "Log in to GitHub Container Registry",
+      "Create and push new Git tag",
+      "Push Docker image"
+     ]
+    }
+   }
+  },
+  "frontend/npm-publish.yml": {
+   "naam": "Build and Test",
+   "trigger": {
+    "push": {
+     "branches": [
+      "*"
+     ]
+    },
+    "pull_request": {
+     "branches": [
+      "*"
+     ]
+    }
+   },
+   "jobs": {
+    "build": {
+     "naam": "build",
+     "stappen": [
+      "Checkout Repository",
+      "Install Node.js",
+      "Install node modules",
+      "Lint",
+      "Build"
+     ]
+    }
+   }
+  },
+  "frontend/security.yml": {
+   "naam": "Security checks",
+   "trigger": {
+    "push": {
+     "branches": [
+      "*"
+     ]
+    },
+    "pull_request": {
+     "branches": [
+      "*"
+     ]
+    }
+   },
+   "jobs": {
+    "secret-scan": {
+     "naam": "Secret scanning (gitleaks)",
+     "stappen": [
+      "Checkout repository (volledige historie)",
+      "Install gitleaks (met checksum-controle)",
+      "Scan volledige git-historie op secrets"
+     ]
+    },
+    "dependency-audit": {
+     "naam": "Dependency audit (npm audit)",
+     "stappen": [
+      "Checkout repository",
+      "Set up Node.js",
+      "npm audit (productie, faalt bij high)",
+      "npm audit (dev-afhankelijkheden, informatief)"
+     ]
+    }
+   }
+  }
+ },
+ "ci_runs": {
+  "Software-BackEnd": {
+   "Sonar Scan": {
+    "n": 82,
+    "success": 0,
+    "failure": 82,
+    "cancelled": 0,
+    "eerste": "2026-01-14T13:13:54Z",
+    "laatste": "2026-11-17T22:26:24Z"
+   },
+   "CI build": {
+    "n": 120,
+    "success": 113,
+    "failure": 1,
+    "cancelled": 6,
+    "eerste": "2026-01-14T13:13:54Z",
+    "laatste": "2026-11-17T22:26:24Z"
+   },
+   "Deploy": {
+    "n": 10,
+    "success": 7,
+    "failure": 0,
+    "cancelled": 3,
+    "eerste": "2026-11-17T11:25:06Z",
+    "laatste": "2026-11-17T22:26:24Z"
+   },
+   "Super-Linter": {
+    "n": 140,
+    "success": 62,
+    "failure": 78,
+    "cancelled": 0,
+    "eerste": "2026-01-14T13:13:54Z",
+    "laatste": "2026-11-17T22:26:24Z"
+   },
+   "Backend CI to GitHub Container Registry": {
+    "n": 6,
+    "success": 2,
+    "failure": 4,
+    "cancelled": 0,
+    "eerste": "2026-01-14T13:13:54Z",
+    "laatste": "2026-09-21T18:45:17Z"
+   },
+   "Build and Test": {
+    "n": 4,
+    "success": 1,
+    "failure": 3,
+    "cancelled": 0,
+    "eerste": "2026-02-23T16:06:46Z",
+    "laatste": "2026-09-21T18:45:17Z"
+   }
+  },
+  "Software-FrontEnd": {
+   "Build and Test": {
+    "n": 74,
+    "success": 59,
+    "failure": 15,
+    "cancelled": 0,
+    "eerste": "2026-02-23T16:06:21Z",
+    "laatste": "2026-11-17T22:05:13Z"
+   },
+   "Frontend CI to GitHub Container Registry": {
+    "n": 106,
+    "success": 98,
+    "failure": 8,
+    "cancelled": 0,
+    "eerste": "2026-02-23T16:06:29Z",
+    "laatste": "2026-11-17T22:05:13Z"
+   },
+   "Security checks": {
+    "n": 35,
+    "success": 34,
+    "failure": 1,
+    "cancelled": 0,
+    "eerste": "2026-11-17T11:02:33Z",
+    "laatste": "2026-11-17T22:05:13Z"
+   },
+   "E2E tests": {
+    "n": 63,
+    "success": 2,
+    "failure": 61,
+    "cancelled": 0,
+    "eerste": "2026-09-18T14:42:18Z",
+    "laatste": "2026-11-17T22:05:13Z"
+   },
+   "Dynamische GitHub-workflow": {
+    "n": 1,
+    "success": 0,
+    "failure": 0,
+    "cancelled": 1,
+    "eerste": "2026-05-13T11:39:16Z",
+    "laatste": "2026-05-13T11:39:16Z"
+   }
+  }
+ }
+}
