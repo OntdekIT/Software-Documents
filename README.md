@@ -6,3 +6,6 @@ Ontdekstation organiseert samen met Bibliotheek Midden-Brabant workshops voor jo
 
 ### Opstart instructies
 Voor meer informatie over het opzetten van het project wordt doorverwezen naar de wiki. Bekijk de [Getting Started](https://github.com/OntdekIT/Software-Documents/wiki/Getting-Started) page om zowel de backend als frontend te configureren.
+
+### Documentatie
+- [Backend API-documentatie](api/README.md): overzicht van alle endpoints van de ClimateChecker-backend (authenticatie, requests, responses en foutcodes).
