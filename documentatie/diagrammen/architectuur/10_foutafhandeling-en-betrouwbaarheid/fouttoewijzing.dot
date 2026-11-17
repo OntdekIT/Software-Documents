@@ -1,0 +1,32 @@
+digraph f {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.15; ranksep=1.2;
+  s400 [label="400 BAD_REQUEST", fillcolor="#FECB3D", shape=box];
+  s403 [label="403 FORBIDDEN", fillcolor="#FECB3D", shape=box];
+  s404 [label="404 NOT_FOUND", fillcolor="#FECB3D", shape=box];
+  s409 [label="409 CONFLICT", fillcolor="#FECB3D", shape=box];
+  s500 [label="500 INTERNAL_SERVER_ERROR", fillcolor="#FECB3D", shape=box];
+  "IllegalArgumentException" -> s400;
+  "InvalidArgumentException" -> s400;
+  "ConstraintViolationException" -> s400;
+  "DateTimeParseException" -> s400;
+  "MethodArgumentNotValidException" -> s400;
+  "HttpMessageNotReadableException" -> s400;
+  "AccessDeniedException" -> s403;
+  "NoSuchElementException" -> s404;
+  "NotFoundException" -> s404;
+  "ExistingUniqueIdentifierException" -> s409;
+  "DataIntegrityViolationException" -> s409;
+  "Exception" -> s500;
+  s401 [label="401 UNAUTHORIZED", fillcolor="#FECB3D"]; s429 [label="429 TOO_MANY_REQUESTS", fillcolor="#FECB3D"]; s405 [label="405 en andere Spring-MVC-fouten", fillcolor="#FECB3D"];
+  "RestAuthenticationEntryPoint\n(geen of ongeldig token)" -> s401;
+  "RestAccessDeniedHandler\n(onvoldoende rol)" -> s403x;
+  s403x [label="403 FORBIDDEN", fillcolor="#FECB3D"];
+  "RateLimitingFilter" -> s429;
+  "handleExceptionInternal" -> s405;
+
+}

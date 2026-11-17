@@ -1,0 +1,15 @@
+digraph g {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  up [label="UP\nHTTP 200", fillcolor="#FECB3D"];
+  deg [label="DEGRADED\nHTTP 200 (http-mapping)\nlaatste geslaagde ingest ouder\ndan 30 min", fillcolor="#FFF9E6"];
+  down [label="DOWN\nHTTP 503\ndatabase onbereikbaar\n(readiness-groep: readinessState, db, ingest)", fillcolor="white"];
+  up -> deg [label="ingest valt stil"];
+  deg -> up [label="ingest slaagt weer"];
+  up -> down [label="db valt weg"];
+  deg -> down [label="db valt weg"];
+  note [shape=note, fillcolor="white", label="Liveness (/actuator/health/liveness)\ncontroleert de database niet.\nMail-health staat uit: een\nonbereikbare mailserver mag de\napp niet DOWN maken."];
+}

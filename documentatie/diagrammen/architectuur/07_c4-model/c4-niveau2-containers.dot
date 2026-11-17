@@ -1,0 +1,27 @@
+digraph c4n2 {
+  rankdir=TB; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.45; ranksep=1.0; compound=true;
+  gebruiker [label="Gebruiker\n(bezoeker, eigenaar,\nbeheerder)", fillcolor="#FECB3D"];
+  subgraph cluster_stack {
+    label="MB Ontdekt (docker compose, netwerk public)"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    spa [label="React-app (SPA)\nreact 18.3.1, vite, maplibre-gl 6.10.0\ndraait in de browser", fillcolor="#FECB3D"];
+    nginx [label="frontend\nnginx:1.27-alpine\nserveert de gebouwde bestanden\nhostpoort 3000:80"];
+    api [label="backend-api\nSpring Boot 3.3.5, Java 21\nREST-API, ingest-worker, snapshots\nhostpoort 8082:8082", fillcolor="#FECB3D"];
+    db [label="mariaDB\nmariadb:11.2\ndatabase ontdekstation013\nhostpoort 3307:3306", fillcolor="#FECB3D", shape=cylinder, style="filled"];
+    mh [label="mailhog\nmailhog/mailhog:v1.0.1\nvangt uitgaande mail op\nSMTP 1025:1025, web 8025:8025"];
+  }
+  mjs [label="meetjestad.net", fillcolor="white"];
+  tegels [label="tiles.openfreemap.org", fillcolor="white"];
+  gebruiker -> nginx [label="1. laadt de app (HTTP)"];
+  nginx -> spa [label="levert JS, CSS", style=dashed];
+  gebruiker -> spa [dir=none, style=invis];
+  spa -> api [label="2. REST-aanroepen\n(JSON, Bearer-JWT)"];
+  api -> db [label="JDBC (MariaDB)\nFlyway-migraties"];
+  api -> mh [label="SMTP"];
+  api -> mjs [label="HTTPS, elke 5 min\n(ingest-worker)"];
+  spa -> tegels [label="HTTPS", style=dashed];
+}

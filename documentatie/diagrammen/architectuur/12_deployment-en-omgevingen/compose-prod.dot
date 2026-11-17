@@ -1,0 +1,16 @@
+digraph c {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.4; ranksep=0.9;
+  subgraph cluster_c { label="docker-compose-prod.yml (restart: unless-stopped)"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    fr [label="frontend\nghcr.io/ontdekit/climatechecker-frontend\nhostpoort 5173 (standaard) naar 80", fillcolor="#FECB3D"];
+    bk [label="backend\nghcr.io/ontdekit/climatechecker-backend:BACKEND_TAG\nhostpoort 8082 (standaard)\nhealthcheck /actuator/health/readiness", fillcolor="#FECB3D"];
+    db [label="db\nmariadb:11.2, geen gepubliceerde poort\nhealthcheck healthcheck.sh", shape=cylinder, fillcolor="#FECB3D"];
+    vol [label="volume db_data\n/var/lib/mysql", shape=folder, fillcolor="white"];
+  }
+  fr -> bk [label="depends_on healthy"]; bk -> db [label="depends_on healthy"]; db -> vol;
+  geh [label="Geen geheimen in het bestand:\nJWT_SECRET, TRUSTED_IP_PEPPER,\nFRONTEND_HOST, CORS_ALLOWED_ORIGINS\nzijn verplicht (:? in compose)", shape=note, fillcolor="white"];
+}

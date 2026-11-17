@@ -1,0 +1,55 @@
+{
+ "logregels_per_pakket": {
+  "exception": {
+   "warn": 11,
+   "error": 1
+  },
+  "features/measurement": {
+   "error": 1
+  },
+  "features/neighbourhood": {
+   "warn": 1
+  },
+  "features/station": {
+   "warn": 1,
+   "info": 3,
+   "error": 2
+  },
+  "features/user": {
+   "warn": 1,
+   "info": 2,
+   "error": 4
+  },
+  "ingest": {
+   "info": 4,
+   "error": 2,
+   "warn": 1
+  },
+  "snapshot": {
+   "error": 1,
+   "info": 1
+  }
+ },
+ "system_out_aanroepen": 0,
+ "status_voorbeeld": {
+  "dataAsOf": "2026-11-17T22:42:55.025622175Z",
+  "ingest": {
+   "enabled": true,
+   "lastSuccessAt": "2026-11-17T22:42:55.025622175Z",
+   "lastAttemptAt": "2026-11-17T22:42:55.025622175Z",
+   "lastError": null,
+   "consecutiveFailures": 0,
+   "nextAttemptAt": "2026-11-17T22:47:55.457408841Z",
+   "lastStoredCount": 9,
+   "stale": false,
+   "staleAfterMinutes": 30
+  },
+  "snapshot": {
+   "builtAt": "2026-11-17T22:42:00Z",
+   "stations": 43,
+   "payloadBytes": 108559,
+   "wijken": 59,
+   "version": 6
+  }
+ }
+}

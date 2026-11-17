@@ -1,0 +1,34 @@
+digraph c4n3fe {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.35; ranksep=0.9;
+  subgraph cluster_fe {
+    label="React-app (src/): mappen en imports ertussen (aantal, vanaf 2)"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+  "main.jsx" [label="main.jsx\nrouter en routes\n1 bestanden", fillcolor="#FFF9E6"];
+  "pages" [label="pages\nschermen per route\n30 bestanden", fillcolor="#FECB3D"];
+  "components" [label="components\nherbruikbare onderdelen\n67 bestanden", fillcolor="#FFF9E6"];
+  "hooks" [label="hooks\n2 bestanden", fillcolor="#FFF9E6"];
+  "providers" [label="providers\ninlogstatus (auth-provider)\n1 bestanden", fillcolor="#FFF9E6"];
+  "utils" [label="utils\nlogica zonder scherm:\nIDW, kleurschaal, backend-api\n31 bestanden", fillcolor="#FECB3D"];
+  "loaders" [label="loaders\n1 bestanden", fillcolor="#FFF9E6"];
+  "domain" [label="domain\nrollen\n1 bestanden", fillcolor="#FFF9E6"];
+  }
+  api [label="backend-api\n(REST, via utils/backend-api, axios,\ntime-out 15 s)", fillcolor="white"];
+  grp [label="components bevat deze groepen (bestanden):\ndashboard 9, neighbourhoods 8, stations 6, Home 5, ui 5, charts 4, map 4, users 4, kaart 3, wijken 3, admin 2, data-coverage 2, heatmap 2, workshop 2, auth 1, bottom-bar.jsx 1, dashboard-button.jsx 1, filter-button.jsx 1, legacy-redirect.jsx 1, navbar.jsx 1, newmap.jsx 1, protected-route.jsx 1", shape=note, fillcolor="white", style="filled"];
+  "components" -> "providers" [label="4"];
+  "components" -> "utils" [label="52"];
+  "main.jsx" -> "components" [label="4"];
+  "main.jsx" -> "domain" [label="1"];
+  "main.jsx" -> "loaders" [label="1"];
+  "main.jsx" -> "pages" [label="27"];
+  "main.jsx" -> "providers" [label="1"];
+  "main.jsx" -> "utils" [label="1"];
+  "pages" -> "components" [label="103"];
+  "pages" -> "hooks" [label="2"];
+  "pages" -> "providers" [label="4"];
+  "pages" -> "utils" [label="53"];
+  "utils" -> api [label="HTTP"];
+}

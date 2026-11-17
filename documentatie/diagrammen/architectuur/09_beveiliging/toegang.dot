@@ -1,0 +1,11 @@
+digraph t {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  "Publiek (geen token)" [shape=box, fillcolor="#FFF9E6", label="Publiek (geen token)  (22)\l\lPOST /authentication/forgot-password\lPOST /authentication/login\lPOST /authentication/register\lPOST /authentication/reset-password\lPOST /authentication/verify\lGET /measurement/history\lGET /measurement/history/average/region/{regionId}\lGET /measurement/history/average/{id}\lGET /measurement/history/half-hourly/{id}\lGET /measurement/history/hourly/{id}\lGET /measurement/history/network\lGET /meetstation/availability/{stationId}/{workshopCode}\lGET /meetstation/measurements/{id}\lGET /meetstation/stations\lGET /meetstation/stations-met-measurements\lGET /meetstation/{id}\lGET /neighbourhood/history\lGET /neighbourhood/history/average/{id}\lGET /neighbourhood/history/timelapse\lGET /neighbourhood/{id}\lGET /snapshot\lGET /status\l", fontname="Helvetica", fontsize=9];
+  "Ingelogd (elke rol)" [shape=box, fillcolor="#FECB3D", label="Ingelogd (elke rol)  (5)\l\lPUT /meetstation/claim\lPUT /meetstation/edit/{id}\lPUT /meetstation/transfer/{id}\lGET /my-account\lPUT /my-account\l", fontname="Helvetica", fontsize=9];
+  "ADMIN of SUPER_ADMIN" [shape=box, fillcolor="#FECB3D", label="ADMIN of SUPER_ADMIN  (10)\l\lGET /measurement/coverage\lPOST /meetstation/add\lGET /users\lDELETE /users/{id}\lGET /users/{id}\lPUT /users/{id}\lGET /workshops\lPOST /workshops\lDELETE /workshops/{code}\lGET /workshops/{code}/users\l", fontname="Helvetica", fontsize=9];
+  "Publiek (geen token)" -> "Ingelogd (elke rol)" -> "ADMIN of SUPER_ADMIN" [style=invis];
+}

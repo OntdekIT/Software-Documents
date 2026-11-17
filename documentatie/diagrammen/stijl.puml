@@ -1,0 +1,27 @@
+' Gedeelde PlantUML-stijl: amber en inkt, zoals de app. Gebruik: !include ../stijl.puml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontColor #111827
+skinparam shadowing false
+skinparam roundCorner 8
+skinparam ArrowColor #111827
+skinparam ArrowFontColor #4B5563
+skinparam NoteBackgroundColor #FFF9E6
+skinparam NoteBorderColor #8A6408
+skinparam ParticipantBackgroundColor #FFF9E6
+skinparam ParticipantBorderColor #111827
+skinparam ActorBackgroundColor #FECB3D
+skinparam ActorBorderColor #111827
+skinparam ClassBackgroundColor #FFF9E6
+skinparam ClassBorderColor #111827
+skinparam ClassHeaderBackgroundColor #FECB3D
+skinparam RectangleBackgroundColor #FFF9E6
+skinparam RectangleBorderColor #111827
+skinparam DatabaseBackgroundColor #FECB3D
+skinparam DatabaseBorderColor #111827
+skinparam ComponentBackgroundColor #FFF9E6
+skinparam ComponentBorderColor #111827
+skinparam PackageBackgroundColor #FFFFFF
+skinparam PackageBorderColor #8A6408
+skinparam SequenceLifeLineBorderColor #8A6408
+skinparam SequenceGroupBackgroundColor #FFF9E6

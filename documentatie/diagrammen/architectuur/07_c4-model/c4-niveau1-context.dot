@@ -1,0 +1,26 @@
+digraph c4n1 {
+  rankdir=TB; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.5; ranksep=0.8;
+  bezoeker [label="Bezoeker\n(zonder account)\nbekijkt kaart, heatmap,\nwijken en dashboard", fillcolor="#FECB3D", shape=box];
+  eigenaar [label="Meetstation-eigenaar\n(rol USER)\nbeheert eigen stations", fillcolor="#FECB3D"];
+  beheerder [label="Beheerder\n(rol ADMIN of SUPER_ADMIN)\ngebruikers, workshopcodes,\nstations, datadekking", fillcolor="#FECB3D"];
+  subgraph cluster_sys {
+    label="Systeem in scope"; labeljust=l; style="rounded,dashed"; color="#8A6408"; fontcolor="#8A6408";
+    app [label="MB Ontdekt / ClimateChecker\nklimaatkaart:\ntemperatuur en fijnstof per wijk\nen per meetstation", fillcolor="#FECB3D", width=3.2, height=1.1];
+  }
+  mjs [label="meetjestad.net\nbron van de metingen\n(JSON-API)", fillcolor="white"];
+  mail [label="Mailserver (SMTP)\nlokaal: MailHog", fillcolor="white"];
+  tegels [label="OpenFreeMap\nkaarttegels en stijl\n(tiles.openfreemap.org)", fillcolor="white"];
+  cdn [label="jsDelivr CDN\nbootstrap-icons (lettertype\nmet pictogrammen)", fillcolor="white"];
+  bezoeker -> app [label="bekijkt (browser)"];
+  eigenaar -> app [label="registreert, logt in,\nclaimt station"];
+  beheerder -> app [label="beheert"];
+  app -> mjs [label="haalt metingen op\n(alleen de ingest-worker)", dir=forward];
+  app -> mail [label="verstuurt inlogcodes,\nresetcodes, uitvalmeldingen"];
+  app -> tegels [label="browser laadt\nkaartachtergrond", style=dashed];
+  app -> cdn [label="browser laadt\npictogrammen", style=dashed];
+}

@@ -1,0 +1,17 @@
+@startuml
+!include ../../stijl.puml
+title Uitkomsten van een ingest-run en de wachttijd erna
+[*] --> Wachten : ApplicationReadyEvent (regel 72)
+Wachten --> Slot : na nextDelay
+Slot --> BUSY : lock bezet (regel 96)
+Slot --> Limiet : lock vrij
+Limiet --> RATE_LIMITED : max 30 per uur of tussentijd 60 s (regel 101)
+Limiet --> Ophalen
+Ophalen --> SUCCESS : opgeslagen (regel 113)
+Ophalen --> FAILURE : RuntimeException (regel 117)
+SUCCESS --> Wachten : 300 s
+BUSY --> Wachten : 60 s
+RATE_LIMITED --> Wachten : wachttijd uit de limiet
+FAILURE --> Wachten : backoff 30 s, verdubbelt, max 1800 s, 50 tot 100 procent jitter, Retry-After wint als die langer is
+note bottom of Wachten : na elke uitkomst (finally, regel 132) worden de snapshots opnieuw gebouwd; mislukt het opnieuw bouwen, dan alleen een logregel en blijft de vorige snapshot staan
+@enduml

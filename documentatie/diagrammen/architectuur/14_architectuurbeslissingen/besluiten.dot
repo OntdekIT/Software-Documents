@@ -1,0 +1,16 @@
+digraph b {
+  rankdir=LR; 
+  graph [fontname="Helvetica", bgcolor="white", pad="0.3"];
+  node [style="filled,rounded", shape=box, fillcolor="#FFF9E6", color="#111827", fontcolor="#111827", fontname="Helvetica", fontsize=11];
+  edge [color="#111827", fontcolor="#4B5563", fontname="Helvetica", fontsize=9];
+
+  nodesep=0.25; ranksep=0.9;
+  a1 [label="ADR-0001\nWorker en snapshots\nbackend #206, PR #207", fillcolor="#FECB3D"];
+  a2 [label="ADR-0002\nCaffeine-cache\nbackend #206, PR #207"];
+  a3 [label="ADR-0003\nKaart als hoofdscherm\nfrontend #172, PR #179"];
+  a4 [label="ADR-0004\nIDW voor de heatmap\nfrontend #184, PR #191"];
+  a5 [label="ADR-0005\nBearer-JWT, geen cookies\nbackend PR #120, #187"];
+  a6 [label="ADR-0006\nSquash-merges\nnaar s3nj26_dev"];
+  a1 -> a2 [label="vangt andere\ntijdstippen op"]; a3 -> a4 [label="Heatmap naast kaart:\nhet patroon over de stad"]; a1 -> a3 [label="snelle data maakt\ndat mogelijk", style=dashed];
+  a5 -> a6 [style=invis];
+}
